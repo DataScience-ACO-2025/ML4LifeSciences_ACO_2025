@@ -1,0 +1,114 @@
+# === SYSTEM FILES ===
+.DS_Store
+Thumbs.db
+Icon?
+ehthumbs.db
+desktop.ini
+
+# === PYTHON ===
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+ENV/
+.ipynb_checkpoints/
+*.egg-info/
+build/
+dist/
+*.egg
+*.pkl
+*.log
+
+# === NOTEBOOKS ===
+# Checkpoints et caches Jupyter
+.ipynb_checkpoints
+jupyter_cache/
+# Sorties lourdes (optionnel : à commenter si besoin)
+*.nbconvert.ipynb
+
+# === DATA ===
+# Dossiers ou fichiers de données volumineux
+data/
+datasets/
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.h5
+*.hdf5
+*.jsonl
+*.zip
+*.tar
+*.tar.gz
+*.npy
+*.npz
+*.pdb
+*.fasta
+*.msa
+*.pt
+*.pth
+*.model
+# (Astuce : tu peux conserver un sous-dossier data/sample/ avec quelques exemples légers)
+
+# === RESULTS & MODELS ===
+outputs/
+results/
+models/
+checkpoints/
+runs/
+wandb/
+mlruns/
+tensorboard/
+*.ckpt
+*.onnx
+
+# === WEB CONTENT ===
+# Build du site (Hugo, Jekyll, etc.)
+_site/
+public/
+node_modules/
+*.lock
+package-lock.json
+yarn.lock
+
+# === SLIDES ===
+# Fichiers exportés lourds ou temporaires
+*.pdf
+*.pptx
+*.key
+slides/build/
+slides/output/
+slides/.cache/
+
+# === IDEs / EDITORS ===
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.spyproject/
+.project
+.pydevproject
+
+# === OS / BACKUP ===
+*.bak
+*.tmp
+*.swp
+*.old
+*.orig
+
+# === GIT / COLLAB ===
+# Ignore merge artefacts
+*.merge
+*.rej
+*.orig
+
+# === SECURITY ===
+# Ne jamais versionner de clés ou tokens
+*.key
+*.pem
+*.crt
+*.env
+secrets/
