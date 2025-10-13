@@ -12,7 +12,6 @@ Suggestion structure du repo
 │   ├── _quarto.yml ← configuration du site
 │   ├── index.qmd ← page d’accueil (programme, encadrants, calendrier)
 │   ├── /projects/ ← pages web par mini-cours (une par groupe)
-│   ├── /reviews/ ← synthèse ou résultats des relectures
 │   └── /docs/ ← dossier de sortie HTML publié
 │
 ├── /submissions/ ← contributions des groupes
