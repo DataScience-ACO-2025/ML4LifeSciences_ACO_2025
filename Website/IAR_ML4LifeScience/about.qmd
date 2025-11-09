@@ -1,9 +1,90 @@
 ---
-title: "About"
+title: "A propos"
 ---
 
-About this site
+L’[Institut Agro Rennes-Angers](https://www.institut-agro-rennes-angers.fr/) est un établissement public d’enseignement supérieur et de recherche en agronomie, environnement et alimentation. Il forme des ingénieurs et chercheurs capables de relever les défis liés à la durabilité des systèmes agricoles et alimentaires.
 
-```{r}
-1 + 1
-```
+Le [Master Mathématiques Appliquées, Statistique](https://eco.univ-rennes.fr/master-mathematiques-appliquees-statistique) est co-accréditée par plusieurs établissements d’enseignement supérieur rennais, notament l’[Université Rennes 2](https://www.univ-rennes2.fr/) et l’[École Nationale de la Statistique et de l’Analyse de l’Information (ENSAI)](https://ensai.fr/). 
+
+Au sein de l’Institut Agro Rennes-Angers, les étudiants suivent le parcours [Data Science pour la biologie](https://www.institut-agro-rennes-angers.fr/formation/masters/parcours-data-science-pour-la-biologie), qui vise à développer des compétences avancées en analyse de données et en modélisation statistique appliquées aux domaines de l’agriculture, de l’agroalimentaire, des sciences de l’environnement et de la biologie.
+
+:::: {.grid .logos-grid}
+
+::: {.g-col-6 .g-col-md-3 .text-center}
+![](img/Logo_rennes_2.svg){.logo-ecole}
+:::
+
+::: {.g-col-6 .g-col-md-3 .text-center}
+![](img/Logo_ENSAI.png){.logo-ecole}
+:::
+
+::: {.g-col-6 .g-col-md-3 .text-center}
+![](img/Logo-ia-couleur.png){.logo-ecole}
+:::
+
+:::: 
+
+
+## Responsables péagogiques : 
+
+Responsable de la spécialisation : Sébastien Lê — sebastien.le@institut-agro.fr
+
+Responsable du master : David Causeur — david.causeur@institut-agro.fr
+
+
+## Promo 2025
+
+Les étudiants de la spécialisation **Sciences des Données Biologiques** présentent leurs travaux dans le cadre de la conférence *Machine Learning pour la Science du Vivant*.
+
+:::: {.grid}
+
+::: {.g-col-6 .g-col-md-3 .text-center}
+![](img/laetitia.jpg){.photo-profil-about .rounded-circle}
+**Dupont Alice** 
+Etudiant ingénieur Agronome
+Institut Agro Rennes  
+[GitHub](https://github.com/alicedupont) • [LinkedIn](https://linkedin.com/in/alicedupont)
+:::
+
+::: {.g-col-6 .g-col-md-3 .text-center}
+![](img/mathieux.jpg){.photo-profil-about .rounded-circle}
+
+**Martin Hugo**  
+Université Rennes 2  
+Institut Agro Rennes  
+[GitHub](https://github.com/hugomartin) • [LinkedIn](https://linkedin.com/in/hugomartin)
+:::
+
+::: {.g-col-6 .g-col-md-3 .text-center}
+![](img/etudiants/placier.jpg){.rounded-circle width="120"}
+**Placier Moïse**
+Etudiant ingénieur Agronome - ENSAT
+Institut Agro Rennes  
+[GitHub](https://github.com/MoisePlacier) • [LinkedIn](https://linkedin.com/in/moiseplacier)
+:::
+
+::: {.g-col-6 .g-col-md-3 .text-center}
+![](img/etudiants/durand.jpg){.rounded-circle width="120"}
+**Durand Emma** 
+Etudiant ingénieur Agroalimentaire
+Institut Agro Rennes 
+[GitHub](https://github.com/emmadurand) • [LinkedIn](https://linkedin.com/in/emmadurand)
+:::
+
+::: {.g-col-6 .g-col-md-3 .text-center}
+![](img/etudiants/placier.jpg){.rounded-circle width="120"}
+**Placier Moïse**
+Etudiant ingénieur Agronome - ENSAT
+Institut Agro Rennes  
+[GitHub](https://github.com/MoisePlacier) • [LinkedIn](https://linkedin.com/in/moiseplacier)
+:::
+
+::: {.g-col-6 .g-col-md-3 .text-center}
+![](img/etudiants/durand.jpg){.rounded-circle width="120"}
+**Durand Emma** 
+Etudiant ingénieur Agroalimentaire
+Institut Agro Rennes 
+[GitHub](https://github.com/emmadurand) • [LinkedIn](https://linkedin.com/in/emmadurand)
+:::
+
+::::

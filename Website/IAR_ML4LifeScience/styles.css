@@ -107,6 +107,42 @@ a:hover {
   border: 2px solid #282929; /* optionnel : contour */
 }
 
+/* Photos de profil uniformisées */
+.photo-profil-about {
+  width: 150px;           /* taille fixe */
+  height: 150px;
+  object-fit: cover;      /* rogne proprement sans déformer */
+  border-radius: 50%;     /* cercle parfait */
+  border: 2px solid #f8ac00; /* rappel couleur Institut Agro */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.photo-profil-about:hover {
+  transform: scale(1.05);
+}
+/* Mise en forme homogène des logos */
+.logos-grid {
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5em;
+}
+
+.logo-ecole {
+  width: 150px;       /* taille fixe homogène */
+  height: 150px;
+  object-fit: contain; /* évite la déformation */
+  background-color: white;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.logo-ecole:hover {
+  transform: scale(1.05);
+}
 /* --- header statique --- */
 
 

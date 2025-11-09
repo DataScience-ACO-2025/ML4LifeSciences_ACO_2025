@@ -2,9 +2,9 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "A propos",
     "section": "",
-    "text": "About this site\n\n\nCode\n1 + 1\n\n\n[1] 2"
+    "text": "L’Institut Agro Rennes-Angers est un établissement public d’enseignement supérieur et de recherche en agronomie, environnement et alimentation. Il forme des ingénieurs et chercheurs capables de relever les défis liés à la durabilité des systèmes agricoles et alimentaires.\nLe Master Mathématiques Appliquées, Statistique est co-accréditée par plusieurs établissements d’enseignement supérieur rennais, notament l’Université Rennes 2 et l’École Nationale de la Statistique et de l’Analyse de l’Information (ENSAI).\nAu sein de l’Institut Agro Rennes-Angers, les étudiants suivent le parcours Data Science pour la biologie, qui vise à développer des compétences avancées en analyse de données et en modélisation statistique appliquées aux domaines de l’agriculture, de l’agroalimentaire, des sciences de l’environnement et de la biologie."
   },
   {
     "objectID": "infos.html",
@@ -180,5 +180,33 @@
     "title": "3ᵉ édition de la conférence de Machine Learning en Sciences du Vivant",
     "section": "📍 Informations pratiques",
     "text": "📍 Informations pratiques\nDétails d’accès et plan disponibles dans la page Infos pratiques.\nLieu : Institut Agro Rennes, Amphi Matagrin\nHoraires : 9h00 – 17h30."
+  },
+  {
+    "objectID": "about.html#intervenants-2025",
+    "href": "about.html#intervenants-2025",
+    "title": "A propos",
+    "section": "Intervenants 2025",
+    "text": "Intervenants 2025\nLes étudiants de la spécialisation Sciences des Données Biologiques présentent leurs travaux dans le cadre de la conférence Machine Learning pour la Science du Vivant.\n\n\n Dupont Alice Etudiant ingénieur Agronome Institut Agro Rennes\nGitHub • LinkedIn\n\n\n\nMartin Hugo\nUniversité Rennes 2\nInstitut Agro Rennes\nGitHub • LinkedIn\n\n\n Placier Moïse Etudiant ingénieur Agronome - ENSAT Institut Agro Rennes\nGitHub • LinkedIn\n\n\n Durand Emma Etudiant ingénieur Agroalimentaire Institut Agro Rennes GitHub • LinkedIn\n\n\n Placier Moïse Etudiant ingénieur Agronome - ENSAT Institut Agro Rennes\nGitHub • LinkedIn\n\n\n Durand Emma Etudiant ingénieur Agroalimentaire Institut Agro Rennes GitHub • LinkedIn"
+  },
+  {
+    "objectID": "about.html#professeurs",
+    "href": "about.html#professeurs",
+    "title": "A propos",
+    "section": "Professeurs",
+    "text": "Professeurs\nResponsable de la spécialisation : Sébastien Lê — sebastien.le@institut-agro.fr\nResponsable du master : David Causeur — david.causeur@institut-agro.fr"
+  },
+  {
+    "objectID": "about.html#responsables-péagogiques",
+    "href": "about.html#responsables-péagogiques",
+    "title": "A propos",
+    "section": "Responsables péagogiques :",
+    "text": "Responsables péagogiques :\nResponsable de la spécialisation : Sébastien Lê — sebastien.le@institut-agro.fr\nResponsable du master : David Causeur — david.causeur@institut-agro.fr"
+  },
+  {
+    "objectID": "about.html#promo-2025",
+    "href": "about.html#promo-2025",
+    "title": "A propos",
+    "section": "Promo 2025",
+    "text": "Promo 2025\nLes étudiants de la spécialisation Sciences des Données Biologiques présentent leurs travaux dans le cadre de la conférence Machine Learning pour la Science du Vivant.\n\n\n Dupont Alice Etudiant ingénieur Agronome Institut Agro Rennes\nGitHub • LinkedIn\n\n\n\nMartin Hugo\nUniversité Rennes 2\nInstitut Agro Rennes\nGitHub • LinkedIn\n\n\n Placier Moïse Etudiant ingénieur Agronome - ENSAT Institut Agro Rennes\nGitHub • LinkedIn\n\n\n Durand Emma Etudiant ingénieur Agroalimentaire Institut Agro Rennes GitHub • LinkedIn\n\n\n Placier Moïse Etudiant ingénieur Agronome - ENSAT Institut Agro Rennes\nGitHub • LinkedIn\n\n\n Durand Emma Etudiant ingénieur Agroalimentaire Institut Agro Rennes GitHub • LinkedIn"
   }
 ]
