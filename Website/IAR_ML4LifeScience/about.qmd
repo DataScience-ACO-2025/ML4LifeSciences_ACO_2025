@@ -11,15 +11,16 @@ Au sein de l’Institut Agro Rennes-Angers, les étudiants suivent le parcours [
 :::: {.grid .logos-grid}
 
 ::: {.g-col-6 .g-col-md-3 .text-center}
-![](img/Logo_rennes_2.svg){.logo-ecole}
+<img src="/img/Logo_rennes_2.svg" alt="ENSAI" class="logo-ecole">
 :::
 
 ::: {.g-col-6 .g-col-md-3 .text-center}
-![](img/Logo_ENSAI.png){.logo-ecole}
+<img src="/img/Logo_ENSAI.png" alt="ENSAI" class="logo-ecole">
 :::
 
 ::: {.g-col-6 .g-col-md-3 .text-center}
-![](img/Logo-ia-couleur.png){.logo-ecole}
+<img src="/img/Logo-ia-couleur.png" alt="institut agro" class="logo-ecole">
+
 :::
 
 :::: 
@@ -39,7 +40,7 @@ Les étudiants de la spécialisation **Sciences des Données Biologiques** prés
 :::: {.grid}
 
 ::: {.g-col-6 .g-col-md-3 .text-center}
-![](img/laetitia.jpg){.photo-profil-about .rounded-circle}
+<img src="/img/laetitia.jpg" alt="laetita" class="photo-profil-about">
 **Dupont Alice** 
 Etudiant ingénieur Agronome
 Institut Agro Rennes  
