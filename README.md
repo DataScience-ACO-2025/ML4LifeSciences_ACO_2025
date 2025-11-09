@@ -8,11 +8,13 @@ Suggestion structure du repo
 │
 ├── README.md
 │
+├── docs/ ← dossier de sortie HTML publié (site web commpilé) 
+│
 ├── /website/ ← site Quarto pour hébergement sur GitHub Pages
 │   ├── _quarto.yml ← configuration du site
 │   ├── index.qmd ← page d’accueil (programme, encadrants, calendrier)
-│   ├── /projects/ ← pages web par mini-cours (une par groupe)
-│   └── /docs/ ← dossier de sortie HTML publié
+│   └── /projects/ ← pages web par mini-cours (une par groupe)
+│   
 │
 ├── /submissions/ ← contributions des groupes
 │   ├── groupe01_nom_projet/
