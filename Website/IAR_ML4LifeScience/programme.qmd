@@ -1,5 +1,6 @@
 ---
 title: "Programme"
+description: "Programme complet de la conférence Machine Learning pour la Science du Vivant"
 listing:
   id: projets_etudiants
   contents: projets

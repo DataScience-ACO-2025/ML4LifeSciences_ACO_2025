@@ -15,7 +15,7 @@ links:
 :::: {.columns}
 
 ::: {.column width="35%"}
-![](img/logo_ia_marine.png){.logo}
+![](img/logo_ia_marine.png){.logo alt="Logo Institut Agro Rennes Angers"}
 
 :::
 ::: {.column width="5%"}
@@ -23,26 +23,28 @@ links:
 :::
 
 ::: {.column width="60%"}
-![](img/img-masure.jpg)
+![](img/img-masure.jpg){alt="Image de l'Institut Agro Rennes Angers"}
 :::
 
 ::::
 
 
-## Présentation
+## Présentation de l'école d'automne
 
-Organisée entièrement par les étudiants de **master 2 - spécialisation Sciences des Données**, cette conférence annuelle est un rendez-vous incontournable ! 
+Organisée entièrement par les étudiants de **Master 2 – spécialisation Sciences des Données**, cette école d’automne annuelle est un rendez-vous incontournable !
 
-Elle s’inscrit dans le cadre de l'évaluation des modules **Machine Learning** et **Computer Science for Big Data Approaches**. 
-C'est l'occasion de mettre à l’honneur les projets des étudiants et de découvrir des méthodes modernes de **Machine Learning** et de **Deep Learning** appliquées aux problématiques des **sciences du vivant**.
+Elle s’inscrit dans le cadre de l’évaluation des modules **Machine Learning** et **Computer Science for Big Data Approaches**, et permet aux étudiants de restituer leurs projets sous forme de mini‑cours. Chaque groupe présente ainsi un exposé didactique, combinant théorie et pratique, pour partager ses méthodes et résultats.
 
-## Thème 2025 – *Machine Learning pour la Science du Vivant*
+C’est l’occasion de mettre à l’honneur les travaux des étudiants et de découvrir des approches modernes de Machine Learning et de Deep Learning appliquées aux problématiques des sciences du vivant.
 
-Pour cette **3ᵉ édition**, la conférence explore les apports du Machine Learning à la compréhension, la modélisation et la prédiction dans le champ du vivant : agriculture, environnement, écologie, santé, ou encore biotechnologies.  
-Les étudiants présentent des projets originaux illustrant la diversité des approches possibles et l'impact de telles applications.
+### Thème 2025 – *Machine Learning pour la Science du Vivant*
+
+Pour cette **3ᵉ édition**,l’école explore les apports du Machine Learning à la compréhension, la modélisation et la prédiction dans le champ du vivant : agriculture, environnement, écologie, santé ou biotechnologies.
+
+Les étudiants présenteront des projets originaux illustrant la diversité des approches possibles et l’impact concret de telles applications. 
 
 
-## Organisation
+### Les acteurs de la conférence
 
 - **Encadrants pédagogiques :**  
 
@@ -76,17 +78,20 @@ Les étudiants présentent des projets originaux illustrant la diversité des ap
 ::::
 
 <br>
+
+- **Étudiants participants :**  
+
+Les étudiants de la promotion 2025 du parcours **Sciences des Données** sont présentés dans la rubrique [À propos](about.qmd) du site, avec leurs photos, noms et liens vers GitHub et LinkedIn.
 <br>
 
 
-- **Étudiants participants :**  
-  Promotion 2025, parcours *Sciences des Données* à l'[Institut Agro Rennes – Département Mathématiques et Informatique](https://www.institut-agro-rennes-angers.fr/formation/ingenieurs/specialisations-dingenieur/sciences-des-donnees).
+### Programme de la journée
 
-## Programme de la journée
+Le programme complet, incluant les horaires de passages et les slides de chaque groupe, est consultable dans la rubrique [Programme](programme.qmd).
 
-Le programme complet, incluant les horaires et les productions de chaque groupe, est consultable dans la rubrique [Programme](programme.qmd).
+Tous les travaux des étudiants sont centralisés dans un dépôt [GitHub](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025). Chaque projet comprend le code, un document de synthèse et les diapositives de présentation, permettant de consulter, reproduire et approfondir les travaux présentés durant cette édition de l’école d’automne.
 
-## 📍 Informations pratiques
+### 📍 Informations pratiques
 
 Détails d’accès et plan disponibles dans la page [Infos pratiques](infos.qmd).
 

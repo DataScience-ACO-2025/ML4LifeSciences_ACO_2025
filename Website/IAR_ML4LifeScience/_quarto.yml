@@ -3,7 +3,7 @@ project:
   output-dir: ../../docs
 
 website:
-  title: "Journée Data Science – Institut Agro Rennes"
+  title: "École d’Automne Data Science – Institut Agro Rennes"
   description: "Présentation des projets Deep Learning des étudiants ingénieurs agronomes"
   navbar:
     logo: img/logo_ia_nb.png
