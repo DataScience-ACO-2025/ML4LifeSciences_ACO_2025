@@ -1,0 +1,134 @@
+/* css styles */
+/* ===========================================
+   Institut Agro Rennes – Charte graphique
+   =========================================== */
+
+/* --- Couleurs principales --- */
+/* Jaune principal */
+.color-primary { color: #f8ac00; }
+.bg-primary { background-color: #f8ac00; }
+
+/* Gris presque noir */
+.color-dark { color: #282929; }
+.bg-dark { background-color: #282929; }
+
+
+
+/* --- Couleurs secondaires --- */
+.color-pink { color: #f4a6b7; }
+.bg-pink { background-color: #f4a6b7; }
+
+.color-yellow { color: #feec2f; }
+.bg-yellow { background-color: #feec2f; }
+
+.color-green { color: #3fb498; }
+.bg-green { background-color: #3fb498; }
+
+.color-blue { color: #a1daf8; }
+.bg-blue { background-color: #a1daf8; }
+
+.color-purple { color: #ab93c5; }
+.bg-purple { background-color: #ab93c5; }
+
+/* --- Police --- */
+@font-face {
+  font-family: "Cocosharp";
+  src: url("fonts/Cocosharp-Regular.woff2") format("woff2"),
+       url("fonts/Cocosharp-Regular.woff") format("woff"),
+       url("fonts/Cocosharp-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cocosharp";
+  src: url("fonts/Cocosharp-Bold.woff2") format("woff2"),
+       url("fonts/Cocosharp-Bold.woff") format("woff"),
+       url("fonts/Cocosharp-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* --- Styles globaux --- */
+body .container, 
+body .container-fluid {
+  max-width: 100% !important;   /* supprime la largeur maximale */
+  padding-left: 0 !important;   /* supprime la marge intérieure gauche */
+  padding-right: 0 !important;  /* supprime la marge intérieure droite */
+}
+
+body {
+  font-family: "Cocosharp", Arial, sans-serif;
+  color: #282929;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cocosharp", Arial, sans-serif;
+  font-weight: bold;
+  color: #282929;
+}
+
+/* --- Liens --- */
+a {
+  color: #f8ac00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* --- Navigation et pied de page --- */
+.navbar, footer {
+  background-color: #f8ac00;
+  color: #282929;
+}
+
+.navbar a, footer a {
+  color: white;
+}
+
+.navbar img {
+  height: 95px; /* 25 mm */
+  margin-right: 10px;
+}
+.navbar a:hover, footer a:hover {
+  color: #f8ac00;
+}
+
+.photo-profil {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* rend l'image ronde */
+  object-fit: cover;  /* recadre l'image sans déformation */
+  margin-bottom: 0.5rem;
+  border: 2px solid #282929; /* optionnel : contour */
+}
+
+/* --- header statique --- */
+
+
+.header-banner {
+  width: 100%;
+  background-color: #f8ac00; /* couleur de ta charte */
+  color: #282929;
+  text-align: center;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  font-family: "Cocosharp", Arial, sans-serif;
+}
+
+.header-banner h1, .header-banner h2, .header-banner h3 {
+  margin: 0.2rem 0;
+}
+.header-banner {
+  width: 100%;
+  background: linear-gradient(rgba(248, 172, 0, 0.85), rgba(248, 172, 0, 0.85)),
+              url("img/img-masure.jpg") center/cover no-repeat;
+  color: #282929;
+  text-align: center;
+  padding: 2.5rem 0;
+  margin-bottom: 2rem;
+}

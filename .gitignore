@@ -112,3 +112,4 @@ slides/.cache/
 *.crt
 *.env
 secrets/
+.Rproj.user
