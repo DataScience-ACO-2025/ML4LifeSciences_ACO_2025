@@ -1,0 +1,34 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Journée Data Science – Institut Agro Rennes"
+  description: "Présentation des projets Deep Learning des étudiants ingénieurs agronomes"
+  navbar:
+    logo: img/logo_ia_nb.png
+    right:
+      - text: "Accueil"
+        href: index.qmd
+      - text: "Programme"
+        href: programme.qmd
+      - text: "Infos pratiques"
+        href: infos.qmd
+      - text: "À propos"
+        href: about.qmd
+  page-footer:
+    left: "© Institut Agro Rennes – Formation Data Science"
+    right: 
+      - text: "Contact"
+        href: "mailto:contact@institut-agro-rennes.fr"
+format:
+  html:
+    theme: 
+      light: default
+    css: styles.css
+    toc: true
+    smooth-scroll: true
+    code-fold: true
+
+
+

@@ -1,0 +1,30 @@
+---
+title: "Infos pratiques"
+editor: visual
+---
+
+
+### Horaires : 
+
+9h00 – 17h30
+
+
+### Lieu 
+
+[Institut Agro Rennes 65 Rue de Saint-Brieuc, 35042 Rennes.](https://maps.app.goo.gl/rpyS8aUX8sGbn3vu9)
+
+
+```{r}
+library(leaflet)
+
+leaflet() %>%  addTiles() %>%    addMarkers( lat=48.11349, lng=-1.70613, popup="Institut Agro Rennes")
+```
+
+
+### Détails d’accès et plan 
+
+**Amphi Paul Matagrin** (Bâtiment N°5)
+
+![](img/plan_IAR.png)
+
+

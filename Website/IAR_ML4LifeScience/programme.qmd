@@ -1,0 +1,16 @@
+---
+title: "Programme"
+listing:
+  id: projets_etudiants
+  contents: projets
+  sort-ui: [description]
+  type: default
+  fields: [image, date, title, author, description]
+---
+
+You can review the following documents for additional information:
+
+::: {#projets_etudiants}
+:::
+
+
