@@ -3,16 +3,15 @@ title: "Infos pratiques"
 editor: visual
 ---
 
+### Horaires :
 
-### Horaires : 
+**vendredi 21 novembre 2025** entre **13h30** et **16h30**
 
-9h00 – 17h30
-
-
-### Lieu 
+### Lieu
 
 [Institut Agro Rennes 65 Rue de Saint-Brieuc, 35042 Rennes.](https://maps.app.goo.gl/rpyS8aUX8sGbn3vu9)
 
+Salle **5ème année** du **Bâtiment 24**
 
 ```{r}
 library(leaflet)
@@ -20,11 +19,8 @@ library(leaflet)
 leaflet() %>%  addTiles() %>%    addMarkers( lat=48.11349, lng=-1.70613, popup="Institut Agro Rennes")
 ```
 
-
-### Détails d’accès et plan 
+### Détails d’accès et plan
 
 **Amphi Paul Matagrin** (Bâtiment N°5)
 
 ![](img/plan_IAR.png)
-
-

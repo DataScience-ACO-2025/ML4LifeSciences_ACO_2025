@@ -1,6 +1,8 @@
 project:
   type: website
-  output-dir: ../../docs
+  output-dir : docs  
+  ## output-dir: ../../docs 
+   
 
 website:
   title: "École d’Automne Data Science – Institut Agro Rennes"
