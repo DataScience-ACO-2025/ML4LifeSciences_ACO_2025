@@ -9,7 +9,6 @@ listing:
   fields: [image, date, title, author, description]
 ---
 
-You can review the following documents for additional information:
 
 ::: {#projets_etudiants}
 :::

@@ -5,6 +5,7 @@ editor: visual
 
 ### Horaires :
 
+<<<<<<< Updated upstream
 **vendredi 21 novembre 2025** entre **13h30** et **16h30**
 
 ### Lieu
@@ -14,13 +15,60 @@ editor: visual
 Salle **5ème année** du **Bâtiment 24**
 
 ```{r}
+=======
+Vendredi 21 novembre 2025 entre 13h30 et 16h30.
+
+### Lieu
+
+[Salle 5ème année du Bâtiment 24 de l'Institut Agro Rennes-Angers (Campus de Rennes)](https://maps.app.goo.gl/rpyS8aUX8sGbn3vu9)
+
+```{r, echo=FALSE, warning=FALSE}
+>>>>>>> Stashed changes
 library(leaflet)
 
 leaflet() %>%  addTiles() %>%    addMarkers( lat=48.11349, lng=-1.70613, popup="Institut Agro Rennes")
 ```
 
+<<<<<<< Updated upstream
 ### Détails d’accès et plan
 
 **Amphi Paul Matagrin** (Bâtiment N°5)
 
 ![](img/plan_IAR.png)
+=======
+### Plan
+
+![](img/plan_IAR.png)
+
+### Les acteurs de la conférence
+
+-   **Encadrants pédagogiques :**
+
+::::: columns
+::: {.column width="50%"}
+<img src="/img/mathieux.jpg" alt="Mathieu Emily" class="photo-profil"/> [Mathieu Emily](https://emily.perso.math.cnrs.fr/Homepage/index.htm)
+
+-   Professeur titulaire de statistique et responsable du département de recherche en statistique.
+
+-   Laboratoire : [Département statistique](https://math.institut-agro-rennes-angers.fr/fr), [IRMAR](https://irmar.univ-rennes.fr/) (UMR CNRS 6625)
+
+-   Contact : mathieu.emily\@agrocampus-ouest.fr
+:::
+
+::: {.column width="50%"}
+<img src="/img/laetitia.jpg" alt="Laetitia Chapel" class="photo-profil"/> [Laetitia Chapel](https://people.irisa.fr/Laetitia.Chapel/)
+
+-   Professeure titulaire en Computeur Science et chercheuse.
+
+-   Laboratoire : Équipe [OBELIX](https://www-obelix.irisa.fr/), [IRISA](https://www.irisa.fr/) (UMR CNRS 6074)
+
+-   Contact : laetitia.chapel\@agrocampus-ouest.fr
+:::
+:::::
+
+<br>
+
+-   **Étudiants participants :**
+
+Les étudiants de la promotion 2025 du parcours **Sciences des Données** sont présentés dans la rubrique [À propos](about.qmd) du site, avec leurs photos, noms et liens vers GitHub et LinkedIn. <br>
+>>>>>>> Stashed changes

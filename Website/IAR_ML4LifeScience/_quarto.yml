@@ -16,8 +16,6 @@ website:
         href: programme.qmd
       - text: "Infos pratiques"
         href: infos.qmd
-      - text: "À propos"
-        href: about.qmd
   page-footer:
     left: "© Institut Agro Rennes – Formation Data Science"
     right: 

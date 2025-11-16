@@ -11,24 +11,24 @@ links:
       href: https://github.com
 ---
 
-
-:::: {.columns}
-
+:::::: columns
 ::: {.column width="35%"}
 ![](img/logo_ia_marine.png){.logo alt="Logo Institut Agro Rennes Angers"}
-
 :::
-::: {.column width="5%"}
 
+::: {.column width="5%"}
 :::
 
 ::: {.column width="60%"}
 ![](img/img-masure.jpg){alt="Image de l'Institut Agro Rennes Angers"}
 :::
+::::::
 
-::::
+## Edition 2025 : Ecole d'automne
 
+**Pour cette 3ème édition, la conférence prend le format d'une école d'automne.**
 
+<<<<<<< Updated upstream
 ## Edition 2025 : Ecole d'automne
 
 Pour cette 3ème édition, la conférence prend le format d'une **école d'automne** et est organisée entièrement par les étudiants de **Master 2 – spécialisation Sciences des Données**. Nous explorons les apports du Machine Learning à la compréhension, la modélisation et la prédiction dans le champ du vivant : agriculture, environnement, écologie, santé ou biotechnologies.
@@ -77,6 +77,19 @@ C’est l’occasion de découvrir des méthodes modernes de Machine Learning et
 
 Les étudiants de la promotion 2025 du parcours **Sciences des Données** sont présentés dans la rubrique [À propos](about.qmd) du site, avec leurs photos, noms et liens vers GitHub et LinkedIn.
 <br>
+=======
+Organisée par les étudiants de Master 2 et les élèves ingénieurs en spécialisation Sciences des Données, cette école d’automne annuelle est un rendez-vous incontournable !
+
+Elle s’inscrit dans le cadre de l’évaluation des modules **Machine Learning** et **Computer Science for Big Data Approaches**, et permet aux étudiants de restituer leurs projets sous forme de mini‑cours.
+
+C’est l’occasion de mettre à l’honneur les travaux des étudiants et de découvrir des approches modernes de Machine Learning et de Deep Learning appliquées aux problématiques des sciences du vivant.
+
+### Thème 2025
+
+Pour cette **3ᵉ édition**, nous explorons les apports du Machine Learning à la compréhension, la modélisation et la prédiction dans le champ du vivant : agriculture, environnement, écologie, santé ou biotechnologies.
+
+Les étudiants présenteront des projets originaux illustrant la diversité des approches possibles et l’impact concret de telles applications.
+>>>>>>> Stashed changes
 
 
 ### Programme de la journée
@@ -89,9 +102,6 @@ Tous les travaux des étudiants sont centralisés dans un dépôt [GitHub](https
 
 Détails d’accès et plan disponibles dans la page [Infos pratiques](infos.qmd).
 
-Lieu : Institut Agro Rennes, Amphi Matagrin
+Lieu : Salle 5ème année du Bâtiment 24 de l'Institut Agro Rennes-Angers (Campus de Rennes)
 
-Horaires : 9h00 – 17h30.  
-
-
-
+Horaires : Vendredi 21 novembre 2025 entre 13h30 et 16h30.
