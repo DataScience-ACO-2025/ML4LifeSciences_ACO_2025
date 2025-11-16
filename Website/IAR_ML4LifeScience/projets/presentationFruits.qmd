@@ -1,7 +1,7 @@
 ---
-title: "Classification d'images - une séparation entre R et Python"
+title: "Classification d'images - une comparaison entre R et Python"
 subtitle: "heure - passage"
-description: "Comparaison méthologiques de l'utilisation de Keras sur R et Python et Pytorch sur Python dans le cadre d'une classification d'images à 2 classes et à k > 2 classes"
+description: "Comparaison méthologiques de l'utilisation de Keras sur R et Python et Pytorch sur Python dans le cadre d'une classification d'images à 2 classes"
 author:
   - name: "Clément Melina"
     affiliation: "Institut Agro Rennes"
