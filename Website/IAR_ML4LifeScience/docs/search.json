@@ -4,7 +4,7 @@
     "href": "programme.html",
     "title": "Programme",
     "section": "",
-    "text": "You can review the following documents for additional information:\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Description\n        \n     \n  \n\n\n\n\n  \n\n\n\n\nCrop Type Classification\n\n\n9h30 - 10h\n\n\nMapping crop types at the pixel level using multispectral satellite image time series with a hybrid CNN + U-Net approach.\n\n\n\n\n\n\nNov 9, 2025\n\n\nPlacier Moïse, Dupont Claire\n\n\n\n\n\n\n  \n\n\n\n\nTitre du projet\n\n\nheure - passage\n\n\npetite description\n\n\n\n\n\n\nNov 21, 2025\n\n\nNom Prenom, Nom Prenom, Nom Prenom\n\n\n\n\n\n\n  \n\n\n\n\ncancer prediction\n\n\n10h - 10h30\n\n\nPrediction of cancer via deep learning and computer vision\n\n\n\n\n\n\nNov 9, 2025\n\n\nCamille haar, Dupont Claire\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Description\n        \n     \n  \n\n\n\n\n\n\n\n\n\n\nApport d’un modèle Bayésien lors de l’utilisation de réseaux de neuronnes pour la classification d’images\n\n\nheure - passage\n\n\nComparaison de 2 ‘versions’ du modèle AlexNet pour la classification d’images, exemple sur un jeu d’images d’insectes\n\n\n\n\n\nNov 21, 2025\n\n\nRoattino Thibault, Belle Louis, Rosa Matéo\n\n\n\n\n\n\n\n\n\n\n\n\nClassification d’images - une séparation entre R et Python\n\n\nheure - passage\n\n\nComparaison méthologiques de l’utilisation de Keras sur R et Python et Pytorch sur Python dans le cadre d’une classification d’images à 2 classes et à k &gt; 2 classes\n\n\n\n\n\nNov 21, 2025\n\n\nClément Melina, Le Moan Delalande Riwal, Mathieu Anna\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Meow\n\n\nheure - passage\n\n\nLabellisation de signaux audio de miaulement de chat\n\n\n\n\n\nNov 21, 2025\n\n\nAntier Augustin, Causeur Léna, Prusiewicz-Blondin Louis\n\n\n\n\n\n\n\n\n\n\n\n\nLe Machine Learning dans l’agriculture\n\n\nheure - passage\n\n\n\n\n\n\n\n\nNov 21, 2025\n\n\nLefèvre Vadim, Naux Emilie, Julliard Valentine\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projets/Projet_exemple.html",
@@ -158,7 +158,7 @@
     "href": "infos.html",
     "title": "Infos pratiques",
     "section": "",
-    "text": "Horaires :\nvendredi 21 novembre 2025 entre 13h30 et 16h30\n\n\nLieu\nInstitut Agro Rennes 65 Rue de Saint-Brieuc, 35042 Rennes.\nSalle 5ème année du Bâtiment 24\n\n\nCode\nlibrary(leaflet)\n\nleaflet() %&gt;%  addTiles() %&gt;%    addMarkers( lat=48.11349, lng=-1.70613, popup=\"Institut Agro Rennes\")\n\n\n\n\n\n\n\n\nDétails d’accès et plan\nAmphi Paul Matagrin (Bâtiment N°5)"
+    "text": "Horaires :\nvendredi 21 novembre 2025 entre 13h30 et 16h30\n\n\nLieu\nSalle 5ème année du Bâtiment 24\nInstitut Agro Rennes 65 Rue de Saint-Brieuc, 35042 Rennes.\n\n\nPlan d’accès"
   },
   {
     "objectID": "index.html#présentation-de-lécole-dautomne",
@@ -172,6 +172,132 @@
     "href": "index.html#edition-2025-ecole-dautomne",
     "title": "3ᵉ édition de la conférence de Machine Learning en Sciences du Vivant",
     "section": "Edition 2025 : Ecole d’automne",
-    "text": "Edition 2025 : Ecole d’automne\nPour cette 3ème édition, la conférence prend le format d’une école d’automne et est organisée entièrement par les étudiants de Master 2 – spécialisation Sciences des Données.\nElle s’inscrit dans le cadre de l’évaluation des modules Machine Learning et Computer Science for Big Data Approaches, et permet aux étudiants de restituer leurs projets sous forme de mini‑cours.\nC’est l’occasion de mettre à l’honneur les travaux des étudiants et de découvrir des approches modernes de Machine Learning et de Deep Learning appliquées aux problématiques des sciences du vivant.\nPour cette 3ᵉ édition, nous explorons les apports du Machine Learning à la compréhension, la modélisation et la prédiction dans le champ du vivant : agriculture, environnement, écologie, santé ou biotechnologies.\nLes étudiants présenteront des projets originaux illustrant la diversité des approches possibles et l’impact concret de telles applications.\n\nLes acteurs de la conférence\n\nEncadrants pédagogiques :\n\n\n\n Mathieu Emily\n\nProfesseur titulaire de statistique et responsable du département de recherche en statistique.\nLaboratoire : Département statistique, IRMAR (UMR CNRS 6625)\nContact : mathieu.emily@agrocampus-ouest.fr\n\n\n Laetitia Chapel\n\nProfesseure titulaire en Computeur Science et chercheuse.\nLaboratoire : Équipe OBELIX, IRISA (UMR CNRS 6074)\nContact : laetitia.chapel@agrocampus-ouest.fr\n\n\n\n\n\nÉtudiants participants :\n\nLes étudiants de la promotion 2025 du parcours Sciences des Données sont présentés dans la rubrique À propos du site, avec leurs photos, noms et liens vers GitHub et LinkedIn. \n\n\nProgramme de la journée\nLe programme complet, incluant les horaires de passages et les slides de chaque groupe, est consultable dans la rubrique Programme.\nTous les travaux des étudiants sont centralisés dans un dépôt GitHub. Chaque projet comprend le code, un document de synthèse et les diapositives de présentation, permettant de consulter, reproduire et approfondir les travaux présentés durant cette édition de l’école d’automne.\n\n\n📍 Informations pratiques\nDétails d’accès et plan disponibles dans la page Infos pratiques.\nLieu : Institut Agro Rennes, Amphi Matagrin\nHoraires : 9h00 – 17h30."
+    "text": "Edition 2025 : Ecole d’automne\nPour cette 3ème édition, la conférence prend le format d’une école d’automne.\nOrganisée par les étudiants de Master 2 et les élèves ingénieurs en spécialisation Sciences des Données, cette école d’automne annuelle est un rendez-vous incontournable !\nElle s’inscrit dans le cadre de l’évaluation des modules Machine Learning et Computer Science for Big Data Approaches, et permet aux étudiants de restituer leurs projets sous forme de mini‑cours.\nC’est l’occasion de mettre à l’honneur les travaux des étudiants et de découvrir des approches modernes de Machine Learning et de Deep Learning appliquées aux problématiques des sciences du vivant.\n\nThème 2025\nPour cette 3ᵉ édition, nous explorons les apports du Machine Learning à la compréhension, la modélisation et la prédiction dans le champ du vivant : agriculture, environnement, écologie, santé ou biotechnologies.\nLes étudiants présenteront des projets originaux illustrant la diversité des approches possibles et l’impact concret de telles applications.\n\n\nProgramme de la journée\nLe programme complet, incluant les horaires de passages et les slides de chaque groupe, est consultable dans la rubrique Programme.\nTous les travaux des étudiants sont centralisés dans un dépôt GitHub. Chaque projet comprend le code, un document de synthèse et les diapositives de présentation, permettant de consulter, reproduire et approfondir les travaux présentés durant cette édition de l’école d’automne.\n\n\n📍 Informations pratiques\nDétails d’accès et plan disponibles dans la page Infos pratiques.\nLieu : Salle 5ème année du Bâtiment 24 de l’Institut Agro Rennes-Angers (Campus de Rennes)\nHoraires : Vendredi 21 novembre 2025 entre 13h30 et 16h30."
+  },
+  {
+    "objectID": "projets/projets_val.html",
+    "href": "projets/projets_val.html",
+    "title": "Le Machine Learning dans l’agriculture",
+    "section": "",
+    "text": "Github"
+  },
+  {
+    "objectID": "projets/projets_val.html#lien-vers-le-code-github",
+    "href": "projets/projets_val.html#lien-vers-le-code-github",
+    "title": "Le Machine Learning dans l’agriculture",
+    "section": "",
+    "text": "Github"
+  },
+  {
+    "objectID": "projets/projets_val.html#lien-vers-les-slides",
+    "href": "projets/projets_val.html#lien-vers-les-slides",
+    "title": "Le Machine Learning dans l’agriculture",
+    "section": "Lien vers les slides",
+    "text": "Lien vers les slides\n\nSlides"
+  },
+  {
+    "objectID": "projets/projets_val.html#description-projet",
+    "href": "projets/projets_val.html#description-projet",
+    "title": "Le Machine Learning dans l’agriculture",
+    "section": "description Projet",
+    "text": "description Projet\nNotre projet vise à optimiser l’irrigation de plants de tomates grâce à un agent d’apprentissage par renforcement apprenant à décider de la quantité d’eau à fournir. Nous avons construit un environnement simulant l’évolution de l’humidité du sol et du rendement, puis entraîné un agent à arroser les plants pour maximiser la production tout en réduisant la consommation d’eau. L’objectif est de proposer une stratégie d’irrigation efficace et durable qui peut s’adapter à différentes conditions observées."
+  },
+  {
+    "objectID": "projets/presentationFruits.html",
+    "href": "projets/presentationFruits.html",
+    "title": "Classification d’images - une séparation entre R et Python",
+    "section": "",
+    "text": "Github"
+  },
+  {
+    "objectID": "projets/presentationFruits.html#lien-vers-le-code-github",
+    "href": "projets/presentationFruits.html#lien-vers-le-code-github",
+    "title": "Classification d’images - une séparation entre R et Python",
+    "section": "",
+    "text": "Github"
+  },
+  {
+    "objectID": "projets/presentationFruits.html#lien-vers-les-slides",
+    "href": "projets/presentationFruits.html#lien-vers-les-slides",
+    "title": "Classification d’images - une séparation entre R et Python",
+    "section": "Lien vers les slides",
+    "text": "Lien vers les slides\n\nSlides"
+  },
+  {
+    "objectID": "projets/presentationFruits.html#description-projet",
+    "href": "projets/presentationFruits.html#description-projet",
+    "title": "Classification d’images - une séparation entre R et Python",
+    "section": "description Projet",
+    "text": "description Projet\nLes disciplines de machine learning et de deep learning se pratiquent essentiellement avec le langage Python, langage de programmation le plus demandé par les recruteurs de la Data Science en 2021 (KDnuggets). Or, le langage de programmation Open Source R est celui que nous utilisons le plus pour programmer.\nAinsi, nous nous sommes donné le challenge suivant : construire un modèle de deep learning en langage R.\nNous nous sommes demandé : Comment un même projet de deep learning peut-il être abordé différemment selon l’outil utilisé ? Quels sont les avantages et limites de R Keras, Python Keras et PyTorch pour construire, entraîner et exploiter un modèle ?\nNotre exemple se place dans le cadre d’une classification de fruits pourris ou frais."
+  },
+  {
+    "objectID": "projets/presentation_projet_CNN-BNN_insects.html",
+    "href": "projets/presentation_projet_CNN-BNN_insects.html",
+    "title": "Apport d’un modèle Bayésien lors de l’utilisation de réseaux de neuronnes pour la classification d’images",
+    "section": "",
+    "text": "Github"
+  },
+  {
+    "objectID": "projets/presentation_projet_CNN-BNN_insects.html#lien-vers-le-code-github",
+    "href": "projets/presentation_projet_CNN-BNN_insects.html#lien-vers-le-code-github",
+    "title": "Apport d’un modèle Bayésien lors de l’utilisation de réseaux de neuronnes pour la classification d’images",
+    "section": "",
+    "text": "Github"
+  },
+  {
+    "objectID": "projets/presentation_projet_CNN-BNN_insects.html#lien-vers-les-slides",
+    "href": "projets/presentation_projet_CNN-BNN_insects.html#lien-vers-les-slides",
+    "title": "Apport d’un modèle Bayésien lors de l’utilisation de réseaux de neuronnes pour la classification d’images",
+    "section": "Lien vers les slides",
+    "text": "Lien vers les slides\n\nSlides"
+  },
+  {
+    "objectID": "projets/presentation_projet_CNN-BNN_insects.html#description-projet",
+    "href": "projets/presentation_projet_CNN-BNN_insects.html#description-projet",
+    "title": "Apport d’un modèle Bayésien lors de l’utilisation de réseaux de neuronnes pour la classification d’images",
+    "section": "Description Projet",
+    "text": "Description Projet\nNotre projet s’axe sur des problématiques d’apprentissage profond via réseaux de neuronnes, dans le cadre de la reconnaissance d’images. Il a pour but l’évaluation de l’apport d’un modèle comportant des composantes bayésiennes par rapport à un modèle purement fréquentiste. En comparant les 2 modèles du point de vue de l’acuracy en fonction des ressources demandées (nombre d’image dans le jeu de donnée, temps d’entrainement du modèle, ressource GPU, …) nous pourrons alors déterminer dans quels cas il est préférable d’utiliser l’une des 2 méthodes.\nEn terme de donnée, nous avons trouvé un jeu de donnée “Insect_Detect_classification_v2” contenant des images d’insectes de basse qualité (70x70) répartie dans 27 classes.\nPour effectuer cette démarche, le choix du modèle de CNN s’est d’abord imposé. Notre réflexion s’est portée autour 3 modèles connus et éprouvés : AlexNet, VGGNet et ResNet. Ces 3 modèles ont été entrainé avec les data d’“ImageNet”, banque de plus de 14 millions d’images annotées à la main(1.2M à l’époque). La simplicité de manipulation du modèle ainsi que sa clarté ont été les principaux éléments de décisions qui nous a poussé à utiliser AlexNet, qui fait figure de basique du genre. En effet, ce modèle contient 8 couches : 5 convolutionnelles (+ 3 max-pooling) et 3 couches denses.\nNous possédons des ressources limitées, et avons donc fait le choix de prendre le modèle AlexNet déjà pré-entrainé (en conservant les poids optenu à la suite de son entrainement sur ImageNet) et de le fine-tuner pour nos données.\nAinsi, reste le problème du modèle bayésien. Au cours de nos recherches, nous avons découvert un package permettant de fine-tuner AlexNet en remplacant les couches convolutionnelles et linéaires classiques, qui renvoient des poids w fixe, en couches bayésiennes qui renvoient une distriution de poids w.\nL’objectif est alors de comprendre ce package, réussir à le faire fonctionner correctement pour notre problématique, et l’optimiser au possible avec nos ressources disponibles."
+  },
+  {
+    "objectID": "projets/Projet_DeepMeow.html",
+    "href": "projets/Projet_DeepMeow.html",
+    "title": "Deep Meow",
+    "section": "",
+    "text": "Github"
+  },
+  {
+    "objectID": "projets/Projet_DeepMeow.html#lien-vers-le-code-github",
+    "href": "projets/Projet_DeepMeow.html#lien-vers-le-code-github",
+    "title": "Deep Meow",
+    "section": "",
+    "text": "Github"
+  },
+  {
+    "objectID": "projets/Projet_DeepMeow.html#lien-vers-les-slides",
+    "href": "projets/Projet_DeepMeow.html#lien-vers-les-slides",
+    "title": "Deep Meow",
+    "section": "Lien vers les slides",
+    "text": "Lien vers les slides\n\nSlides"
+  },
+  {
+    "objectID": "projets/Projet_DeepMeow.html#contexte",
+    "href": "projets/Projet_DeepMeow.html#contexte",
+    "title": "Deep Meow",
+    "section": "Contexte :",
+    "text": "Contexte :\nLa labellisation d’audio est une méthode fortement utilisée en machine learning, en agronomie, en sociologie, musique, etc… Nous proposons donc de présenter une démarche de traitement de signaux audio et de labellisation de ces signaux."
+  },
+  {
+    "objectID": "projets/Projet_DeepMeow.html#notre-jeu-de-données",
+    "href": "projets/Projet_DeepMeow.html#notre-jeu-de-données",
+    "title": "Deep Meow",
+    "section": "Notre jeu de données :",
+    "text": "Notre jeu de données :\nNotre exemple sera la labellisation d’audio de chat. Le jeu de données comprend 440 audios au format .WAV. Chaque audio étant un miaulement de chat. Les chats sont enregistrés dans différentes situations (En train d’être brossé, attendant de la nourriture, isolement dans un espace inconnu). Le but ici est de déterminer le contexte d’émission d’un miaulement."
+  },
+  {
+    "objectID": "projets/Projet_DeepMeow.html#points-abordés",
+    "href": "projets/Projet_DeepMeow.html#points-abordés",
+    "title": "Deep Meow",
+    "section": "Points abordés :",
+    "text": "Points abordés :\n\nPreprocessing sur des données audios\nExtraction de features via un réseau de neurones et des couches convolutionnelles"
   }
 ]

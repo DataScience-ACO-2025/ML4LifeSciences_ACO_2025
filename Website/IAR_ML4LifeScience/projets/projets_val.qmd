@@ -1,0 +1,31 @@
+---
+title: "Le Machine Learning dans l'agriculture"
+subtitle: "heure - passage"
+description: ""
+author:
+  - name: "Lefèvre Vadim"
+    affiliation: "Institut Agro Rennes"
+  - name: "Naux Emilie"
+    affiliation: "Institut Agro Rennes"
+  - name: "Julliard Valentine"
+    affiliation: "Institut Agro Rennes"
+
+date: 2025-11-21 
+image: ../img_projets/rev_tec.jpg
+listing:
+  id: projets
+---
+
+## Lien vers le code github 
+
+- [Github](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025)
+
+## Lien vers les slides
+
+- [Slides](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025)
+
+## description Projet
+Notre projet vise à optimiser l’irrigation de plants de tomates grâce à un agent d’apprentissage par renforcement apprenant à décider de la quantité d’eau à fournir.
+Nous avons construit un environnement simulant l’évolution de l’humidité du sol et du rendement, puis entraîné un agent à arroser les plants pour maximiser la production tout en réduisant la consommation d’eau.
+L’objectif est de proposer une stratégie d’irrigation efficace et durable qui peut s'adapter à différentes conditions observées. 
+

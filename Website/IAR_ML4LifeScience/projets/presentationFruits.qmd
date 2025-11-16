@@ -1,0 +1,40 @@
+---
+title: "Classification d'images - une séparation entre R et Python"
+subtitle: "heure - passage"
+description: "Comparaison méthologiques de l'utilisation de Keras sur R et Python et Pytorch sur Python dans le cadre d'une classification d'images à 2 classes et à k > 2 classes"
+author:
+  - name: "Clément Melina"
+    affiliation: "Institut Agro Rennes"
+  - name: "Le Moan Delalande Riwal"
+    affiliation: "Institut Agro Rennes"
+  - name: "Mathieu Anna" 
+    affiliation: "Institut Agro Rennes"
+
+date: 2025-11-21 
+image: ../img_projets/exemple.png 
+listing:
+  id: projets
+---
+
+## Lien vers le code github 
+
+- [Github](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025)
+
+## Lien vers les slides
+
+- [Slides](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025)
+
+## description Projet
+
+Les disciplines de machine learning et de deep learning se pratiquent essentiellement avec le langage Python, langage de programmation le plus demandé par les recruteurs de la Data Science en 2021 (KDnuggets). Or, le langage de programmation Open Source R est celui que nous utilisons le plus pour programmer. 
+
+Ainsi, nous nous sommes donné le challenge suivant : construire un modèle de deep learning en langage R. 
+
+Nous nous sommes demandé : Comment un même projet de deep learning peut-il être abordé différemment selon l’outil utilisé ? Quels sont les avantages et limites de R Keras, Python Keras et PyTorch pour construire, entraîner et exploiter un modèle ?
+
+Notre exemple se place dans le cadre d'une classification de fruits pourris ou frais. 
+
+
+
+
+

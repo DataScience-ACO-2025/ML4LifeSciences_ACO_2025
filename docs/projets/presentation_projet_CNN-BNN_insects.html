@@ -6,8 +6,13 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Roattino Thibault">
+<meta name="author" content="Belle Louis">
+<meta name="author" content="Rosa Matéo">
+<meta name="dcterms.date" content="2025-11-21">
+<meta name="description" content="Comparaison de 2 ‘versions’ du modèle AlexNet pour la classification d’images, exemple sur un jeu d’images d’insectes">
 
-<title>3ᵉ édition de la conférence de Machine Learning en Sciences du Vivant – École d’Automne Data Science – Institut Agro Rennes</title>
+<title>Apport d’un modèle Bayésien lors de l’utilisation de réseaux de neuronnes pour la classification d’images – École d’Automne Data Science – Institut Agro Rennes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +28,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -66,23 +73,81 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-projets .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-projets'] = new List('listing-projets', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./img/logo_ia_nb.png" alt="" class="navbar-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../img/logo_ia_nb.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">École d’Automne Data Science – Institut Agro Rennes</span>
     </a>
   </div>
@@ -93,15 +158,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./programme.html"> 
+    <a class="nav-link" href="../programme.html"> 
 <span class="menu-text">Programme</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./infos.html"> 
+    <a class="nav-link" href="../infos.html"> 
 <span class="menu-text">Infos pratiques</span></a>
   </li>  
 </ul>
@@ -115,20 +180,71 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lien-vers-le-code-github" id="toc-lien-vers-le-code-github" class="nav-link active" data-scroll-target="#lien-vers-le-code-github">Lien vers le code github</a></li>
+  <li><a href="#lien-vers-les-slides" id="toc-lien-vers-les-slides" class="nav-link" data-scroll-target="#lien-vers-les-slides">Lien vers les slides</a></li>
+  <li><a href="#description-projet" id="toc-description-projet" class="nav-link" data-scroll-target="#description-projet">Description Projet</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">3ᵉ édition de la conférence de Machine Learning en Sciences du Vivant</h1>
+<h1 class="title">Apport d’un modèle Bayésien lors de l’utilisation de réseaux de neuronnes pour la classification d’images</h1>
+<p class="subtitle lead">heure - passage</p>
 </div>
 
+<div>
+  <div class="description">
+    Comparaison de 2 ‘versions’ du modèle AlexNet pour la classification d’images, exemple sur un jeu d’images d’insectes
+  </div>
+</div>
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Roattino Thibault </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Institut Agro Rennes
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Belle Louis </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Institut Agro Rennes
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Rosa Matéo </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Institut Agro Rennes
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 21, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -138,42 +254,206 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="columns">
-<div class="column" style="width:35%;">
-<p><img src="img/logo_ia_marine.png" class="logo img-fluid" alt="Logo Institut Agro Rennes Angers"></p>
-</div><div class="column" style="width:5%;">
+<section id="lien-vers-le-code-github" class="level2">
+<h2 class="anchored" data-anchor-id="lien-vers-le-code-github">Lien vers le code github</h2>
+<ul>
+<li><a href="https://github.com/BelloW34/BNN_insect">Github</a></li>
+</ul>
+</section>
+<section id="lien-vers-les-slides" class="level2">
+<h2 class="anchored" data-anchor-id="lien-vers-les-slides">Lien vers les slides</h2>
+<ul>
+<li><a href="https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025">Slides</a></li>
+</ul>
+</section>
+<section id="description-projet" class="level2">
+<h2 class="anchored" data-anchor-id="description-projet">Description Projet</h2>
+<p>Notre projet s’axe sur des problématiques d’apprentissage profond via réseaux de neuronnes, dans le cadre de la reconnaissance d’images. Il a pour but l’évaluation de l’apport d’un modèle comportant des composantes bayésiennes par rapport à un modèle purement fréquentiste. En comparant les 2 modèles du point de vue de l’acuracy en fonction des ressources demandées (nombre d’image dans le jeu de donnée, temps d’entrainement du modèle, ressource GPU, …) nous pourrons alors déterminer dans quels cas il est préférable d’utiliser l’une des 2 méthodes.</p>
+<p>En terme de donnée, nous avons trouvé un jeu de donnée “Insect_Detect_classification_v2” contenant des images d’insectes de basse qualité (70x70) répartie dans 27 classes.</p>
+<p>Pour effectuer cette démarche, le choix du modèle de CNN s’est d’abord imposé. Notre réflexion s’est portée autour 3 modèles connus et éprouvés : AlexNet, VGGNet et ResNet. Ces 3 modèles ont été entrainé avec les data d’“ImageNet”, banque de plus de 14 millions d’images annotées à la main(1.2M à l’époque). La simplicité de manipulation du modèle ainsi que sa clarté ont été les principaux éléments de décisions qui nous a poussé à utiliser AlexNet, qui fait figure de basique du genre. En effet, ce modèle contient 8 couches : 5 convolutionnelles (+ 3 max-pooling) et 3 couches denses.</p>
+<p>Nous possédons des ressources limitées, et avons donc fait le choix de prendre le modèle AlexNet déjà pré-entrainé (en conservant les poids optenu à la suite de son entrainement sur ImageNet) et de le fine-tuner pour nos données.</p>
+<p>Ainsi, reste le problème du modèle bayésien. Au cours de nos recherches, nous avons découvert un package permettant de fine-tuner AlexNet en remplacant les couches convolutionnelles et linéaires classiques, qui renvoient des poids w fixe, en couches bayésiennes qui renvoient une distriution de poids w.</p>
+<p>L’objectif est alors de comprendre ce package, réussir à le faire fonctionner correctement pour notre problématique, et l’optimiser au possible avec nos ressources disponibles.</p>
 
-</div><div class="column" style="width:60%;">
-<p><img src="img/img-masure.jpg" class="img-fluid" alt="Image de l'Institut Agro Rennes Angers"></p>
+
+
+</section>
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-projets">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1763679600000" data-listing-file-modified-sort="1763148590186" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="130">
+<div class="thumbnail">
+<p><a href="../projets/presentationFruits.html" class="no-external"></a></p><a href="../projets/presentationFruits.html" class="no-external">
+<p><img loading="lazy" src="../img_projets/exemple.png" class="thumbnail-image"></p>
+</a><p><a href="../projets/presentationFruits.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../projets/presentationFruits.html" class="no-external">Classification d’images - une séparation entre R et Python</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../projets/presentationFruits.html" class="no-external">heure - passage</a>
+</div>
+<div class="listing-description">
+<a href="../projets/presentationFruits.html" class="no-external">Comparaison méthologiques de l’utilisation de Keras sur R et Python et Pytorch sur Python dans le cadre d’une classification d’images à 2 classes et à k &gt; 2 classes</a>
 </div>
 </div>
-<section id="edition-2025-ecole-dautomne" class="level2">
-<h2 class="anchored" data-anchor-id="edition-2025-ecole-dautomne">Edition 2025 : Ecole d’automne</h2>
-<p><strong>Pour cette 3ème édition, la conférence prend le format d’une école d’automne.</strong></p>
-<p>Organisée par les étudiants de Master 2 et les élèves ingénieurs en spécialisation Sciences des Données, cette école d’automne annuelle est un rendez-vous incontournable !</p>
-<p>Elle s’inscrit dans le cadre de l’évaluation des modules <strong>Machine Learning</strong> et <strong>Computer Science for Big Data Approaches</strong>, et permet aux étudiants de restituer leurs projets sous forme de mini‑cours.</p>
-<p>C’est l’occasion de mettre à l’honneur les travaux des étudiants et de découvrir des approches modernes de Machine Learning et de Deep Learning appliquées aux problématiques des sciences du vivant.</p>
-<section id="thème-2025" class="level3">
-<h3 class="anchored" data-anchor-id="thème-2025">Thème 2025</h3>
-<p>Pour cette <strong>3ᵉ édition</strong>, nous explorons les apports du Machine Learning à la compréhension, la modélisation et la prédiction dans le champ du vivant : agriculture, environnement, écologie, santé ou biotechnologies.</p>
-<p>Les étudiants présenteront des projets originaux illustrant la diversité des approches possibles et l’impact concret de telles applications.</p>
-</section>
-<section id="programme-de-la-journée" class="level3">
-<h3 class="anchored" data-anchor-id="programme-de-la-journée">Programme de la journée</h3>
-<p>Le programme complet, incluant les horaires de passages et les slides de chaque groupe, est consultable dans la rubrique <a href="./programme.html">Programme</a>.</p>
-<p>Tous les travaux des étudiants sont centralisés dans un dépôt <a href="https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025">GitHub</a>. Chaque projet comprend le code, un document de synthèse et les diapositives de présentation, permettant de consulter, reproduire et approfondir les travaux présentés durant cette édition de l’école d’automne.</p>
-</section>
-<section id="informations-pratiques" class="level3">
-<h3 class="anchored" data-anchor-id="informations-pratiques">📍 Informations pratiques</h3>
-<p>Détails d’accès et plan disponibles dans la page <a href="./infos.html">Infos pratiques</a>.</p>
-<p>Lieu : Salle 5ème année du Bâtiment 24 de l’Institut Agro Rennes-Angers (Campus de Rennes)</p>
-<p>Horaires : Vendredi 21 novembre 2025 entre 13h30 et 16h30.</p>
-
-
-</section>
-</section>
-
-</main> <!-- /main -->
+<div class="metadata">
+<a href="../projets/presentationFruits.html" class="no-external">
+<div class="listing-date">
+Nov 21, 2025
+</div>
+<div class="listing-author">
+Clément Melina, Le Moan Delalande Riwal, Mathieu Anna
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1762642800000" data-listing-file-modified-sort="1762768898021" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2265">
+<div class="thumbnail">
+<p><a href="../projets/Projet_exemple.html" class="no-external"></a></p><a href="../projets/Projet_exemple.html" class="no-external">
+<p><img loading="lazy" src="../img_projets/exemple.png" class="thumbnail-image"></p>
+</a><p><a href="../projets/Projet_exemple.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../projets/Projet_exemple.html" class="no-external">Crop Type Classification</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../projets/Projet_exemple.html" class="no-external">9h30 - 10h</a>
+</div>
+<div class="listing-description">
+<a href="../projets/Projet_exemple.html" class="no-external">Mapping crop types at the pixel level using multispectral satellite image time series with a hybrid CNN + U-Net approach.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../projets/Projet_exemple.html" class="no-external">
+<div class="listing-date">
+Nov 9, 2025
+</div>
+<div class="listing-author">
+Placier Moïse, Dupont Claire
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1763679600000" data-listing-file-modified-sort="1763301588521" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="129">
+<div class="thumbnail">
+<p><a href="../projets/Projet_DeepMeow.html" class="no-external"></a></p><a href="../projets/Projet_DeepMeow.html" class="no-external">
+<p><img loading="lazy" src="../img_projets/chat.jpg" class="thumbnail-image"></p>
+</a><p><a href="../projets/Projet_DeepMeow.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../projets/Projet_DeepMeow.html" class="no-external">Deep Meow</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../projets/Projet_DeepMeow.html" class="no-external">heure - passage</a>
+</div>
+<div class="listing-description">
+<a href="../projets/Projet_DeepMeow.html" class="no-external">Labellisation de signaux audio de miaulement de chat</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../projets/Projet_DeepMeow.html" class="no-external">
+<div class="listing-date">
+Nov 21, 2025
+</div>
+<div class="listing-author">
+Antier Augustin, Causeur Léna, Prusiewicz-Blondin Louis
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1763679600000" data-listing-file-modified-sort="1763301647242" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="82">
+<div class="thumbnail">
+<p><a href="../projets/projets_val.html" class="no-external"></a></p><a href="../projets/projets_val.html" class="no-external">
+<p><img loading="lazy" src="../img_projets/rev_tec.png" class="thumbnail-image"></p>
+</a><p><a href="../projets/projets_val.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../projets/projets_val.html" class="no-external">Le Machine Learning dans l’agriculture</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../projets/projets_val.html" class="no-external">heure - passage</a>
+</div>
+<div class="listing-description">
+<a href="../projets/projets_val.html" class="no-external">Notre projet vise à optimiser l’irrigation de plants de tomates grâce à un agent d’apprentissage par renforcement apprenant à décider de la quantité d’eau à fournir. Nous…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../projets/projets_val.html" class="no-external">
+<div class="listing-date">
+Nov 21, 2025
+</div>
+<div class="listing-author">
+Lefèvre Vadim, Naux Emilie, Julliard Valentine
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1763679600000" data-listing-file-modified-sort="1762768898022" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
+<div class="thumbnail">
+<p><a href="../projets/Template_presentation_projets.html" class="no-external"></a></p><a href="../projets/Template_presentation_projets.html" class="no-external">
+<p><img loading="lazy" src="../img_projets/exemple.png" class="thumbnail-image"></p>
+</a><p><a href="../projets/Template_presentation_projets.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../projets/Template_presentation_projets.html" class="no-external">Titre du projet</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../projets/Template_presentation_projets.html" class="no-external">heure - passage</a>
+</div>
+<div class="listing-description">
+<a href="../projets/Template_presentation_projets.html" class="no-external">petite description</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../projets/Template_presentation_projets.html" class="no-external">
+<div class="listing-date">
+Nov 21, 2025
+</div>
+<div class="listing-author">
+Nom Prenom
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1762642800000" data-listing-file-modified-sort="1762768898021" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2265">
+<div class="thumbnail">
+<p><a href="../projets/Projet_exemple_2.html" class="no-external"></a></p><a href="../projets/Projet_exemple_2.html" class="no-external">
+<p><img loading="lazy" src="../img_projets/exemple.png" class="thumbnail-image"></p>
+</a><p><a href="../projets/Projet_exemple_2.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../projets/Projet_exemple_2.html" class="no-external">cancer prediction</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../projets/Projet_exemple_2.html" class="no-external">10h - 10h30</a>
+</div>
+<div class="listing-description">
+<a href="../projets/Projet_exemple_2.html" class="no-external">Prediction of cancer via deep learning and computer vision</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../projets/Projet_exemple_2.html" class="no-external">
+<div class="listing-date">
+Nov 9, 2025
+</div>
+<div class="listing-author">
+Camille haar, Dupont Claire
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -618,5 +898,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

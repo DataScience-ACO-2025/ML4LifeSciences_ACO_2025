@@ -1,0 +1,43 @@
+---
+title: "Deep Meow"
+subtitle: "heure - passage"
+description: "Labellisation de signaux audio de miaulement de chat"
+author:
+  - name: "Antier Augustin"
+    affiliation: "Institut Agro Rennes"
+  - name: "Causeur Léna"
+    affiliation: "Institut Agro Rennes"
+  - name: "Prusiewicz-Blondin Louis"
+    affiliation: "Institut Agro Rennes"
+
+
+date: 2025-11-21 
+image: ../img_projets/chat.jpg
+listing:
+  id: projets
+---
+
+## Lien vers le code github 
+
+- [Github](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025)
+
+## Lien vers les slides
+
+- [Slides](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025)
+
+# Deep Meow
+
+## Contexte : 
+
+La labellisation d’audio est une méthode fortement utilisée en machine learning, en agronomie, en sociologie, musique, etc… Nous proposons donc de présenter une démarche de traitement de signaux audio et de labellisation de ces signaux. 
+
+## Notre jeu de données : 
+
+Notre exemple sera la labellisation d’audio de chat. Le jeu de données comprend 440 audios au format .WAV. Chaque audio étant un miaulement de chat. Les chats sont enregistrés dans différentes situations (En train d’être brossé, attendant de la nourriture, isolement dans un espace inconnu). Le but ici est de déterminer le contexte d’émission d’un miaulement. 
+
+## Points abordés :  
+
+-	Preprocessing sur des données audios
+-	Extraction de features via un réseau de neurones et des couches convolutionnelles
+
+
