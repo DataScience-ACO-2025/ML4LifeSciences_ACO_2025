@@ -380,8 +380,6 @@ Classical PSSM-based predictors report similar metrics (Q3 accuracy ~82.5%, bala
 ProtBERT embeddings encode **residue-level and long-range sequence information**, including patterns learned across millions of proteins, which capture implicit evolutionary and structural signals.
 
 
-# Bibliographi
-
 ## References
 
 1. Ismi, D. P., Pulungan, R., & Afiahayati. Deep learning for protein secondary structure prediction: Pre and post-AlphaFold. Computational and Structural Biotechnology Journal 20, 6271–6286 (2022).
