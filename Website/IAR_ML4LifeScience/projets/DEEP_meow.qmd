@@ -10,9 +10,8 @@ author:
   - name: "Prusiewicz-Blondin Louis"
     affiliation: "Institut Agro Rennes"
 
-
 date: 2025-11-21 
-image: ../img_projets/chat.jpg
+image: ../img_projets/chat.jpg 
 listing:
   id: projets
 ---
@@ -24,8 +23,6 @@ listing:
 ## Lien vers les slides
 
 - [Slides](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025)
-
-# Deep Meow
 
 ## Contexte : 
 

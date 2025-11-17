@@ -1,7 +1,7 @@
 ---
 title: "Le Machine Learning dans l'agriculture"
 subtitle: "heure - passage"
-description: ""
+description: "description"
 author:
   - name: "Lefèvre Vadim"
     affiliation: "Institut Agro Rennes"

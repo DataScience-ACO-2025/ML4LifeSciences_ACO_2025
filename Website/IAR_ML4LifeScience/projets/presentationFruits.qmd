@@ -11,7 +11,7 @@ author:
     affiliation: "Institut Agro Rennes"
 
 date: 2025-11-21 
-image: ../img_projets/exemple.png 
+image: ../img_projets/image_fruit.png 
 listing:
   id: projets
 ---
