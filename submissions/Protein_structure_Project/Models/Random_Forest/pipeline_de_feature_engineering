@@ -1,0 +1,20 @@
+digraph "Pipeline de Feature Engineering" {
+	graph [fontcolor="#2D3436" fontname="Sans-Serif" fontsize=15 label="Pipeline de Feature Engineering" nodesep=0.60 pad=2.0 rankdir=LR ranksep=0.75 splines=ortho]
+	node [fixedsize=true fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 height=1.4 imagescale=true labelloc=b shape=box style=rounded width=1.4]
+	edge [color="#7B8894"]
+	subgraph "cluster_1. Feature Engineering" {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label="1. Feature Engineering" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		"20ee456b954e448dbf01b3ba163a28f9" [label="JSON d'entrée"]
+		"0b68f3c77ff9462696036322e934f86a" [label="Fenêtre Glissante"]
+		faa02aa69ff342feb6897654447de1ea [label="AAIndex Lookup"]
+		"9893ca81eb334b77a46c4c10be01e554" [label=Flattening]
+	}
+	subgraph "cluster_2. Entraînement ML" {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label="2. Entraînement ML" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		f3b4b1694ec54aca98c4372da581a046 [label="Random Forest"]
+	}
+	"20ee456b954e448dbf01b3ba163a28f9" -> "0b68f3c77ff9462696036322e934f86a" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"0b68f3c77ff9462696036322e934f86a" -> faa02aa69ff342feb6897654447de1ea [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	faa02aa69ff342feb6897654447de1ea -> "9893ca81eb334b77a46c4c10be01e554" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"9893ca81eb334b77a46c4c10be01e554" -> f3b4b1694ec54aca98c4372da581a046 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+}

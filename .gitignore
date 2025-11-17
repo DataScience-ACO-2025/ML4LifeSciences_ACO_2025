@@ -49,14 +49,14 @@ datasets/
 *.fasta
 *.msa
 *.pt
-*.pth
+
 *.model
 # (Astuce : tu peux conserver un sous-dossier data/sample/ avec quelques exemples légers)
 
 # === RESULTS & MODELS ===
 outputs/
 results/
-models/
+
 checkpoints/
 runs/
 wandb/
@@ -64,6 +64,7 @@ mlruns/
 tensorboard/
 *.ckpt
 *.onnx
+*.joblib
 
 # === WEB CONTENT ===
 # Build du site (Hugo, Jekyll, etc.)
@@ -76,7 +77,7 @@ yarn.lock
 
 # === SLIDES ===
 # Fichiers exportés lourds ou temporaires
-*.pdf
+
 *.pptx
 *.key
 slides/build/
