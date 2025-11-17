@@ -18,7 +18,7 @@ listing:
 
 ## Lien vers le code github 
 
-- [Github](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025)
+- [Github](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025/submissions/groupe02)
 
 ## Lien vers les slides
 
