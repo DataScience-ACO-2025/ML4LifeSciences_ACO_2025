@@ -151,7 +151,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-project-team" id="toc-the-project-team" class="nav-link active" data-scroll-target="#the-project-team">The Project Team</a></li>
+  <li><a href="#predicting-protein-secondary-structure-from-biological-signals-to-advanced-learning-approaches" id="toc-predicting-protein-secondary-structure-from-biological-signals-to-advanced-learning-approaches" class="nav-link active" data-scroll-target="#predicting-protein-secondary-structure-from-biological-signals-to-advanced-learning-approaches">Predicting Protein Secondary Structure: From Biological Signals to Advanced Learning Approaches</a>
+  <ul class="collapse">
+  <li><a href="#project-summary" id="toc-project-summary" class="nav-link" data-scroll-target="#project-summary">Project Summary</a></li>
+  </ul></li>
+  <li><a href="#the-project-team" id="toc-the-project-team" class="nav-link" data-scroll-target="#the-project-team">The Project Team</a></li>
   <li><a href="#intro" id="toc-intro" class="nav-link" data-scroll-target="#intro">Intro</a>
   <ul class="collapse">
   <li><a href="#definitions" id="toc-definitions" class="nav-link" data-scroll-target="#definitions">Definitions</a></li>
@@ -161,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#biological-inputs-and-modelling-strategy" id="toc-biological-inputs-and-modelling-strategy" class="nav-link" data-scroll-target="#biological-inputs-and-modelling-strategy">Biological Inputs and Modelling Strategy</a>
   <ul class="collapse">
-  <li><a href="#local-models-physico-chemical-features-random-forest" id="toc-local-models-physico-chemical-features-random-forest" class="nav-link" data-scroll-target="#local-models-physico-chemical-features-random-forest">1. Local Models: Physico-Chemical Features + Random Forest</a>
+  <li><a href="#local-model-physico-chemical-features-random-forest" id="toc-local-model-physico-chemical-features-random-forest" class="nav-link" data-scroll-target="#local-model-physico-chemical-features-random-forest">1. Local Model : Physico-Chemical Features + Random Forest</a>
   <ul class="collapse">
   <li><a href="#data-preprocessing-for-the-random-forest" id="toc-data-preprocessing-for-the-random-forest" class="nav-link" data-scroll-target="#data-preprocessing-for-the-random-forest">Data Preprocessing for the Random Forest</a></li>
   <li><a href="#model-training" id="toc-model-training" class="nav-link" data-scroll-target="#model-training">Model Training</a></li>
@@ -170,14 +174,17 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#evolutionary-information-and-convolutional-models-1d-cnn-pssm" id="toc-evolutionary-information-and-convolutional-models-1d-cnn-pssm" class="nav-link" data-scroll-target="#evolutionary-information-and-convolutional-models-1d-cnn-pssm">Evolutionary information and convolutional models (1D CNN + PSSM)</a>
   <ul class="collapse">
   <li><a href="#the-biological-input-pssm" id="toc-the-biological-input-pssm" class="nav-link" data-scroll-target="#the-biological-input-pssm">The biological input : PSSM</a></li>
-  <li><a href="#data-preprocessing-for-the-1d-cnn-model" id="toc-data-preprocessing-for-the-1d-cnn-model" class="nav-link" data-scroll-target="#data-preprocessing-for-the-1d-cnn-model">Data Preprocessing for the 1D CNN Model</a></li>
-  <li><a href="#d-cnn-architecture" id="toc-d-cnn-architecture" class="nav-link" data-scroll-target="#d-cnn-architecture">1D CNN Architecture</a></li>
-  <li><a href="#results-and-discussion-1" id="toc-results-and-discussion-1" class="nav-link" data-scroll-target="#results-and-discussion-1">Results and discussion</a></li>
   </ul></li>
-  <li><a href="#language-model-proteinbert-for-secondary-structure-prediction" id="toc-language-model-proteinbert-for-secondary-structure-prediction" class="nav-link" data-scroll-target="#language-model-proteinbert-for-secondary-structure-prediction">language model ProteinBERT for Secondary Structure Prediction</a>
+  <li><a href="#protein-secondary-structure-prediction-with-protbert" id="toc-protein-secondary-structure-prediction-with-protbert" class="nav-link" data-scroll-target="#protein-secondary-structure-prediction-with-protbert">Protein Secondary Structure Prediction with ProtBERT</a>
   <ul class="collapse">
-  <li><a href="#the-embedding-generation-pipeline" id="toc-the-embedding-generation-pipeline" class="nav-link" data-scroll-target="#the-embedding-generation-pipeline">The embedding-generation pipeline</a></li>
+  <li><a href="#embedding-generation-pipeline" id="toc-embedding-generation-pipeline" class="nav-link" data-scroll-target="#embedding-generation-pipeline">Embedding Generation Pipeline</a></li>
+  <li><a href="#transformer-based-classifier" id="toc-transformer-based-classifier" class="nav-link" data-scroll-target="#transformer-based-classifier">Transformer-based Classifier</a></li>
   </ul></li>
+  <li><a href="#results-and-discussion-2" id="toc-results-and-discussion-2" class="nav-link" data-scroll-target="#results-and-discussion-2">Results and Discussion</a></li>
+  </ul></li>
+  <li><a href="#bibliographi" id="toc-bibliographi" class="nav-link" data-scroll-target="#bibliographi">Bibliographi</a>
+  <ul class="collapse">
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -243,6 +250,13 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="predicting-protein-secondary-structure-from-biological-signals-to-advanced-learning-approaches" class="level1">
+<h1>Predicting Protein Secondary Structure: From Biological Signals to Advanced Learning Approaches</h1>
+<section id="project-summary" class="level2">
+<h2 class="anchored" data-anchor-id="project-summary">Project Summary</h2>
+<p>This project investigates <strong>Protein Secondary Structure Prediction (PSSP)</strong> from the primary amino-acid sequence, mapping the linear sequence of residues (primary structure) to a one-dimensional annotation of local folding states (secondary structure). We evaluate the impact of different biological descriptors and compare three core modeling strategies: <strong>Random Forest</strong>, <strong>1D Convolutional Neural Networks (CNN)</strong>, and <strong>specialized Protein Language Models (BERT)</strong>.</p>
+</section>
+</section>
 <section id="the-project-team" class="level1">
 <h1>The Project Team</h1>
 <div class="grid">
@@ -261,7 +275,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="intro" class="level1">
 <h1>Intro</h1>
-<p>This project focuses on predicting the secondary structure of proteins from their primary amino-acid sequence. In the scientific scope, we aim to map from the linear sequence of residues (primary structure) to a one-dimensional annotation of local folding states (secondary structure).</p>
+<p>Proteins play important roles for living organisms due to their diverse functions, for example, acting as a catalyst in cell metabolism, playing an essential role in DNA replication, forming cell structures, forming living tissues, and constructing antibodies for the immune system [1]. Protein has four different levels of structure: primary structure, secondary structure, tertiary structure, and quaternary structure.</p>
 <section id="definitions" class="level3">
 <h3 class="anchored" data-anchor-id="definitions">Definitions</h3>
 <p><strong>Primary structure</strong> refers to the linear sequence of amino acids (residues) in a protein.</p>
@@ -278,8 +292,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="why-focus-on-sequence-based-prediction" class="level3">
 <h3 class="anchored" data-anchor-id="why-focus-on-sequence-based-prediction">Why focus on sequence-based prediction?</h3>
-<p>A central principle of molecular biophysics is that the amino-acid sequence largely determines the final three-dimensional fold, a concept supported both experimentally (e.g., <a href="https://en.wikipedia.org/wiki/Anfinsen%27s_dogma">Anfinsen’s dogma</a>) and theoretically. This makes structure prediction from sequence an attractive computational goal, especially because sequencing a protein is vastly simpler, faster, and cheaper (on the order of ~$100) than experimentally determining its structure via crystallography, NMR or cryo-EM (which often require years of work and involve very large costs). Consequently the field of protein-structure prediction is highly active.</p>
-<p>However, the prediction problem is intrinsically difficult. The classical Levinthal paradox illustrates well the combinatorial explosion of possible conformations: if each residue can adopt approximately three stable states, a protein of 101 amino acids would have ~3^100 potential conformations. Exhaustive enumeration is therefore infeasible</p>
+<p>Proteins function differently from one another due to variations in their structures, mainly due to the folds that make up varying tertiary structures [2,3]. Since the function of a particular protein is influenced by its tertiary structure, understanding the protein’s tertiary structure is necessary to reveal its functionality.</p>
+<p>A central principle of molecular biophysics is that the amino-acid sequence largely determines the final three-dimensional fold, a concept supported both experimentally and theoretically, known as <a href="https://en.wikipedia.org/wiki/Anfinsen%27s_dogma">Anfinsen’s dogma</a>). The dogma asserts that the three-dimensional structure of a native protein is determined by its primary amino-acid sequence. This makes predicting structure from sequence an attractive computational goal, especially because sequencing a protein is vastly simpler, faster, and cheaper than experimentally determining its structure.</p>
+<p>However, it turns out that predicting protein structure from sequence is not so simple. This is because of a second concept called Levinthal’s paradox [5]. The classical Levinthal paradox illustrates well the combinatorial explosion of possible conformations: if each residue can adopt approximately three stable states, a protein of 101 amino acids would have ∼3^100 potential conformations. Therefore, finding the native folded state of a protein by a random search among all possible configurations can take an enormously long time.</p>
 </section>
 <section id="why-predict-secondary-structure" class="level3">
 <h3 class="anchored" data-anchor-id="why-predict-secondary-structure">Why predict secondary structure?</h3>
@@ -288,7 +303,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="dataset-proteinnet" class="level3">
 <h3 class="anchored" data-anchor-id="dataset-proteinnet">Dataset: ProteinNet</h3>
-<p>This project relies on <strong>ProteinNet</strong>, a curated dataset introduced by AlQuraishi and colleagues to standardize machine-learning benchmarks for protein structure prediction (<a href="https://arxiv.org/pdf/1902.00249">ProteinNet paper</a>). ProteinNet integrates sequence data, evolutionary information, and experimentally resolved structural annotations, and is designed to mirror the evaluation protocol of the CASP challenge.</p>
+<p>This project uses <strong>ProteinNet</strong>, a curated dataset designed to standardize machine-learning benchmarks for protein structure prediction, mirroring the evaluation protocol of the CASP challenge [6]. It provides protein sequences, structures (secondary and tertiary), multiple sequence alignments (MSAs), position-specific scoring matrices (PSSMs), and standardized training / validation / test splits. ProteinNet builds on the biennial CASP assessments, which carry out blind predictions of recently solved but publicly unavailable protein structures, to provide test sets that push the frontiers of computational methodology.</p>
+<p>It is organized as a series of data sets, spanning CASP 7 through 12 (covering a ten-year period), to provide a range of data set sizes that enable assessment of new methods in relatively data poor and data rich regimes. We chose to focus our model development and evaluation specifically on the historical CASP 8 assessment data.</p>
+<p>The full CASP8 ProteinNet dataset is not included in the repository because its size exceeds GitHub’s storage limits (approximately 5 GB). It can be accessed and downloaded from the following source : <a href="https://github.com/aqlaboratory/proteinnet">DATASET</a></p>
 <section id="characteristics-of-protein-datasets" class="level4">
 <h4 class="anchored" data-anchor-id="characteristics-of-protein-datasets">Characteristics of Protein Datasets</h4>
 <p>Protein datasets differ fundamentally from standard machine-learning datasets, and these differences deeply impact training, evaluation, and generalization.</p>
@@ -321,8 +338,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="biological-inputs-and-modelling-strategy" class="level1">
 <h1>Biological Inputs and Modelling Strategy</h1>
-<section id="local-models-physico-chemical-features-random-forest" class="level2">
-<h2 class="anchored" data-anchor-id="local-models-physico-chemical-features-random-forest">1. Local Models: Physico-Chemical Features + Random Forest</h2>
+<section id="local-model-physico-chemical-features-random-forest" class="level2">
+<h2 class="anchored" data-anchor-id="local-model-physico-chemical-features-random-forest">1. Local Model : Physico-Chemical Features + Random Forest</h2>
 <p>Our initial modeling strategy leverages the intrinsic physico-chemical properties of individual amino acids and their immediate sequence context to predict secondary structure. By employing a sliding window approach, we capture the local interactions that drive helix and coil formation. This framework provides a straightforward yet biologically informed baseline</p>
 <section id="data-preprocessing-for-the-random-forest" class="level3">
 <h3 class="anchored" data-anchor-id="data-preprocessing-for-the-random-forest">Data Preprocessing for the Random Forest</h3>
@@ -650,40 +667,229 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p>If <span class="math inline">\(P(a\mid i)\)</span> is higher than the background, the score is positive, indicating evolutionary enrichment of that amino acid at that position. If it is lower, the score is negative. In the example, position 1 is strongly enriched for A because <span class="math inline">\(P(A\mid1)=1.0\)</span> is much larger than the background probability <span class="math inline">\(P(A)=0.05\)</span>, giving a high log-odds value of about 3.00. In other words, a high positive PSSM score at position <span class="math inline">\(i\)</span> for amino acid <span class="math inline">\(a\)</span> indicates that <span class="math inline">\(a\)</span> occurs more often than expected by chance at that position among homologous sequences.</p>
-<p>The PSSMs used in this project are derived from the ProteinNet dataset, where MSAs were generated using JackHMMER and weighted with <a href="(https://pubmed.ncbi.nlm.nih.gov/7966282/)">Henikoff position-based weights</a> to reduce the influence of closely related sequences.</p>
+<p>The PSSMs used in this project are derived from the ProteinNet dataset, where MSAs were generated using JackHMMER and weighted with Henikoff position-based weights [18] to reduce the influence of closely related sequences.</p>
 <p>For secondary structure prediction, PSSMs introduce a strong biological signal that is not present in raw amino acid sequences or physico-chemical descriptors. Evolutionarily conserved positions tend to correspond to structurally or functionally important residues, while positions tolerant to substitution often lie in loops or solvent-exposed regions.</p>
-</section>
-<section id="data-preprocessing-for-the-1d-cnn-model" class="level3">
-<h3 class="anchored" data-anchor-id="data-preprocessing-for-the-1d-cnn-model">Data Preprocessing for the 1D CNN Model</h3>
+<section id="data-preprocessing-for-the-1d-cnn-model" class="level4">
+<h4 class="anchored" data-anchor-id="data-preprocessing-for-the-1d-cnn-model">Data Preprocessing for the 1D CNN Model</h4>
 <p>To leverage the sequential nature of proteins, the 1D convolutional neural network (CNN) operates on full-length sequences rather than fixed local windows. Unlike the Random Forest, which relies on sliding windows to capture short-range context, the CNN requires a consistent tensor shape across all proteins while preserving the residue order.</p>
-<p>Each amino acid is represented as a 21-dimensional one-hot vector, encoding the 20 standard residues plus a dedicated padding token. Protein sequences vary in length, so both inputs and labels are padded to the maximum sequence length in the dataset. As a result, each protein is converted into an input tensor of shape <span class="math inline">\((L_{\text{max}}, 21)\)</span> and a label tensor of shape <span class="math inline">\((L_{\text{max}})\)</span>, with padded positions assigned a special index to be ignored during loss computation.</p>
-<p>During training, input tensors are transposed to <span class="math inline">\((\text{Batch}, 21, L_{\text{max}})\)</span>, the format expected by PyTorch’s Conv1d layers.</p>
+<p>Each amino acid is represented by a 41-dimensional feature vector. This vector is constructed by concatenating the 21-dimensional One-Hot Encoding (OHE) (20 standard residues plus a dedicated padding token) and the 20-dimensional PSSM profile [19]. Protein sequences vary in length, so both inputs and labels are padded to the maximum sequence length in the dataset. As a result, each protein is converted into an input tensor of shape <span class="math inline">\((L_{\text{max}}, 41)\)</span> and a label tensor of shape <span class="math inline">\((L_{\text{max}})\)</span>, with padded positions assigned a special index to be ignored during loss computation.</p>
+<p>During training, input tensors are transposed to <span class="math inline">\((\text{Batch}, 41, L_{\text{max}})\)</span>, the format expected by PyTorch’s Conv1d layers.</p>
 </section>
-<section id="d-cnn-architecture" class="level3">
-<h3 class="anchored" data-anchor-id="d-cnn-architecture">1D CNN Architecture</h3>
-<p>The network consists of three consecutive 1D convolutional layers with kernel size 5 corresponding to the typical length of local structural motifs, progressively increasing the number of filters from 128 to 256 and then 512. Dropout layers (rate 0.5) follow the first two convolutions to mitigate overfitting. The final classification layer is a position-wise 1D convolution with kernel size one, producing logits over the three secondary structure classes (H, E, C) for each residue. Padding is applied to maintain the original sequence length throughout all convolutional layers.</p>
-<p>This architecture was chosen to balance biological interpretability and computational efficiency: the kernel size reflects the scale of short-range interactions, the progressive increase in filter number allows hierarchical feature extraction, and the absence of pooling preserves positional information critical for residue-level classification. By combining sequence order and evolutionary profiles through PSSMs, the network can leverage both local residue context and evolutionary conservation to improve secondary structure prediction accuracy.</p>
-<p>You then justify the use of 1D or 2D convolutional networks: CNNs apply learnable filters that slide along the sequence, sharing weights across positions and exploiting translational invariance (or equivariance). This yields a stronger ability to learn local sequence motifs and conserved patterns than Random Forests. However, CNNs remain inherently local. Although receptive fields can be widened, PSSMs themselves carry position-specific but non-contextual information, so long-range effects are still not represented explicitly.</p>
+<section id="d-cnn-architecture" class="level4">
+<h4 class="anchored" data-anchor-id="d-cnn-architecture">1D CNN Architecture</h4>
+<p>The network consists of three consecutive 1D convolutional layers with multi-scale kernel sizes (3, 7, and 11) [19] corresponding to different lengths of local structural motifs, progressively increasing the number of filters from 128 to 256 and then 512. Dropout layers (rate 0.5) follow the first two convolutions to mitigate overfitting. The final classification layer is a position-wise 1D convolution with kernel size one, producing logits over the three secondary structure classes (H, E, C) for each residue. Padding is applied to maintain the original sequence length throughout all convolutional layers.</p>
+<p>This architecture was chosen to balance biological interpretability and computational efficiency: the use of multiple kernel sizes (3, 7, 11) allows the model to simultaneously reflect the scale of short-range interactions and analyze longer contextual segments (up to 11 residues), crucial for defining β-strands. The progressive increase in filter number allows hierarchical feature extraction, and the absence of pooling preserves positional information critical for residue-level classification. By combining sequence order and evolutionary profiles through PSSMs, the network can leverage both local residue context and evolutionary conservation to improve secondary structure prediction accuracy.</p>
 </section>
-<section id="results-and-discussion-1" class="level3">
-<h3 class="anchored" data-anchor-id="results-and-discussion-1">Results and discussion</h3>
+<section id="results-and-discussion-1" class="level4">
+<h4 class="anchored" data-anchor-id="results-and-discussion-1">Results and discussion</h4>
+<p><strong>Overall Metrics</strong></p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Q3 Accuracy</td>
+<td><strong>82.56%</strong></td>
+</tr>
+<tr class="even">
+<td>Balanced Accuracy</td>
+<td><strong>83%</strong></td>
+</tr>
+<tr class="odd">
+<td>Macro F1</td>
+<td><strong>83%%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Class-wise Performance</strong></p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Class</th>
+<th>Precision</th>
+<th>Recall</th>
+<th>F1-score</th>
+<th>Support</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>H</td>
+<td>0.85</td>
+<td>0.86</td>
+<td>0.85</td>
+<td>3788</td>
+</tr>
+<tr class="even">
+<td>E</td>
+<td>0.83</td>
+<td>0.77</td>
+<td>0.80</td>
+<td>2551</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>0.81</td>
+<td>0.83</td>
+<td>0.82</td>
+<td>5317</td>
+</tr>
+<tr class="even">
+<td><strong>Macro Avg</strong></td>
+<td>0.83</td>
+<td>0.82</td>
+<td>0.82</td>
+<td>11656</td>
+</tr>
+<tr class="odd">
+<td><strong>Weighted Avg</strong></td>
+<td>0.83</td>
+<td>0.83</td>
+<td>0.83</td>
+<td>11656</td>
+</tr>
+</tbody>
+</table>
+<p>CNNs apply learnable filters that slide along the sequence, sharing weights across positions and exploiting translational invariance (or equivariance). This yields a stronger ability to learn local sequence motifs and conserved patterns than Random Forests. However, CNNs remain inherently local. Although the multi-scale kernels (3, 7, 11) widen the receptive fields significantly, PSSMs themselves carry position-specific but non-contextual information, so true long-range effects (interactions between residues far apart in the sequence) are still not represented explicitly.</p>
+<p>Additionally, PSSMs derived from multiple sequence alignments (MSAs) represent aggregated evolutionary information at each position, but they do not implicitly encode co-evolution between residues. That is, correlations between mutations of different residues—which often reflect spatial contacts in the 3D structure—are lost in the positional averaging of PSSMs.</p>
 </section>
 </section>
-<section id="language-model-proteinbert-for-secondary-structure-prediction" class="level2">
-<h2 class="anchored" data-anchor-id="language-model-proteinbert-for-secondary-structure-prediction">language model ProteinBERT for Secondary Structure Prediction</h2>
-<p>ProteinBERT is a deep language model specifically designed for protein sequences. Inspired by the Transformer/BERT architecture from natural language processing, it integrates both local (residue-level) and global (whole-sequence) representations, enabling efficient modeling of very long protein sequences. Despite its relatively modest size (~16 million parameters), ProteinBERT achieves state-of-the-art performance across multiple protein prediction benchmarks.</p>
-<p>The model is pretrained using a dual-task self-supervised scheme on ~106 million non-redundant protein sequences from UniRef90. The pretraining tasks include masked language modeling, where random amino acids are corrupted and must be reconstructed, and Gene Ontology (GO) annotation prediction, where the model predicts functional annotations from partial input. This joint pretraining allows ProteinBERT to learn representations that capture both sequence patterns and functional context.</p>
-<p>ProteinBERT embeddings encode a rich mixture of residue-level physicochemical properties, evolutionary information, and functional context. Pretraining on large, diverse protein sets allows the model to generalize to sequences lacking close homologs, while the GO prediction task provides global functional signals that improve local predictions.</p>
-<p>While PSSMs encode only the likelihood of observing each amino acid at a given position, independently of other positions, ProteinBERT captures richer information that integrates residue-level context, long-range dependencies, and functional signals learned across millions of proteins. Consequently, whereas PSSMs are limited to evolutionary conservation and local substitution patterns, ProteinBERT embeddings incorporate both local sequence motifs and global structural and functional cues.This combination of local and global context makes ProteinBERT particularly suitable for predicting residue-level secondary structures.</p>
-<section id="the-embedding-generation-pipeline" class="level3">
-<h3 class="anchored" data-anchor-id="the-embedding-generation-pipeline">The embedding-generation pipeline</h3>
-<p>The embedding-generation pipeline follows a simple two-step procedure.</p>
-<p>In the first step, each protein sequence is processed independently through the pretrained ProtBERT model. The sequence is tokenized into single-residue tokens, encoded with the ProtBERT tokenizer, and passed through the encoder in inference mode. Each amino-acid sequence of length <span class="math inline">\(L\)</span> is transformed by ProtBERT into a matrix of shape <span class="math inline">\((L, 1024)\)</span>, where each residue is represented by a 1024-dimensional contextual embedding. These embeddings are saved individually as .npy arrays, one per protein, and the associated secondary-structure labels are stored as vectors of length <span class="math inline">\(L\)</span> containing integer class indices.</p>
-<p>During dataset loading, each sequence keeps its original shape <span class="math inline">\((L, 1024)\)</span> until batching. When a batch is formed, the variable-length sequences are padded along the residue axis, producing a tensor of size <span class="math inline">\((\text{Batch}, L_{\text{max}}, 1024)\)</span>, where <span class="math inline">\(L_{\text{max}}\)</span> is the longest sequence in the batch. Labels undergo the same padding procedure and form a tensor of size <span class="math inline">\((\text{Batch}, L_{\text{max}})\)</span>, with a dedicated padding index (−100) used to mask non-valid positions during loss computation.</p>
+</section>
+<section id="protein-secondary-structure-prediction-with-protbert" class="level2">
+<h2 class="anchored" data-anchor-id="protein-secondary-structure-prediction-with-protbert">Protein Secondary Structure Prediction with ProtBERT</h2>
+<p>In this part, we leveraged <strong>ProtBERT</strong>, a deep language model for protein sequences, to predict residue-level secondary structure (H/E/C). ProtBERT is inspired by BERT from natural language processing and is pretrained on over 100 million non-redundant protein sequences from UniRef90 using a dual-task self-supervised approach:</p>
+<ul>
+<li><strong>Masked Language Modeling (MLM):</strong> random amino acids are masked and reconstructed.<br>
+</li>
+<li><strong>Gene Ontology (GO) annotation prediction:</strong> the model predicts functional annotations from partial sequences.</li>
+</ul>
+<p>ProtBERT embeddings capture both <strong>local sequence patterns</strong> and <strong>global functional context</strong>, providing 1024-dimensional vectors per residue. These embeddings encode physicochemical, evolutionary, and functional information, offering a rich starting point for downstream tasks such as secondary structure prediction.</p>
+<section id="embedding-generation-pipeline" class="level3">
+<h3 class="anchored" data-anchor-id="embedding-generation-pipeline">Embedding Generation Pipeline</h3>
+<ol type="1">
+<li>Each protein sequence is tokenized at the residue level and passed through ProtBERT.<br>
+</li>
+<li>Each residue is mapped to a 1024-dimensional embedding.<br>
+</li>
+<li>Embeddings are saved as <code>.npy</code> files per protein, and corresponding secondary structure labels are stored as integer vectors.<br>
+</li>
+<li>During training, sequences are padded to form batches, and padding positions are masked during loss computation.</li>
+</ol>
+</section>
+<section id="transformer-based-classifier" class="level3">
+<h3 class="anchored" data-anchor-id="transformer-based-classifier">Transformer-based Classifier</h3>
+<p>To adapt ProtBERT embeddings for secondary structure prediction, we use a <strong>lightweight Transformer architecture</strong>. The embeddings are first projected to a lower-dimensional space, then processed through the Transformer to capture relationships between residues, and finally passed through a linear classifier to produce per-residue predictions for H/E/C classes. This approach allows the model to combine ProtBERT’s rich contextual information with sequence-level dependencies.</p>
+</section>
+</section>
+<section id="results-and-discussion-2" class="level2">
+<h2 class="anchored" data-anchor-id="results-and-discussion-2">Results and Discussion</h2>
+<p>The ProtBERT-based Transformer produces the following overall performance:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Accuracy</td>
+<td>0.8223</td>
+</tr>
+<tr class="even">
+<td>Balanced Accuracy</td>
+<td>0.8149</td>
+</tr>
+<tr class="odd">
+<td>Macro F1</td>
+<td>0.8156</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Class-wise performance:</strong></p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Class</th>
+<th>Precision</th>
+<th>Recall</th>
+<th>F1-score</th>
+<th>Support</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>H</td>
+<td>0.84</td>
+<td>0.84</td>
+<td>0.84</td>
+<td>3788</td>
+</tr>
+<tr class="even">
+<td>E</td>
+<td>0.78</td>
+<td>0.77</td>
+<td>0.78</td>
+<td>2551</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>0.83</td>
+<td>0.83</td>
+<td>0.83</td>
+<td>5317</td>
+</tr>
+<tr class="even">
+<td><strong>Macro Avg</strong></td>
+<td>0.82</td>
+<td>0.81</td>
+<td>0.82</td>
+<td>11656</td>
+</tr>
+<tr class="odd">
+<td><strong>Weighted Avg</strong></td>
+<td>0.82</td>
+<td>0.82</td>
+<td>0.82</td>
+<td>11656</td>
+</tr>
+</tbody>
+</table>
+<p>Classical PSSM-based predictors report similar metrics (Q3 accuracy ~82.5%, balanced accuracy ~83%, macro F1 ~83%). ProtBERT embeddings encode <strong>residue-level and long-range sequence information</strong>, including patterns learned across millions of proteins, which capture implicit evolutionary and structural signals.</p>
+</section>
+</section>
+<section id="bibliographi" class="level1">
+<h1>Bibliographi</h1>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ol type="1">
+<li>Ismi, D. P., Pulungan, R., &amp; Afiahayati. Deep learning for protein secondary structure prediction: Pre and post-AlphaFold. Computational and Structural Biotechnology Journal 20, 6271–6286 (2022).</li>
+<li>Breda, A. et al.&nbsp;Protein structure, modelling and applications. Bioinformatics in tropical disease research: a practical and case-study approach. (eds.&nbsp;Gruber, A. et al.) 137–170 (National Center for Biotechnology Information (US), 2008).</li>
+<li>Branden, C. I. &amp; Tooze, J. Introduction to Protein Structure. (Garland Science, 2012).</li>
+<li>Anfinsen, C. B. Principles that Govern the Folding of Protein Chains. Science 181, 223–230 (1973).</li>
+<li>Zwanzig, R., Szabo, A. &amp; Bagchi, B. Levinthal’s paradox. Proc. Natl. Acad. Sci. U.S.A. 89, 20–22 (1992).</li>
+<li>AlQuraishi, M. ProteinNet: a standardized data set for machine learning of protein structure. BMC Bioinformatics 20, 311 (2019).</li>
+<li>Finn, R. D. et al.&nbsp;HMMER web server: 2015 update. Nucleic Acids Res 43, W30–W38 (2015).</li>
+<li>Kryshtafovych, A., Schwede, T., Topf, M., Fidelis, K. &amp; Moult, J. Critical assessment of methods of protein structure prediction (CASP)—Round XIII. Proteins 87, 1011–1020 (2019).</li>
+<li>Argos, P., Rao, J. K. M. &amp; Hargrave, P. A. Structural Prediction of Membrane‐Bound Proteins. European Journal of Biochemistry 128, 565–575 (1982).</li>
+<li>Bigelow, C. C. On the average hydrophobicity of proteins and the relation between it and protein structure. Journal of Theoretical Biology 16, 187–211 (1967).</li>
+<li>Fauchère, J., Charton, M., Kier, L. B., Verloop, A. &amp; Pliska, V. Amino acid side chain parameters for correlation studies in biology and pharmacology. International Journal of Peptide and Protein Research 32, 269–278 (1988).</li>
+<li>Charton, M. &amp; Charton, B. I. The structural dependence of amino acid hydrophobicity parameters. Journal of Theoretical Biology 99, 629–644 (1982).</li>
+<li>Grantham, R. Amino Acid Difference Formula to Help Explain Protein Evolution. Science 185, 862–864 (1974).</li>
+<li>Radzicka, A., Pedersen, L. &amp; Wolfenden, R. Influences of solvent water on protein folding: free energies of solvation of cis and trans peptides are nearly identical. Biochemistry 27, 4538–4541 (1988).</li>
+<li>Bhaskaran, R. &amp; Ponnuswamy, P. K. Positional flexibilities of amino acid residues in globular proteins. International Journal of Peptide and Protein Research 32, 241–255 (1988).</li>
+<li>Charton, M. &amp; Charton, B. I. The dependence of the Chou-Fasman parameters on amino acid side chain structure. Journal of Theoretical Biology 102, 121–134 (1983).</li>
+<li>Baldwin, R. L. &amp; Rose, G. D. Is protein folding hierarchic? I. Local structure and peptide folding. Trends in Biochemical Sciences 24, 26–33 (1999).</li>
+<li>Henikoff, S. &amp; Henikoff, J. G. Position-based sequence weights. Journal of Molecular Biology 243, 574–578 (1994).</li>
+<li>Lu, Y. Protein Secondary Structure Prediction Using Convolutional Bidirectional GRU. JMR 16, 11 (2024).</li>
+</ol>
 
 
 
-</section>
 </section>
 </section>
 
@@ -801,20 +1007,20 @@ Antier Augustin, Causeur Léna, Prusiewicz-Blondin Louis
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1763679600000" data-listing-file-modified-sort="1763374746181" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1763679600000" data-listing-file-modified-sort="1763389715350" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="../projets/projets_val.html"> <img src="../img_projets/rev_tec.jpg" class="thumbnail-image"> </a></p>
 </div>
 <div class="body">
 <a href="../projets/projets_val.html">
 <h3 class="no-anchor listing-title">
-Le Machine Learning dans l’agriculture
+Optimisation de l’Irrigation des Cultures de Tomates par Apprentissage par Renforcement : Application de l’Algorithme Proximal Policy Optimization (PPO)
 </h3>
 <div class="listing-subtitle">
 heure - passage
 </div>
 <div class="listing-description">
-<p>description</p>
+<p>Ce travail applique l’algorithme Proximal Policy Optimization (PPO) issu du framework de l’apprentissage par renforcement (RL) à l’optimisation de l’irrigation des cultures de tomates, en exploitant des données agronomiques et climatiques.</p>
 </div>
 </a>
 </div>
@@ -825,34 +1031,6 @@ Nov 21, 2025
 </div>
 <div class="listing-author">
 Lefèvre Vadim, Naux Emilie, Julliard Valentine
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1763679600000" data-listing-file-modified-sort="1763370861951" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="../projets/Template_presentation_projets copie.html"> <img src="../img_projets/exemple.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../projets/Template_presentation_projets copie.html">
-<h3 class="no-anchor listing-title">
-Titre du projet
-</h3>
-<div class="listing-subtitle">
-heure - passage
-</div>
-<div class="listing-description">
-<p>petite description</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../projets/Template_presentation_projets copie.html">
-<div class="listing-date">
-Nov 21, 2025
-</div>
-<div class="listing-author">
-Nom Prenom, Nom Prenom, Nom Prenom
 </div>
 </a>
 </div>
