@@ -1,0 +1,29 @@
+---
+title: "A deep CNN architecture : the Resnet - Application to image classification of pathogenous mycosis"
+subtitle: "heure - passage"
+description: "What is a ResNet and how this architecture permited to train deeper network"
+author:
+  - name: "Mathieu Jules"
+    affiliation: "Institut Agro Rennes"
+  - name: "Norroy Tom"
+    affiliation: "Institut Agro Rennes"
+
+date: 2025-11-21 
+image: ../img_projets/fungi.png 
+listing:
+  id: projets
+---
+
+## Lien vers le code github 
+
+- [Github](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025/blob/main/submissions/ResNet-Project/train_test.py)
+
+## Lien vers les slides
+
+- [Slides](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025/blob/main/submissions/ResNet-Project/Resnet_SLIDE.pdf)
+
+## description Projet
+
+This project explains the architecture of a ResNet and compares it to a traditional CNN in the context of classifying microscopic images of pathogenic fungi. We explain how skip connections enable ResNet models to preserve information and ease gradient flow, addressing limitations of deeper conventional CNNs. Both architectures were tested on the fungal image dataset to evaluate differences in learning efficiency and classification performance.
+
+

@@ -1,68 +1,11 @@
 [
   {
-    "listing": "/projets/Template_presentation_projets.html",
-    "items": [
-      "/projets/presentation_projet_CNN-BNN_insects.html",
-      "/projets/presentationFruits.html",
-      "/projets/projets_val.html",
-      "/projets/Projet_DeepMeow.html",
-      "/projets/Template_presentation_projets copie.html"
-    ]
-  },
-  {
-    "listing": "/projets/Projet_exemple_2.html",
-    "items": [
-      "/projets/Projet_exemple.html",
-      "/projets/Template_presentation_projets.html"
-    ]
-  },
-  {
-    "listing": "/projets/Projet_exemple.html",
-    "items": [
-      "/projets/presentation_projet_CNN-BNN_insects.html",
-      "/projets/Template_presentation_projets.html",
-      "/projets/Projet_exemple_2.html"
-    ]
-  },
-  {
-    "listing": "/programme.html",
-    "items": [
-      "/projets/presentation_projet_CNN-BNN_insects.html",
-      "/projets/presentationFruits.html",
-      "/projets/projets_val.html",
-      "/projets/Projet_DeepMeow.html",
-      "/projets/Projet_strct_prot.html",
-      "/projets/Template_presentation_projets copie.html"
-    ]
-  },
-  {
     "listing": "/projets/presentation_projet_CNN-BNN_insects.html",
     "items": [
+      "/projets/Template_presentation_projets_Tom_Jules.html",
       "/projets/presentationFruits.html",
-      "/projets/Projet_exemple.html",
-      "/projets/Projet_DeepMeow.html",
+      "/projets/DEEP_meow.html",
       "/projets/projets_val.html",
-      "/projets/Template_presentation_projets.html",
-      "/projets/Template_presentation_projets copie.html",
-      "/projets/Projet_exemple_2.html"
-    ]
-  },
-  {
-    "listing": "/projets/Projet_DeepMeow.html",
-    "items": [
-      "/projets/presentation_projet_CNN-BNN_insects.html",
-      "/projets/Projet_exemple.html",
-      "/projets/projets_val.html",
-      "/projets/Template_presentation_projets.html",
-      "/projets/Projet_exemple_2.html"
-    ]
-  },
-  {
-    "listing": "/projets/projets_val.html",
-    "items": [
-      "/projets/presentation_projet_CNN-BNN_insects.html",
-      "/projets/presentationFruits.html",
-      "/projets/Projet_DeepMeow.html",
       "/projets/Projet_strct_prot.html",
       "/projets/Template_presentation_projets copie.html"
     ]
@@ -70,9 +13,79 @@
   {
     "listing": "/projets/presentationFruits.html",
     "items": [
+      "/projets/Template_presentation_projets_Tom_Jules.html",
       "/projets/presentation_projet_CNN-BNN_insects.html",
-      "/projets/Projet_DeepMeow.html",
-      "/projets/projets_val.html"
+      "/projets/DEEP_meow.html",
+      "/projets/projets_val.html",
+      "/projets/Projet_strct_prot.html",
+      "/projets/Template_presentation_projets copie.html"
+    ]
+  },
+  {
+    "listing": "/projets/projets_val.html",
+    "items": [
+      "/projets/Template_presentation_projets_Tom_Jules.html",
+      "/projets/presentation_projet_CNN-BNN_insects.html",
+      "/projets/presentationFruits.html",
+      "/projets/DEEP_meow.html",
+      "/projets/Projet_strct_prot.html",
+      "/projets/Template_presentation_projets copie.html"
+    ]
+  },
+  {
+    "listing": "/projets/DEEP_meow.html",
+    "items": [
+      "/projets/Template_presentation_projets_Tom_Jules.html",
+      "/projets/presentation_projet_CNN-BNN_insects.html",
+      "/projets/presentationFruits.html",
+      "/projets/projets_val.html",
+      "/projets/Projet_strct_prot.html",
+      "/projets/Template_presentation_projets copie.html"
+    ]
+  },
+  {
+    "listing": "/projets/Projet_strct_prot.html",
+    "items": [
+      "/projets/Template_presentation_projets_Tom_Jules.html",
+      "/projets/presentation_projet_CNN-BNN_insects.html",
+      "/projets/presentationFruits.html",
+      "/projets/DEEP_meow.html",
+      "/projets/projets_val.html",
+      "/projets/Template_presentation_projets copie.html"
+    ]
+  },
+  {
+    "listing": "/projets/Template_presentation_projets copie.html",
+    "items": [
+      "/projets/Template_presentation_projets_Tom_Jules.html",
+      "/projets/presentation_projet_CNN-BNN_insects.html",
+      "/projets/presentationFruits.html",
+      "/projets/DEEP_meow.html",
+      "/projets/projets_val.html",
+      "/projets/Projet_strct_prot.html"
+    ]
+  },
+  {
+    "listing": "/projets/Template_presentation_projets_Tom_Jules.html",
+    "items": [
+      "/projets/presentation_projet_CNN-BNN_insects.html",
+      "/projets/presentationFruits.html",
+      "/projets/DEEP_meow.html",
+      "/projets/projets_val.html",
+      "/projets/Projet_strct_prot.html",
+      "/projets/Template_presentation_projets copie.html"
+    ]
+  },
+  {
+    "listing": "/programme.html",
+    "items": [
+      "/projets/Template_presentation_projets_Tom_Jules.html",
+      "/projets/presentation_projet_CNN-BNN_insects.html",
+      "/projets/presentationFruits.html",
+      "/projets/DEEP_meow.html",
+      "/projets/projets_val.html",
+      "/projets/Projet_strct_prot.html",
+      "/projets/Template_presentation_projets copie.html"
     ]
   }
 ]
