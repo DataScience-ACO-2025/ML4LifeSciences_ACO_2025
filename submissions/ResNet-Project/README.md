@@ -5,6 +5,16 @@
 
 What is a ResNet ? How can we construct deeper network ? --> Application to microscopic fungi image classification
 
+## How to launch the project
+
+In the terminal : 
+
+*python3 train_test.py* to produce the raw results
+
+*python3 plots.py* to render the plots
+
+plots et results can be found in the corresponding files 
+
 ## Strcuture 
 
 ## Project Structure
@@ -44,4 +54,6 @@ What is a ResNet ? How can we construct deeper network ? --> Application to micr
 
 - **plots_comparatifs/**  
   Contains all generated graphs comparing the CNN and ResNet performances.
+
+
 
