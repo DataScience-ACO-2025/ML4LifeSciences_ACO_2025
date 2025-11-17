@@ -1,4 +1,4 @@
-# ResNet-Project
+# ResNet-Project : Jules Mathieu / Tom Norroy
 
 
 ## Questions/Goal
