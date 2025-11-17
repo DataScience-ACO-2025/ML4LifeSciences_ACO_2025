@@ -1,0 +1,335 @@
+---
+title: "Prédire la structure secondaire des protéines : du signal biologique aux approches d’apprentissage avancées"
+subtitle: "heure - passage"
+description: "Prédiction de la structure secondaire à partir de la séquence, en évaluant l’impact de différents descripteurs biologiques et des méthodes Random Forest, CNN et modèles de NLP spécialisés du type BERT."
+
+author:
+  - name: "BOULET Faustine"
+    affiliation: "Institut Agro Rennes"
+  - name: "BEAUFILS Constance"
+    affiliation: "Institut Agro Rennes"
+  - name: "PLACIER Moïse"
+    affiliation: "ENSAT & Institut Agro Rennes"
+
+date: 2025-11-21 
+image: ../img_projets/3D_prot_miniature.jpeg 
+listing:
+  id: projets
+---
+
+# The Project Team
+
+:::: {.grid}
+
+::: {.g-col-6 .g-col-md-3 .text-center}
+<img src="../img_projets/Faustine_boulet.jpeg" alt="BOULET Faustine" class="photo-profil-about">
+**BOULET Faustine** 
+Etudiante ingénieure Agronome
+Institut Agro Rennes  
+[GitHub](https://github.com/faustineboulet) • [LinkedIn](https://www.linkedin.com/in/faustine-boulet-066451246/)
+:::
+
+::: {.g-col-6 .g-col-md-3 .text-center}
+<img src="../img_projets/Constance_Beaufils.jpeg" alt="BEAUFILS Constance" class="photo-profil-about">
+**BEAUFILS Constance** 
+Etudiante ingénieure Agronome
+Institut Agro Rennes  
+[GitHub](https://github.com/constancebfls) • [LinkedIn](https://www.linkedin.com/in/constance-beaufils-940672259/)
+:::
+
+::: {.g-col-6 .g-col-md-3 .text-center}
+<img src="../img_projets/Moise_Placier.png" alt="Moïse Placier" class="photo-profil-about">
+**PLACIER Moïse** 
+Etudiant ingénieur Agronome
+Institut Agro Rennes  & ENSAT
+[GitHub](https://github.com/MoisePlacier) • [LinkedIn](www.linkedin.com/in/moïse-placier-9639bb24b)
+:::
+
+::::
+
+# Intro
+
+This project focuses on predicting the secondary structure of proteins from their primary amino-acid sequence. In the scientific scope, we aim to map from the linear sequence of residues (primary structure) to a one-dimensional annotation of local folding states (secondary structure).
+
+### Definitions
+
+**Primary structure** refers to the linear sequence of amino acids (residues) in a protein.
+
+![](../img_projets/5.svg)
+
+
+**The secondary structure** describes the local organization of the protein backbone. Most residues adopt one of two regular conformations: α-helices and β-strands, as originally formalized in the early structural work of [Pauling & Corey](https://pubs.acs.org/doi/10.1021/ja01161a053). 
+
+
+![](../img_projets/Secondary_structure.png)
+
+
+For modelling, we simplify the standard eight secondary structure categories into three classes:
+
+“H” for helix (including 3-10 helix “G” and π-helix “I” mapped to ‘H’)
+
+“E” for β-strand (including β-bridge “B”)
+
+“C” for coil (turns “T”, bends “S”, loops “L”)
+
+This allows us to represent the secondary structure as a one-dimensional sequence of H/E/C labels.
+
+
+
+
+
+**Tertiary structure** refers to the three-dimensional conformation of a protein under physiological conditions (temperature, pH, solvent etc.), as observed via X-ray crystallography, NMR or cryo-EM. It describes the spatial relationships among the secondary-structure elements.
+
+![](../img_projets/Domain_Homology.png)
+
+### Why focus on sequence-based prediction?
+
+A central principle of molecular biophysics is that the amino-acid sequence largely determines the final three-dimensional fold, a concept supported both experimentally (e.g., [Anfinsen’s dogma](https://en.wikipedia.org/wiki/Anfinsen%27s_dogma)) and theoretically. This makes structure prediction from sequence an attractive computational goal, especially because sequencing a protein is vastly simpler, faster, and cheaper (on the order of ~$100) than experimentally determining its structure via crystallography, NMR or cryo-EM (which often require years of work and involve very large costs). Consequently the field of protein-structure prediction is highly active.
+
+However, the prediction problem is intrinsically difficult. The classical Levinthal paradox illustrates well the combinatorial explosion of possible conformations: if each residue can adopt approximately three stable states, a protein of 101 amino acids would have ~3^100 potential conformations. Exhaustive enumeration is therefore infeasible
+
+### Why predict secondary structure?
+
+We restrict our focus to secondary-structure prediction because it simplifies both the modelling and the evaluation. Instead of predicting a 3D coordinate triplet (x, y, z) for every residue, we classify each residue into H, E or C. Metrics such as Q3 accuracy are straightforward to compute, and this one-dimensional output remains highly informative for understanding folding, guiding tertiary-structure prediction, and supporting downstream tasks in structural bioinformatics.
+
+At the same time, although simplified, the biological input features (physico-chemical properties, multiple-sequence alignments, PSSM/evolutionary profiles) and the modelling strategies (Random Forest, CNNs, transformer/NLP-based embeddings) remain relevant and transferable to tertiary-structure prediction tasks. This project therefore offers a sound starting point for exploring the core themes of protein-structure prediction.
+
+
+### Dataset: ProteinNet
+
+This project relies on **ProteinNet**, a curated dataset introduced by AlQuraishi and colleagues to standardize machine-learning benchmarks for protein structure prediction ([ProteinNet paper](https://arxiv.org/pdf/1902.00249)). ProteinNet integrates sequence data, evolutionary information, and experimentally resolved structural annotations, and is designed to mirror the evaluation protocol of the CASP challenge.
+
+#### Characteristics of Protein Datasets
+
+Protein datasets differ fundamentally from standard machine-learning datasets, and these differences deeply impact training, evaluation, and generalization.
+
+**Non-I.I.D. Nature and Evolutionary Coupling**
+
+Proteins are not independent samples. They arise from evolutionary processes and thus share phylogenetic relationships. Many proteins within a dataset have detectable homology, violating the i.i.d. assumption that underpins most ML models. Two sequences may share a common ancestor even if they differ in function, which makes naïve dataset splitting misleading.
+
+**High Structural and Sequential Redundancy**
+
+Homologous proteins can exceed 90% sequence identity, meaning they are nearly identical at the residue level. This level of redundancy has no equivalent in common ML domains such as vision, where similar classes remain pixel-distinct. Without proper control of redundancy, models trivially memorize homologous examples rather than learning the underlying biophysics of folding.
+
+
+#### Impact on Machine-Learning Training
+
+These dataset characteristics create several pitfalls that must be explicitly mitigated.
+
+**Severe Risk of Overfitting**
+
+If training, validation, and test sets share proteins above 30–40% sequence identity, a model can achieve high accuracy simply by memorizing close homologs. This yields deceptively strong performance, especially on short-range structure, without genuine understanding of folding constraints. When homologous leakage occurs, a model does not generalize the folding process and will fail to predict structures for truly novel proteins, such as proteins from under-sampled species or newly sequenced metagenomic datasets. This undermines the biological utility of the predictor.
+
+
+#### Implemented Solutions
+
+ProteinNet employs several mechanisms to avoid these pitfalls.
+
+**Homology-Aware Splitting Through Sequence Clustering for train and validation split**
+
+Dataset splits are not random but based on sequence-identity clustering. Tools such as [jackHMMER](https://pmc.ncbi.nlm.nih.gov/articles/PMC4489315/) group proteins by similarity, ensuring that clusters assigned to training do not overlap with those assigned to validation. This preserves evolutionary independence across folds and yields more realistic performance estimates.
+
+![Homology-Aware Splitting ](../img_projets/)
+
+**Blind Evaluation via CASP Protocol**
+
+ProteinNet uses the [CASP (Critical Assessment of Structure Prediction)](https://pmc.ncbi.nlm.nih.gov/articles/PMC6927249/) evaluation framework, where models are tested on protein structures that were not publicly available at training time. This ensures transparent, unbiased assessment of generalization. CASP remains the gold standard benchmark for structure prediction.
+
+
+# Biological Inputs and Modelling Strategy
+
+## 1. Local Models: Physico-Chemical Features + Random Forest
+
+Our initial modeling strategy leverages the intrinsic physico-chemical properties of individual amino acids and their immediate sequence context to predict secondary structure. By employing a sliding window approach, we capture the local interactions that drive helix and coil formation. This framework provides a straightforward yet biologically informed baseline
+
+### Data Preprocessing for the Random Forest
+
+To prepare the input data for our Random Forest model, each protein sequence is first segmented into overlapping windows of size 11, such that for a sequence of length $L$, $L$ windows are generated, each centered on a single residue. Within each window, individual amino acids are represented as vectors of physico-chemical descriptors derived from the [AAindex1 database](https://www.genome.jp/aaindex/). Residues that correspond to padding ('-') at sequence termini are assigned zero-filled vectors to maintain consistent dimensionality. The descriptors from all residues in a window are then concatenated to form a single flattened feature vector, which preserves local contextual information around each residue while producing a tabular format compatible with classical machine learning models. 
+
+We selected descriptors that influence secondary structure formation:
+
+1) **Hydrophobicity / Hydrophilicity**
+
+Determines helix folding and internal beta-strand stability.
+
+- ARGP820101 Hydrophobicity index ([Argos et al., 1982](https://doi.org/10.1016/0022-2836(82)90193-9)) 
+
+2) **Side-chain Volume / Size**
+
+Steric effects can favor loops versus compact helices.
+
+- BIGC670101 Residue volume ([Bigelow, 1967](ttps://doi.org/10.1016/0022-2836(67)90162-6)) 
+- FAUJ880106 Max width of side chain ([Fauchere et al., 1988](https://pubmed.ncbi.nlm.nih.gov/3209351/))
+
+3) **Polarity**
+
+Influences hydrogen bonding and solvent exposure.
+
+- CHAM820101 Polarizability ([Charton-Charton, 1982](https://www.sciencedirect.com/science/article/abs/pii/0022519382901916))
+- GRAR740102 Polarity ([Grantham, 1974](https://pubmed.ncbi.nlm.nih.gov/4843792/))
+- RADA880108 Mean polarity ([Radzicka-Wolfenden, 1988](https://pubmed.ncbi.nlm.nih.gov/3166998/))
+
+4) **Charge**
+
+Local electrostatics affect helix and beta-strand formation.
+
+- FAUJ880111 Positive charge ([Fauchere et al., 1988](https://pubmed.ncbi.nlm.nih.gov/3209351/))
+- FAUJ880112 Negative charge ([Fauchere et al., 1988](https://pubmed.ncbi.nlm.nih.gov/3209351/))
+
+5) **Flexibility / Rigidity**
+
+Glycine is flexible, proline rigid; this affects loop/corner formation.
+
+- BHAR880101 Flexibility index ([Bhaskaran-Ponnuswamy, 1988](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1399-3011.1988.tb01258.x))
+
+6) **Hydrogen-bond potential**
+
+Ability to donate/accept H-bonds stabilizes helices and strands.
+
+- CHAM830107 Charge transfer parameter (Charton-Charton, 1983)
+- FAUJ880109 Number of hydrogen-bond donors ([Fauchere et al., 1988](https://pubmed.ncbi.nlm.nih.gov/3209351/))
+
+
+Following this preprocessing pipeline, we obtain a comprehensive tabular dataset suitable for Random Forest training. For a sliding window of size 11, each residue is represented by 11 × 11 = **121 features**, reflecting the concatenation of 11 physico-chemical descriptors across the local sequence context. The resulting training set comprises **2,270,581 windows**, with secondary structure labels distributed as **1,011,153 coils (C)**, **472,863 beta strands (E)**, and **786,565 helices (H)**.
+
+
+### Model Training
+
+To train our Random Forest classifier efficiently, we first extracted a representative subset of **200,000 windows** from the training set, stratified by secondary structure labels to preserve class distributions (C: 1,011,153; E: 472,863; H: 786,565). This subset was used for rapid **hyperparameter tuning**, allowing systematic exploration of the number of estimators, tree depth, minimum samples per leaf, and the number of features considered at each split. Each combination of hyperparameters was evaluated on a held-out validation set using multiple metrics, including Q3 accuracy (the fraction of residues correctly classified into the three secondary structure classes H, E, and C), balanced Q3 accuracy and macro F1 score.
+
+After exhaustive grid search, the optimal parameters were identified as **200 trees**, a **maximum depth of 20**, **minimum samples per leaf of 1**, and sqrt features considered at each split. With thoses hyperparameters determined, the final Random Forest was trained on the full training set and persisted to disk. 
+
+### Results and discussion 
+
+**Overall Metrics**
+
+| Metric             | Value  |
+|-------------------|--------|
+| Q3 Accuracy       | 0.665  |
+| Balanced Accuracy | 0.626  |
+| Macro F1          | 0.633  |
+
+
+**Class-wise Performance**
+
+| Class | Precision | Recall | F1-score | Support |
+|-------|-----------|--------|----------|---------|
+| H     | 0.63      | 0.68   | 0.65     | 3788    |
+| E     | 0.65      | 0.43   | 0.52     | 2551    |
+| C     | 0.69      | 0.77   | 0.73     | 5317    |
+| **Macro Avg** | 0.66 | 0.63 | 0.63 | 11656 |
+| **Weighted Avg** | 0.66 | 0.66 | 0.66 | 11656 |
+
+
+Although Random Forests trained on **local physico-chemical** features provide a biologically interpretable baseline, they are inherently limited, which directly accounts for the observed performance. These models are fundamentally local, relying on sliding windows that capture only short-range interactions between residues. 
+
+Beta strands are fundamentally **non-local** structures, as their formation often involves interactions between residues that are distant in the primary sequence, unlike alpha helices, which are largely local and can be stabilized by as few as five consecutive residues through hydrogen bonding. Moreover, a given amino acid sequence can adopt a stable alpha helix in isolation but form a beta strand in the context of long-range interactions with other distant residues. This distinction explains why the model predicts helices and coils relatively well but struggles with beta strands. As Baldwin and Rose note, “the accuracy of secondary structure predictions is only 65–70%. This fact is usually interpreted to imply that the remaining variance of 30–35% is caused by non-local interactions” ([Baldwin & Rose, 2013](https://www.sciencedirect.com/science/article/pii/S0968000498013462)), which is consistent with the ~66% Q3 accuracy achieved by our Random Forest.
+
+![](../img_projets/Beta_Global_vs_alpha_local.webp)
+
+Another limitation stems from the residue-level granularity of predictions, which can fragment continuous secondary structure elements. Helices and beta strands span multiple residues, but predicting each residue independently often produces biologically inconsistent patterns.
+For instance, a target sequence :
+['C',**'H','H','H','H','H','H'**,'C','C','C','C','E','E','E','E'] may be predicted as :  ['C',**'H','H','H'**,'C','C','E','C','C','E','E','E','E','E','E']
+resulting in short, fragmented structures that do not reflect realistic motifs. This is particularly problematic for alpha helices, which require a minimum of five consecutive residues to form a stable helix. If only three consecutive residues are predicted as helix, it is unclear how to interpret them biologically: should they be converted to coil, extended to form a full helix, or treated as part of a beta strand? Such inconsistencies highlight the limitations of purely residue-level, local prediction approaches.
+
+Finally, the Random Forest model itself has limitations: it treats features as independent and is **invariant to permutations**, so it cannot exploit sequential correlations or detect motifs across neighboring residues within the window as a CNN or transformer-based model could. Additionally, the input features—physico-chemical descriptors—represent only local properties and is a **redundant information**. Taken together, these factors naturally limit the model’s performance, making a plateau around 65–66% accuracy expected for purely local, feature-based methods.
+
+
+
+## Evolutionary information and convolutional models (1D CNN + PSSM)
+
+This subsection introduces evolutionary descriptors, especially Position-Specific Scoring Matrices (PSSMs) derived from multiple sequence alignments, widely used in secondary-structure predictors.
+
+
+### The biological input : PSSM 
+
+A Position-Specific Scoring Matrix (PSSM) provides an evolutionary profile for each residue position within a protein sequence. For each position $i$ and amino acid $a$, the PSSM encodes a substitution probability or score $P(a \mid i)$ derived from a Multiple Sequence Alignment (MSA). An MSA is a matrix-like arrangement of homologous sequences where each row represents a sequence and columns align residues considered evolutionarily equivalent.
+
+Suppose we have the following MSA for a protein segment of length 5:
+
+| Sequence | 1 | 2 | 3 | 4 | 5 |
+| -------- | - | - | - | - | - |
+| S1       | A | L | K | A | V |
+| S2       | A | L | R | A | V |
+| S3       | A | I | K | A | I |
+| S4       | A | L | K | A | V |
+
+First, the multiple sequence alignment is scanned column by column to count how many times each amino acid occurs at position $i$.
+
+| Position | A | L | I | K | R | V |
+| -------- | - | - | - | - | - | - |
+| **1**    | 4 | 0 | 0 | 0 | 0 | 0 |
+| **2**    | 0 | 3 | 1 | 0 | 0 | 0 |
+| **3**    | 0 | 0 | 0 | 3 | 1 | 0 |
+| **4**    | 4 | 0 | 0 | 0 | 0 | 0 |
+| **5**    | 0 | 0 | 1 | 0 | 0 | 3 |
+
+Next, the counts are converted into positional probabilities $P(a \mid i)$ by dividing by the number of sequences in the MSA. For example, at position 2, $P(L \mid 2)=3/4$ and $P(I \mid 2)=1/4$. These probabilities indicate how frequently each amino acid occurs at a given evolutionary position.
+
+Finally, the positional probabilities are compared to the background frequency $P(a)$ of each amino acid in a large non-redundant protein database using the log-odds formula: $$PSSM(a, i) = \log \frac{P(a \mid i)}{P(a)}$$
+
+| AA ↓ / Pos → | 1                                  | 2                        | 3        | 4        | 5        |
+| ------------ | ---------------------------------- | ------------------------ | -------- | -------- | -------- |
+| A            | **log(4/4 / 0.05)= log(20)= 3.00** | 0                        | 0        | **3.00** | 0        |
+| L            | 0                                  | **log(3/4 / 0.05)=2.30** | 0        | 0        | 0        |
+| I            | 0                                  | **log(1/4 / 0.05)=1.61** | 0        | 0        | **1.61** |
+| K            | 0                                  | 0                        | **2.71** | 0        | 0        |
+| R            | 0                                  | 0                        | **1.61** | 0        | 0        |
+| V            | 0                                  | 0                        | 0        | 0        | **2.30** |
+
+
+If $P(a\mid i)$ is higher than the background, the score is positive, indicating evolutionary enrichment of that amino acid at that position. If it is lower, the score is negative. In the example, position 1 is strongly enriched for A because $P(A\mid1)=1.0$ is much larger than the background probability $P(A)=0.05$, giving a high log-odds value of about 3.00. In other words, a high positive PSSM score at position $i$ for amino acid $a$ indicates that $a$ occurs more often than expected by chance at that position among homologous sequences.
+
+The PSSMs used in this project are derived from the ProteinNet dataset, where MSAs were generated using JackHMMER and weighted with [Henikoff position-based weights]((https://pubmed.ncbi.nlm.nih.gov/7966282/)) to reduce the influence of closely related sequences.
+ 
+For secondary structure prediction, PSSMs introduce a strong biological signal that is not present in raw amino acid sequences or physico-chemical descriptors. Evolutionarily conserved positions tend to correspond to structurally or functionally important residues, while positions tolerant to substitution often lie in loops or solvent-exposed regions. 
+
+
+### Data Preprocessing for the 1D CNN Model
+
+To leverage the sequential nature of proteins, the 1D convolutional neural network (CNN) operates on full-length sequences rather than fixed local windows. Unlike the Random Forest, which relies on sliding windows to capture short-range context, the CNN requires a consistent tensor shape across all proteins while preserving the residue order.
+
+Each amino acid is represented as a 21-dimensional one-hot vector, encoding the 20 standard residues plus a dedicated padding token. Protein sequences vary in length, so both inputs and labels are padded to the maximum sequence length in the dataset. As a result, each protein is converted into an input tensor of shape $(L_{\text{max}}, 21)$ and a label tensor of shape $(L_{\text{max}})$, with padded positions assigned a special index to be ignored during loss computation.
+
+During training, input tensors are transposed to $(\text{Batch}, 21, L_{\text{max}})$, the format expected by PyTorch’s Conv1d layers.
+
+### 1D CNN Architecture
+
+The network consists of three consecutive 1D convolutional layers with kernel size 5 corresponding to the typical length of local structural motifs, progressively increasing the number of filters from 128 to 256 and then 512. Dropout layers (rate 0.5) follow the first two convolutions to mitigate overfitting. The final classification layer is a position-wise 1D convolution with kernel size one, producing logits over the three secondary structure classes (H, E, C) for each residue. Padding is applied to maintain the original sequence length throughout all convolutional layers.
+
+This architecture was chosen to balance biological interpretability and computational efficiency: the kernel size reflects the scale of short-range interactions, the progressive increase in filter number allows hierarchical feature extraction, and the absence of pooling preserves positional information critical for residue-level classification. By combining sequence order and evolutionary profiles through PSSMs, the network can leverage both local residue context and evolutionary conservation to improve secondary structure prediction accuracy.
+
+
+
+You then justify the use of 1D or 2D convolutional networks:
+CNNs apply learnable filters that slide along the sequence, sharing weights across positions and exploiting translational invariance (or equivariance). This yields a stronger ability to learn local sequence motifs and conserved patterns than Random Forests.
+However, CNNs remain inherently local. Although receptive fields can be widened, PSSMs themselves carry position-specific but non-contextual information, so long-range effects are still not represented explicitly.
+
+### Results and discussion 
+
+
+
+
+## language model ProteinBERT  for Secondary Structure Prediction
+
+
+ProteinBERT is a deep language model specifically designed for protein sequences. Inspired by the Transformer/BERT architecture from natural language processing, it integrates both local (residue-level) and global (whole-sequence) representations, enabling efficient modeling of very long protein sequences. Despite its relatively modest size (~16 million parameters), ProteinBERT achieves state-of-the-art performance across multiple protein prediction benchmarks.
+
+The model is pretrained using a dual-task self-supervised scheme on ~106 million non-redundant protein sequences from UniRef90. The pretraining tasks include masked language modeling, where random amino acids are corrupted and must be reconstructed, and Gene Ontology (GO) annotation prediction, where the model predicts functional annotations from partial input. This joint pretraining allows ProteinBERT to learn representations that capture both sequence patterns and functional context.
+
+ProteinBERT embeddings encode a rich mixture of residue-level physicochemical properties, evolutionary information, and functional context. Pretraining on large, diverse protein sets allows the model to generalize to sequences lacking close homologs, while the GO prediction task provides global functional signals that improve local predictions.
+
+While PSSMs encode only the likelihood of observing each amino acid at a given position, independently of other positions, ProteinBERT captures richer information that integrates residue-level context, long-range dependencies, and functional signals learned across millions of proteins. Consequently, whereas PSSMs are limited to evolutionary conservation and local substitution patterns, ProteinBERT embeddings incorporate both local sequence motifs and global structural and functional cues.This combination of local and global context makes ProteinBERT particularly suitable for predicting residue-level secondary structures.
+
+
+### The embedding-generation pipeline
+
+The embedding-generation pipeline follows a simple two-step procedure.
+
+In the first step, each protein sequence is processed independently through the pretrained ProtBERT model. The sequence is tokenized into single-residue tokens, encoded with the ProtBERT tokenizer, and passed through the encoder in inference mode. Each amino-acid sequence of length $L$ is transformed by ProtBERT into a matrix of shape $(L, 1024)$, where each residue is represented by a 1024-dimensional contextual embedding. These embeddings are saved individually as .npy arrays, one per protein, and the associated secondary-structure labels are stored as vectors of length $L$ containing integer class indices.
+
+During dataset loading, each sequence keeps its original shape $(L, 1024)$ until batching. When a batch is formed, the variable-length sequences are padded along the residue axis, producing a tensor of size $(\text{Batch}, L_{\text{max}}, 1024)$, where $L_{\text{max}}$ is the longest sequence in the batch. Labels undergo the same padding procedure and form a tensor of size $(\text{Batch}, L_{\text{max}})$, with a dedicated padding index (−100) used to mask non-valid positions during loss computation.
+
+
+
+
