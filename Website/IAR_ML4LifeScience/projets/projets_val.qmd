@@ -1,7 +1,8 @@
 ---
-title: "Le Machine Learning dans l'agriculture"
+title: "Optimisation de l'Irrigation des Cultures de Tomates par Apprentissage par Renforcement : Application de l'Algorithme Proximal Policy Optimization (PPO)"
 subtitle: "heure - passage"
 description: "Notre projet vise à optimiser l’irrigation de plants de tomates grâce à un agent d’apprentissage par renforcement."
+
 author:
   - name: "Lefèvre Vadim"
     affiliation: "Institut Agro Rennes"
@@ -25,7 +26,5 @@ listing:
 - [Slides](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025)
 
 ## description Projet
-Notre projet vise à optimiser l’irrigation de plants de tomates grâce à un agent d’apprentissage par renforcement apprenant à décider de la quantité d’eau à fournir.
-Nous avons construit un environnement simulant l’évolution de l’humidité du sol et du rendement, puis entraîné un agent à arroser les plants pour maximiser la production tout en réduisant la consommation d’eau.
-L’objectif est de proposer une stratégie d’irrigation efficace et durable qui peut s'adapter à différentes conditions observées. 
+Ce travail applique l'algorithme Proximal Policy Optimization (PPO) issu du framework de l’apprentissage par renforcement (RL) à l'optimisation de l'irrigation des cultures de tomates, en exploitant des données agronomiques et climatiques. L'agent apprend à maximiser le rendement tout en minimisant le gaspillage d'eau, validant l'efficacité du RL pour une gestion adaptative des ressources en agriculture.
 
