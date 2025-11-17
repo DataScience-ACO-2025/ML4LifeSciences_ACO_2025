@@ -1,5 +1,5 @@
 ---
-title: "EntraÃ®ner un modÃ¨le Vision Transformers pour la classification d'images "
+title: "Entraîner un modèle Vision Transformers pour la classification d'images "
 subtitle: "heure - passage"
 description: "Utilisation d'un Vision Transformers pour determiner si des feuilles sont malades ou non et leur maladie"
 author:

@@ -2,24 +2,28 @@
   {
     "listing": "/programme.html",
     "items": [
+      "/projets/Template_presentation_projets_Tom_Jules.html",
       "/projets/presentation_projet_CNN-BNN_insects.html",
       "/projets/presentationFruits.html",
+      "/projets/Template_presentation_projet_data_augmentation.html",
       "/projets/Projet_DeepMeow.html",
       "/projets/Template_presentation_projets.html",
+      "/projets/Template_presentation_feuille.html",
       "/projets/projets_val.html",
-      "/projets/Projet_strct_prot.html",
-      "/projets/Template_presentation_projets copie.html"
+      "/projets/Project_protein_web.html"
     ]
   },
   {
     "listing": "/projets/projets_val.html",
     "items": [
+      "/projets/Template_presentation_projets_Tom_Jules.html",
       "/projets/presentation_projet_CNN-BNN_insects.html",
       "/projets/presentationFruits.html",
+      "/projets/Template_presentation_projet_data_augmentation.html",
       "/projets/Projet_DeepMeow.html",
       "/projets/Template_presentation_projets.html",
-      "/projets/Projet_strct_prot.html",
-      "/projets/Template_presentation_projets copie.html"
+      "/projets/Template_presentation_feuille.html",
+      "/projets/Project_protein_web.html"
     ]
   }
 ]
