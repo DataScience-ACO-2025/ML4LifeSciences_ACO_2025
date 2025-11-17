@@ -1,0 +1,31 @@
+---
+title: "Data augmentation appliquée à des images"
+subtitle: "heure - passage"
+description: "Modèle CNN avec data augmentation pour classifier des images d'animaux"
+author:
+  - name: "EL HILALI Nassima"
+    affiliation: "Institut Agro Rennes"
+  - name: "MONTIER Maéva"
+    affiliation: "Institut Agro Rennes"
+  - name: "TRAORE Fabrice"
+    affiliation: "Institut Agro Rennes"
+
+date: 2025-11-21 
+image: ../img_projets/chat_rota.jpg
+listing:
+  id: projets
+---
+
+## Lien vers le code github 
+
+- [Github](https://github.com/nassimaelhilali-hub/ML_Project.git)
+
+## Lien vers les slides
+
+- [Slides](https://github.com/nassimaelhilali-hub/ML_Project/blob/main/Machine%20Learning.pptx)
+
+## description Projet
+
+Projet de classification d’images basé sur un CNN entraîné sur le dataset Animals10. Mise en place d’un pipeline complet : préparation des données, data augmentation et entraînement du modèle avec PyTorch. Évaluation des performances via précision, matrice de confusion et courbes d’apprentissage.
+
+

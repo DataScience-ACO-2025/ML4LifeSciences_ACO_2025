@@ -1,0 +1,35 @@
+---
+title: "EntraÃ®ner un modÃ¨le Vision Transformers pour la classification d'images "
+subtitle: "heure - passage"
+description: "Utilisation d'un Vision Transformers pour determiner si des feuilles sont malades ou non et leur maladie"
+author:
+  - name: "Fraysse Emilie"
+    affiliation: "Institut Agro Rennes"
+  - name: "Gouhier Erwan"
+    affiliation: "Institut Agro Rennes"
+  - name: "Delage de Luget Sixtine"
+    affiliation: "Institut Agro Rennes"
+
+date: 2025-11-21 
+image: ../img_projets/image_feuille.png
+listing:
+  id: projets
+---
+
+## Lien vers le code github 
+
+- [Github](https://github.com/KPatoche/Cours-ML-Bigdata-Erwan-Marie-Sixtine.git)
+
+## Lien vers les slides
+
+- [Slides](https://github.com/KPatoche/Cours-ML-Bigdata-Erwan-Marie-Sixtine.git)
+
+## description Projet
+
+Utilisation d'un Vision Transformers pour determiner si des feuilles sont malades ou non et leur maladie.
+
+
+
+
+
+

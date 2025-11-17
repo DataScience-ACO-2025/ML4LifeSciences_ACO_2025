@@ -1,7 +1,7 @@
 ---
 title: "Le Machine Learning dans l'agriculture"
 subtitle: "heure - passage"
-description: "description"
+description: "Notre projet vise à optimiser l’irrigation de plants de tomates grâce à un agent d’apprentissage par renforcement."
 author:
   - name: "Lefèvre Vadim"
     affiliation: "Institut Agro Rennes"

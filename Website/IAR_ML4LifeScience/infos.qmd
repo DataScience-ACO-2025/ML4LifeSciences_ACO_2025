@@ -9,10 +9,9 @@ editor: visual
 
 ### Lieu
 
-[Salle **5ème année** du **Bâtiment 24**](https://maps.app.goo.gl/rpyS8aUX8sGbn3vu9) 
+[Salle **5ème année** du **Bâtiment 24**](https://maps.app.goo.gl/rpyS8aUX8sGbn3vu9)
 
 [Institut Agro Rennes 65 Rue de Saint-Brieuc, 35042 Rennes.](https://maps.app.goo.gl/rpyS8aUX8sGbn3vu9)
-
 
 ### Plan d'accès
 
@@ -22,8 +21,4 @@ library(leaflet)
 leaflet() %>%  addTiles() %>%    addMarkers( lat=48.11349, lng=-1.70613, popup="Institut Agro Rennes")
 ```
 
-
-
 ![](img/plan_IAR.png)
-
-

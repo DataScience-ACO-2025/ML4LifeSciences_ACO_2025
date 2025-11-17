@@ -29,10 +29,12 @@
     "items": [
       "/projets/presentation_projet_CNN-BNN_insects.html",
       "/projets/presentationFruits.html",
-      "/projets/projets_val.html",
+      "/projets/Template_presentation_projet_data_augmentation.html",
       "/projets/Projet_DeepMeow.html",
-      "/projets/Projet_strct_prot.html",
-      "/projets/Template_presentation_projets copie.html"
+      "/projets/Template_presentation_projets.html",
+      "/projets/Template_presentation_feuille.html",
+      "/projets/projets_val.html",
+      "/projets/Projet_strct_prot.html"
     ]
   },
   {
@@ -73,6 +75,30 @@
       "/projets/presentation_projet_CNN-BNN_insects.html",
       "/projets/Projet_DeepMeow.html",
       "/projets/projets_val.html"
+    ]
+  },
+  {
+    "listing": "/projets/Template_presentation_projet_data_augmentation.html",
+    "items": [
+      "/projets/presentation_projet_CNN-BNN_insects.html",
+      "/projets/presentationFruits.html",
+      "/projets/Projet_DeepMeow.html",
+      "/projets/Template_presentation_projets.html",
+      "/projets/projets_val.html",
+      "/projets/Projet_strct_prot.html",
+      "/projets/Template_presentation_projets copie.html"
+    ]
+  },
+  {
+    "listing": "/projets/Template_presentation_feuille.html",
+    "items": [
+      "/projets/presentation_projet_CNN-BNN_insects.html",
+      "/projets/presentationFruits.html",
+      "/projets/Template_presentation_projet_data_augmentation.html",
+      "/projets/Projet_DeepMeow.html",
+      "/projets/Template_presentation_projets.html",
+      "/projets/projets_val.html",
+      "/projets/Projet_strct_prot.html"
     ]
   }
 ]

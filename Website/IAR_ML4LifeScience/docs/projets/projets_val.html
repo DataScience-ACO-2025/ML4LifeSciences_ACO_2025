@@ -6,8 +6,13 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Lefèvre Vadim">
+<meta name="author" content="Naux Emilie">
+<meta name="author" content="Julliard Valentine">
+<meta name="dcterms.date" content="2025-11-21">
+<meta name="description" content="Notre projet vise à optimiser l’irrigation de plants de tomates grâce à un agent d’apprentissage par renforcement.">
 
-<title>Infos pratiques – École d’Automne Data Science – Institut Agro Rennes</title>
+<title>Le Machine Learning dans l’agriculture – École d’Automne Data Science – Institut Agro Rennes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +28,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -66,30 +73,68 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-projets .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-projets'] = new List('listing-projets', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>html{ scroll-behavior: smooth; }</style>
-<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
 
-<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
-<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
-
-<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
-
-<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
-
-<script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
-
-<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
-
-<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
-
-<script src="site_libs/leaflet-binding-2.2.2/leaflet.js"></script>
-
-
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -99,10 +144,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./img/logo_ia_nb.png" alt="" class="navbar-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../img/logo_ia_nb.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">École d’Automne Data Science – Institut Agro Rennes</span>
     </a>
   </div>
@@ -113,15 +158,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./programme.html"> 
+    <a class="nav-link" href="../programme.html"> 
 <span class="menu-text">Programme</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./infos.html" aria-current="page"> 
+    <a class="nav-link" href="../infos.html"> 
 <span class="menu-text">Infos pratiques</span></a>
   </li>  
 </ul>
@@ -140,9 +185,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#horaires" id="toc-horaires" class="nav-link active" data-scroll-target="#horaires">Horaires :</a></li>
-  <li><a href="#lieu" id="toc-lieu" class="nav-link" data-scroll-target="#lieu">Lieu</a></li>
-  <li><a href="#plan-daccès" id="toc-plan-daccès" class="nav-link" data-scroll-target="#plan-daccès">Plan d’accès</a></li>
+  <li><a href="#lien-vers-le-code-github" id="toc-lien-vers-le-code-github" class="nav-link active" data-scroll-target="#lien-vers-le-code-github">Lien vers le code github</a></li>
+  <li><a href="#lien-vers-les-slides" id="toc-lien-vers-les-slides" class="nav-link" data-scroll-target="#lien-vers-les-slides">Lien vers les slides</a></li>
+  <li><a href="#description-projet" id="toc-description-projet" class="nav-link" data-scroll-target="#description-projet">description Projet</a></li>
   </ul>
 </nav>
     </div>
@@ -151,14 +196,55 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Infos pratiques</h1>
+<h1 class="title">Le Machine Learning dans l’agriculture</h1>
+<p class="subtitle lead">heure - passage</p>
 </div>
 
+<div>
+  <div class="description">
+    Notre projet vise à optimiser l’irrigation de plants de tomates grâce à un agent d’apprentissage par renforcement.
+  </div>
+</div>
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Lefèvre Vadim </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Institut Agro Rennes
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Naux Emilie </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Institut Agro Rennes
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Julliard Valentine </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Institut Agro Rennes
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 21, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -168,29 +254,201 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="horaires" class="level3">
-<h3 class="anchored" data-anchor-id="horaires">Horaires :</h3>
-<p><strong>vendredi 21 novembre 2025</strong> entre <strong>13h30</strong> et <strong>16h30</strong></p>
+<section id="lien-vers-le-code-github" class="level2">
+<h2 class="anchored" data-anchor-id="lien-vers-le-code-github">Lien vers le code github</h2>
+<ul>
+<li><a href="https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025">Github</a></li>
+</ul>
 </section>
-<section id="lieu" class="level3">
-<h3 class="anchored" data-anchor-id="lieu">Lieu</h3>
-<p><a href="https://maps.app.goo.gl/rpyS8aUX8sGbn3vu9">Salle <strong>5ème année</strong> du <strong>Bâtiment 24</strong></a></p>
-<p><a href="https://maps.app.goo.gl/rpyS8aUX8sGbn3vu9">Institut Agro Rennes 65 Rue de Saint-Brieuc, 35042 Rennes.</a></p>
+<section id="lien-vers-les-slides" class="level2">
+<h2 class="anchored" data-anchor-id="lien-vers-les-slides">Lien vers les slides</h2>
+<ul>
+<li><a href="https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025">Slides</a></li>
+</ul>
 </section>
-<section id="plan-daccès" class="level3">
-<h3 class="anchored" data-anchor-id="plan-daccès">Plan d’accès</h3>
-<div class="cell">
-<div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-7e274f322e7acadb07ad" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-7e274f322e7acadb07ad">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[48.11349,-1.70613,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Institut Agro Rennes",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[48.11349,48.11349],"lng":[-1.70613,-1.70613]}},"evals":[],"jsHooks":[]}</script>
+<section id="description-projet" class="level2">
+<h2 class="anchored" data-anchor-id="description-projet">description Projet</h2>
+<p>Notre projet vise à optimiser l’irrigation de plants de tomates grâce à un agent d’apprentissage par renforcement apprenant à décider de la quantité d’eau à fournir. Nous avons construit un environnement simulant l’évolution de l’humidité du sol et du rendement, puis entraîné un agent à arroser les plants pour maximiser la production tout en réduisant la consommation d’eau. L’objectif est de proposer une stratégie d’irrigation efficace et durable qui peut s’adapter à différentes conditions observées.</p>
+
+
+
+</section>
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-projets">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1763679600000" data-listing-file-modified-sort="1763302073211" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="405">
+<div class="thumbnail">
+<p><a href="../projets/presentation_projet_CNN-BNN_insects.html" class="no-external"></a></p><a href="../projets/presentation_projet_CNN-BNN_insects.html" class="no-external">
+<p><img loading="lazy" src="../img_projets/image_insecte.jpg" class="thumbnail-image"></p>
+</a><p><a href="../projets/presentation_projet_CNN-BNN_insects.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../projets/presentation_projet_CNN-BNN_insects.html" class="no-external">Apport d’un modèle Bayésien lors de l’utilisation de réseaux de neuronnes pour la classification d’images</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../projets/presentation_projet_CNN-BNN_insects.html" class="no-external">heure - passage</a>
+</div>
+<div class="listing-description">
+<a href="../projets/presentation_projet_CNN-BNN_insects.html" class="no-external">Comparaison de 2 ‘versions’ du modèle AlexNet pour la classification d’images, exemple sur un jeu d’images d’insectes</a>
 </div>
 </div>
-<p><img src="img/plan_IAR.png" class="img-fluid"></p>
-
-
-</section>
-
-</main> <!-- /main -->
+<div class="metadata">
+<a href="../projets/presentation_projet_CNN-BNN_insects.html" class="no-external">
+<div class="listing-date">
+Nov 21, 2025
+</div>
+<div class="listing-author">
+Roattino Thibault, Belle Louis, Rosa Matéo
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1763679600000" data-listing-file-modified-sort="1763375645135" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="130">
+<div class="thumbnail">
+<p><a href="../projets/presentationFruits.html" class="no-external"></a></p><a href="../projets/presentationFruits.html" class="no-external">
+<p><img loading="lazy" src="../img_projets/image_fruit.png" class="thumbnail-image"></p>
+</a><p><a href="../projets/presentationFruits.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../projets/presentationFruits.html" class="no-external">Classification d’images - une comparaison entre R et Python</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../projets/presentationFruits.html" class="no-external">heure - passage</a>
+</div>
+<div class="listing-description">
+<a href="../projets/presentationFruits.html" class="no-external">Comparaison méthologiques de l’utilisation de Keras sur R et Python et Pytorch sur Python dans le cadre d’une classification d’images à 2 classes</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../projets/presentationFruits.html" class="no-external">
+<div class="listing-date">
+Nov 21, 2025
+</div>
+<div class="listing-author">
+Clément Melina, Le Moan Delalande Riwal, Mathieu Anna
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1763679600000" data-listing-file-modified-sort="1763413943519" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="129">
+<div class="thumbnail">
+<p><a href="../projets/Projet_DeepMeow.html" class="no-external"></a></p><a href="../projets/Projet_DeepMeow.html" class="no-external">
+<p><img loading="lazy" src="../img_projets/chat.jpg" class="thumbnail-image"></p>
+</a><p><a href="../projets/Projet_DeepMeow.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../projets/Projet_DeepMeow.html" class="no-external">Deep Meow</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../projets/Projet_DeepMeow.html" class="no-external">heure - passage</a>
+</div>
+<div class="listing-description">
+<a href="../projets/Projet_DeepMeow.html" class="no-external">Labellisation de signaux audio de miaulement de chat</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../projets/Projet_DeepMeow.html" class="no-external">
+<div class="listing-date">
+Nov 21, 2025
+</div>
+<div class="listing-author">
+Antier Augustin, Causeur Léna, Prusiewicz-Blondin Louis
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1763679600000" data-listing-file-modified-sort="1763375664067" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="203">
+<div class="thumbnail">
+<p><a href="../projets/Template_presentation_projets.html" class="no-external"></a></p><a href="../projets/Template_presentation_projets.html" class="no-external">
+<p><img loading="lazy" src="../img_projets/irm.jpg" class="thumbnail-image"></p>
+</a><p><a href="../projets/Template_presentation_projets.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../projets/Template_presentation_projets.html" class="no-external">Détection et segmentation automatique des métastases cérébrales sur IRM avec U-Net et SAM</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../projets/Template_presentation_projets.html" class="no-external">heure - passage</a>
+</div>
+<div class="listing-description">
+<a href="../projets/Template_presentation_projets.html" class="no-external">Présentation sur l’imagerie médicale et l’IA : à partir de 156 IRM cérébrales, nous développons des méthodes automatisées pour détecter et segmenter les métastases, rendant le diagnostic plus rapide et fiable.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../projets/Template_presentation_projets.html" class="no-external">
+<div class="listing-date">
+Nov 21, 2025
+</div>
+<div class="listing-author">
+Marine Camus, Audrey Lapie, Léa Desbats
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1763679600000" data-listing-file-modified-sort="1763375645102" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="20" data-listing-word-count-sort="3901">
+<div class="thumbnail">
+<p><a href="../projets/Projet_strct_prot.html" class="no-external"></a></p><a href="../projets/Projet_strct_prot.html" class="no-external">
+<p><img loading="lazy" src="../img_projets/3D_prot_miniature.jpeg" class="thumbnail-image"></p>
+</a><p><a href="../projets/Projet_strct_prot.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../projets/Projet_strct_prot.html" class="no-external">Prédire la structure secondaire des protéines : du signal biologique aux approches d’apprentissage avancées</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../projets/Projet_strct_prot.html" class="no-external">heure - passage</a>
+</div>
+<div class="listing-description">
+<a href="../projets/Projet_strct_prot.html" class="no-external">Prédiction de la structure secondaire à partir de la séquence, en évaluant l’impact de différents descripteurs biologiques et des méthodes Random Forest, CNN et modèles de NLP spécialisés du type BERT.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../projets/Projet_strct_prot.html" class="no-external">
+<div class="listing-date">
+Nov 21, 2025
+</div>
+<div class="listing-author">
+BOULET Faustine, BEAUFILS Constance, PLACIER Moïse
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1763679600000" data-listing-file-modified-sort="1763375645102" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
+<div class="thumbnail">
+<p><a href="../projets/Template_presentation_projets copie.html" class="no-external"></a></p><a href="../projets/Template_presentation_projets copie.html" class="no-external">
+<p><img loading="lazy" src="../img_projets/exemple.png" class="thumbnail-image"></p>
+</a><p><a href="../projets/Template_presentation_projets copie.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../projets/Template_presentation_projets copie.html" class="no-external">Titre du projet</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../projets/Template_presentation_projets copie.html" class="no-external">heure - passage</a>
+</div>
+<div class="listing-description">
+<a href="../projets/Template_presentation_projets copie.html" class="no-external">petite description</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../projets/Template_presentation_projets copie.html" class="no-external">
+<div class="listing-date">
+Nov 21, 2025
+</div>
+<div class="listing-author">
+Nom Prenom
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -635,5 +893,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

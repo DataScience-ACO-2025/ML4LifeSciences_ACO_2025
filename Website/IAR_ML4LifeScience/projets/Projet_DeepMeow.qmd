@@ -10,6 +10,7 @@ author:
   - name: "Prusiewicz-Blondin Louis"
     affiliation: "Institut Agro Rennes"
 
+
 date: 2025-11-21 
 image: ../img_projets/chat.jpg 
 listing:
@@ -18,11 +19,14 @@ listing:
 
 ## Lien vers le code github 
 
-- [Github](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025)
+- [Github](https://github.com/BatchOfKittens/DeepMeows)
 
 ## Lien vers les slides
 
-- [Slides](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025)
+- [Slides](https://raw.githubusercontent.com/BatchOfKittens/DeepMeows/main/slides/presentation_DeepMeow.pdf
+)
+
+# Deep Meow
 
 ## Contexte : 
 
