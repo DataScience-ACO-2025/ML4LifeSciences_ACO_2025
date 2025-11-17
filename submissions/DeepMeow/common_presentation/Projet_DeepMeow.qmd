@@ -1,0 +1,47 @@
+---
+title: "Deep Meow"
+subtitle: "heure - passage"
+description: "Labellisation de signaux audio de miaulement de chat"
+author:
+  - name: "Antier Augustin"
+    affiliation: "Institut Agro Rennes"
+  - name: "Causeur Léna"
+    affiliation: "Institut Agro Rennes"
+  - name: "Prusiewicz-Blondin Louis"
+    affiliation: "Institut Agro Rennes"
+
+
+date: 2025-11-21 
+image: chat.jpg
+listing:
+  id: projets
+---
+
+## Lien vers le code github 
+
+- [Github](https://github.com/BatchOfKittens/DeepMeows)
+
+## Lien vers les slides
+
+- [Slides](https://github.com/BatchOfKittens/DeepMeows/slides/presentation_DeepMeow.pdf)
+
+# Deep Meow : Labellisation du contexte d'émission des miaulements de chat
+
+## Contexte : 
+
+La labellisation d’audio est une méthode fortement utilisée en machine learning, en agronomie, en sociologie, musique, etc… Nous proposons donc de présenter une démarche de traitement de signaux audio et de labellisation de ces signaux. 
+
+L'objectif de ce modèle d'apprentissage profond est d'identifier le contexte dans lequel un chat miaule. À cette fin, nous utilisons un jeu de données de 440 miaulements provenant de 21 chats (deux races : Maine Coon et Européen à poil court), enregistrés dans trois contextes d'élicitation : le brossage, l'isolement dans un environnement inconnu et l'attente de nourriture. Chaque stimulation a duré jusqu'à 5 minutes et les enregistrements ont été collectés dans des contextes naturalistes avec une manipulation standardisée pour minimiser le stress.
+
+Ce jeu de données est fourni par l'université de Milan à l'adresse suivante : CatMeows: A Publicly-Available Dataset of Cat Vocalizations. Nous nous sommes également basés, pour notre recherche, sur cet article : Audio Deep Learning : Sound Classification.
+
+## Notre jeu de données : 
+
+Notre exemple sera la labellisation d’audio de chat. Le jeu de données comprend 440 audios au format .WAV. Chaque audio étant un miaulement de chat. Les chats sont enregistrés dans différentes situations (En train d’être brossé, attendant de la nourriture, isolement dans un espace inconnu). Le but ici est de déterminer le contexte d’émission d’un miaulement. 
+
+## Points abordés :  
+
+-	Preprocessing sur des données audios
+-	Extraction de features via un réseau de neurones et des couches convolutionnelles
+
+
