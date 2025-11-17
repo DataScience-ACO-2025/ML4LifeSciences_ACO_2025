@@ -1,0 +1,87 @@
+
+import os
+import random
+import shutil
+
+
+def compter_images_par_sousdossier(dossier):
+    extensions_images = {".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tiff"}
+    resultats = {}
+
+    # Parcours de chaque sous-dossier
+    for racine, sous_dossiers, fichiers in os.walk(dossier):
+        # On ne compte pas le dossier racine lui-même
+        if racine == dossier:
+            continue
+        
+        nb_images = sum(
+            1 for f in fichiers 
+            if os.path.splitext(f)[1].lower() in extensions_images
+        )
+        
+        # Nom du sous-dossier seulement
+        nom_sous_dossier = os.path.basename(racine)
+        resultats[nom_sous_dossier] = nb_images
+
+    return resultats
+
+# Exemple d’utilisation
+dossier_cible = "../Insect_Detect_classification_v2"
+counts = compter_images_par_sousdossier(dossier_cible)
+
+for sous_dossier, nb in counts.items():
+    print(f"{sous_dossier} : {nb} images")
+
+
+
+
+def generer_groupes(dossier_principal):
+    extensions_images = {".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tiff"}
+    tailles = [5, 10, 50, 100, 500]
+
+    # Reste dans le dossier principal : on liste uniquement les sous-dossiers directs
+    sous_dossiers = [
+        os.path.join(dossier_principal, d)
+        for d in os.listdir(dossier_principal)
+        if os.path.isdir(os.path.join(dossier_principal, d))
+    ]
+
+    for sous in sous_dossiers:
+        # Récupérer les images
+        images = [
+            os.path.join(sous, f)
+            for f in os.listdir(sous)
+            if os.path.splitext(f)[1].lower() in extensions_images
+        ]
+
+        # On ne garde que les sous-dossiers qui ont ≥ 500 images
+        if len(images) < 500:
+            continue
+
+        nom_sous = os.path.basename(sous)
+        print(f"{nom_sous} : {len(images)} images → OK")
+
+        # Pour chaque taille (5, 10, ...)
+        for t in tailles:
+            dossier_taille = os.path.join(dossier_principal, f"{t}_img")
+            os.makedirs(dossier_taille, exist_ok=True)
+
+            # Créer le sous-dossier pour ce groupe
+            dossier_cible = os.path.join(dossier_taille, nom_sous)
+            os.makedirs(dossier_cible, exist_ok=True)
+
+            # Sélection aléatoire des images
+            images_sel = random.sample(images, t)
+
+            # Copier les images
+            for img in images_sel:
+                shutil.copy(img, dossier_cible)
+
+            print(f"  → {t}_img/{nom_sous} rempli avec {t} images")
+
+
+
+# Exemple
+dossier_cible = "../Insect_Detect_classification_v2"
+generer_groupes(dossier_cible)
+
