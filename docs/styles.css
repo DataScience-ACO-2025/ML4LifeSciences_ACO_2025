@@ -138,7 +138,6 @@ a:hover {
     transform: scale(1.1); /* agrandit légèrement le logo au survol */
 }
 
-
 /* Mise en forme homogène des logos */
 .logos-grid {
   align-items: center;
