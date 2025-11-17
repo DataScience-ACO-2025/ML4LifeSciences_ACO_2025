@@ -1,0 +1,40 @@
+---
+title: "Détection et segmentation automatique des métastases cérébrales sur IRM avec U-Net et SAM"
+subtitle: "13h30"
+description: "Présentation sur l'imagerie médicale et l'IA : à partir de 156 IRM cérébrales, nous développons des méthodes automatisées pour détecter et segmenter les métastases, rendant le diagnostic plus rapide et fiable."
+author:
+  - name: "Marine Camus"
+    affiliation: "Institut Agro Rennes"
+  - name: "Audrey Lapie"
+    affiliation: "Institut Agro Rennes"
+  - name: "Léa Desbats"
+    affiliation: "Institut Agro Rennes"
+
+date: 2025-11-21 
+image: ../img_projets/exemple.png 
+listing:
+  id: projets
+---
+
+## Lien vers le code github 
+
+- [Github](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025)
+
+## Lien vers les slides
+
+- [Slides](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025)
+
+## Lien vers les données
+
+- https://stanfordaimi.azurewebsites.net/datasets/f1253510-6ab3-4723-97e7-37d2af1ee898
+Données confidentielles avec une charte de confidentialité à signer. 
+Nous ne pouvons donc pas les upload sur le Git.
+
+## description Projet
+
+Les métastases cérébrales apparaissent chez environ 2% des patients dès le diagnostic initial de leur cancer primaire, et ce chiffre peut être plus élevé pour les cancers particulièrement agressifs. Une détection précoce et précise de ces lésions est cruciale, car certaines métastases peuvent être traitées chirurgicalement ou par radiothérapie stéréotaxique. Cependant, la lecture et l’annotation des IRM cérébrales restent des tâches longues et minutieuses pour les radiologues.
+
+Pour répondre à ce défi, notre projet utilise un jeu de données de 156 IRM cérébrales issues de patients présentant au moins une métastase confirmée. Pour une partie de ces images, des annotations de référence réalisées par des radiologues permettent de comparer et d’évaluer les performances des méthodes développées. L’objectif est de concevoir des approches automatisées capables de détecter et segmenter les métastases cérébrales, en s’appuyant notamment sur des architectures d’apprentissage profond telles que U-Net, largement utilisée pour la segmentation médicale, et SAM (Segment Anything Model), un modèle plus récent et généralisable. Ces outils permettent d’identifier et de délimiter avec précision les lésions, illustrant comment l’intelligence artificielle peut accélérer le diagnostic, améliorer la prise en charge clinique et ouvrir la voie à une médecine plus assistée, fiable et personnalisée.
+
+
+
