@@ -33,7 +33,7 @@ jupyter_cache/
 # Dossiers ou fichiers de données volumineux
 data/
 datasets/
-*.csv
+
 *.tsv
 *.xlsx
 *.xls
