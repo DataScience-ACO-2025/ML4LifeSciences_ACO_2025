@@ -48,7 +48,15 @@ Le programme complet, incluant les horaires de passages et les slides de chaque 
 
 Tous les travaux des étudiants sont centralisés dans un dépôt [GitHub](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025). Chaque projet comprend le code, un document de synthèse et les diapositives de présentation, permettant de consulter, reproduire et approfondir les travaux présentés durant cette édition de l’école d’automne.
 
-### 📍 Informations pratiques
+## Inscription 
+
+Nous vous invitons à vous inscrire en remplissant le formulaire suivant : 
+
+<a href="https://forms.gle/dJ3EVcWxGq4fjDs5A" target="_blank">
+  <img src="img/Formulaire_logo.png" alt="Logo" class="Logo_form">
+</a>
+
+## 📍 Informations pratiques
 
 Détails d’accès et plan disponibles dans la page [Infos pratiques](infos.qmd).
 

@@ -119,9 +119,26 @@ a:hover {
   transition: transform 0.2s ease-in-out;
 }
 
+
 .photo-profil-about:hover {
   transform: scale(1.05);
 }
+
+
+.Logo_form {
+    width: 20%;        /* largeur relative au conteneur parent */
+    max-width: 150px;  /* limite max */
+    height: auto;      /* conserve le ratio de l'image */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.Logo_form:hover {
+    transform: scale(1.1); /* agrandit légèrement le logo au survol */
+}
+
+
 /* Mise en forme homogène des logos */
 .logos-grid {
   align-items: center;

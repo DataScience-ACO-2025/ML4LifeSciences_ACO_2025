@@ -2,9 +2,11 @@
   {
     "listing": "/projets/Template_presentation_projets.html",
     "items": [
-      "/projets/Projet_exemple.html",
-      "/projets/Template_presentation_projets copie.html",
-      "/projets/Projet_exemple_2.html"
+      "/projets/presentation_projet_CNN-BNN_insects.html",
+      "/projets/presentationFruits.html",
+      "/projets/projets_val.html",
+      "/projets/Projet_DeepMeow.html",
+      "/projets/Template_presentation_projets copie.html"
     ]
   },
   {
@@ -27,8 +29,10 @@
     "items": [
       "/projets/presentation_projet_CNN-BNN_insects.html",
       "/projets/presentationFruits.html",
+      "/projets/projets_val.html",
       "/projets/Projet_DeepMeow.html",
-      "/projets/projets_val.html"
+      "/projets/Template_presentation_projets.html",
+      "/projets/Template_presentation_projets copie.html"
     ]
   },
   {
