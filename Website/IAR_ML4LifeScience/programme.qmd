@@ -4,7 +4,8 @@ description: "Programme complet de la conférence Machine Learning pour la Scien
 listing:
   id: projets_etudiants
   contents: projets
-  sort-ui: [description]
+  sort: subtitle   
+  sort-ui: [subtitle]
   type: default
   fields: [image, date, title, author, description]
 ---
