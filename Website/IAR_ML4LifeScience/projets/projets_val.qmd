@@ -1,6 +1,6 @@
 ---
 title: "Optimisation de l'Irrigation des Cultures de Tomates par Apprentissage par Renforcement : Application de l'Algorithme Proximal Policy Optimization (PPO)"
-subtitle: "heure - passage"
+subtitle: "15h30–15h50"
 description: "Notre projet vise à optimiser l’irrigation de plants de tomates grâce à un agent d’apprentissage par renforcement."
 
 author:
@@ -19,11 +19,11 @@ listing:
 
 ## Lien vers le code github 
 
-- [Github](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025)
+- [Github](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025/tree/main/submissions/RL_Irrigation)
 
 ## Lien vers les slides
 
-- [Slides](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025)
+- [Slides](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025/blob/main/submissions/RL_Irrigation/Apprentissage%20par%20renforcement%20Irrigation.pdf)
 
 ## description Projet
 Ce travail applique l'algorithme Proximal Policy Optimization (PPO) issu du framework de l’apprentissage par renforcement (RL) à l'optimisation de l'irrigation des cultures de tomates, en exploitant des données agronomiques et climatiques. L'agent apprend à maximiser le rendement tout en minimisant le gaspillage d'eau, validant l'efficacité du RL pour une gestion adaptative des ressources en agriculture.

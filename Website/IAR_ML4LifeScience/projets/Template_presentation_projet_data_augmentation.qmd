@@ -1,6 +1,6 @@
 ---
 title: "Data augmentation appliquée à des images"
-subtitle: "heure - passage"
+subtitle: "14h50–15h10"
 description: "Modèle CNN avec data augmentation pour classifier des images d'animaux"
 author:
   - name: "EL HILALI Nassima"

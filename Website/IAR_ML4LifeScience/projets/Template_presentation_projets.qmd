@@ -1,6 +1,6 @@
 ---
 title: "Détection et segmentation automatique des métastases cérébrales sur IRM avec U-Net et SAM"
-subtitle: "heure - passage"
+subtitle: "13h30–13h50"
 description: "Présentation sur l'imagerie médicale et l'IA : à partir de 156 IRM cérébrales, nous développons des méthodes automatisées pour détecter et segmenter les métastases, rendant le diagnostic plus rapide et fiable."
 author:
   - name: "Marine Camus"
@@ -18,11 +18,11 @@ listing:
 
 ## Lien vers le code github 
 
-- [Github](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025)
+- [Github](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025/tree/main/submissions/groupe01)
 
 ## Lien vers les slides
 
-- [Slides](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025)
+- [Slides](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025/blob/main/submissions/groupe01/Conf%C3%A9rence%20Unet%20SAM.pdf)
 
 ## description Projet
 

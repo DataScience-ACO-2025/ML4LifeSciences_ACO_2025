@@ -28,6 +28,34 @@
     "text": "Promo 2025\nLes étudiants de la spécialisation Sciences des Données Biologiques présentent leurs travaux dans le cadre de la conférence Machine Learning pour la Science du Vivant.\n\n\n Dupont Alice Etudiant ingénieur Agronome Institut Agro Rennes\nGitHub • LinkedIn\n\n\n\nMartin Hugo\nUniversité Rennes 2\nInstitut Agro Rennes\nGitHub • LinkedIn\n\n\n Placier Moïse Etudiant ingénieur Agronome - ENSAT Institut Agro Rennes\nGitHub • LinkedIn\n\n\n Durand Emma Etudiant ingénieur Agroalimentaire Institut Agro Rennes GitHub • LinkedIn\n\n\n Placier Moïse Etudiant ingénieur Agronome - ENSAT Institut Agro Rennes\nGitHub • LinkedIn\n\n\n Durand Emma Etudiant ingénieur Agroalimentaire Institut Agro Rennes GitHub • LinkedIn"
   },
   {
+    "objectID": "projets/Template_presentation_projets.html",
+    "href": "projets/Template_presentation_projets.html",
+    "title": "Détection et segmentation automatique des métastases cérébrales sur IRM avec U-Net et SAM",
+    "section": "",
+    "text": "Github"
+  },
+  {
+    "objectID": "projets/Template_presentation_projets.html#lien-vers-le-code-github",
+    "href": "projets/Template_presentation_projets.html#lien-vers-le-code-github",
+    "title": "Détection et segmentation automatique des métastases cérébrales sur IRM avec U-Net et SAM",
+    "section": "",
+    "text": "Github"
+  },
+  {
+    "objectID": "projets/Template_presentation_projets.html#lien-vers-les-slides",
+    "href": "projets/Template_presentation_projets.html#lien-vers-les-slides",
+    "title": "Détection et segmentation automatique des métastases cérébrales sur IRM avec U-Net et SAM",
+    "section": "Lien vers les slides",
+    "text": "Lien vers les slides\n\nSlides"
+  },
+  {
+    "objectID": "projets/Template_presentation_projets.html#description-projet",
+    "href": "projets/Template_presentation_projets.html#description-projet",
+    "title": "Détection et segmentation automatique des métastases cérébrales sur IRM avec U-Net et SAM",
+    "section": "description Projet",
+    "text": "description Projet\nLes métastases cérébrales apparaissent chez environ 2% des patients dès le diagnostic initial de leur cancer primaire, et ce chiffre peut être plus élevé pour les cancers particulièrement agressifs. Une détection précoce et précise de ces lésions est cruciale, car certaines métastases peuvent être traitées chirurgicalement ou par radiothérapie stéréotaxique. Cependant, la lecture et l’annotation des IRM cérébrales restent des tâches longues et minutieuses pour les radiologues.\nPour répondre à ce défi, notre projet utilise un jeu de données de 156 IRM cérébrales issues de patients présentant au moins une métastase confirmée. Pour une partie de ces images, des annotations de référence réalisées par des radiologues permettent de comparer et d’évaluer les performances des méthodes développées. L’objectif est de concevoir des approches automatisées capables de détecter et segmenter les métastases cérébrales, en s’appuyant notamment sur des architectures d’apprentissage profond telles que U-Net, largement utilisée pour la segmentation médicale, et SAM (Segment Anything Model), un modèle plus récent et généralisable. Ces outils permettent d’identifier et de délimiter avec précision les lésions, illustrant comment l’intelligence artificielle peut accélérer le diagnostic, améliorer la prise en charge clinique et ouvrir la voie à une médecine plus assistée, fiable et personnalisée."
+  },
+  {
     "objectID": "projets/presentation_projet_CNN-BNN_insects.html",
     "href": "projets/presentation_projet_CNN-BNN_insects.html",
     "title": "Apport d’un modèle Bayésien lors de l’utilisation de réseaux de neuronnes pour la classification d’images",
@@ -133,43 +161,71 @@
     "text": "References\n\nIsmi, D. P., Pulungan, R., & Afiahayati. Deep learning for protein secondary structure prediction: Pre and post-AlphaFold. Computational and Structural Biotechnology Journal 20, 6271–6286 (2022).\nBreda, A. et al. Protein structure, modelling and applications. Bioinformatics in tropical disease research: a practical and case-study approach. (eds. Gruber, A. et al.) 137–170 (National Center for Biotechnology Information (US), 2008).\nBranden, C. I. & Tooze, J. Introduction to Protein Structure. (Garland Science, 2012).\nAnfinsen, C. B. Principles that Govern the Folding of Protein Chains. Science 181, 223–230 (1973).\nZwanzig, R., Szabo, A. & Bagchi, B. Levinthal’s paradox. Proc. Natl. Acad. Sci. U.S.A. 89, 20–22 (1992).\nAlQuraishi, M. ProteinNet: a standardized data set for machine learning of protein structure. BMC Bioinformatics 20, 311 (2019).\nFinn, R. D. et al. HMMER web server: 2015 update. Nucleic Acids Res 43, W30–W38 (2015).\nKryshtafovych, A., Schwede, T., Topf, M., Fidelis, K. & Moult, J. Critical assessment of methods of protein structure prediction (CASP)—Round XIII. Proteins 87, 1011–1020 (2019).\nArgos, P., Rao, J. K. M. & Hargrave, P. A. Structural Prediction of Membrane‐Bound Proteins. European Journal of Biochemistry 128, 565–575 (1982).\nBigelow, C. C. On the average hydrophobicity of proteins and the relation between it and protein structure. Journal of Theoretical Biology 16, 187–211 (1967).\nFauchère, J., Charton, M., Kier, L. B., Verloop, A. & Pliska, V. Amino acid side chain parameters for correlation studies in biology and pharmacology. International Journal of Peptide and Protein Research 32, 269–278 (1988).\nCharton, M. & Charton, B. I. The structural dependence of amino acid hydrophobicity parameters. Journal of Theoretical Biology 99, 629–644 (1982).\nGrantham, R. Amino Acid Difference Formula to Help Explain Protein Evolution. Science 185, 862–864 (1974).\nRadzicka, A., Pedersen, L. & Wolfenden, R. Influences of solvent water on protein folding: free energies of solvation of cis and trans peptides are nearly identical. Biochemistry 27, 4538–4541 (1988).\nBhaskaran, R. & Ponnuswamy, P. K. Positional flexibilities of amino acid residues in globular proteins. International Journal of Peptide and Protein Research 32, 241–255 (1988).\nCharton, M. & Charton, B. I. The dependence of the Chou-Fasman parameters on amino acid side chain structure. Journal of Theoretical Biology 102, 121–134 (1983).\nBaldwin, R. L. & Rose, G. D. Is protein folding hierarchic? I. Local structure and peptide folding. Trends in Biochemical Sciences 24, 26–33 (1999).\nHenikoff, S. & Henikoff, J. G. Position-based sequence weights. Journal of Molecular Biology 243, 574–578 (1994).\nLu, Y. Protein Secondary Structure Prediction Using Convolutional Bidirectional GRU. JMR 16, 11 (2024)."
   },
   {
-    "objectID": "projets/DEEP_meow.html",
-    "href": "projets/DEEP_meow.html",
+    "objectID": "projets/Template_presentation_feuille.html",
+    "href": "projets/Template_presentation_feuille.html",
+    "title": "Entraîner un modèle Vision Transformers pour la classification d’images",
+    "section": "",
+    "text": "Github"
+  },
+  {
+    "objectID": "projets/Template_presentation_feuille.html#lien-vers-le-code-github",
+    "href": "projets/Template_presentation_feuille.html#lien-vers-le-code-github",
+    "title": "Entraîner un modèle Vision Transformers pour la classification d’images",
+    "section": "",
+    "text": "Github"
+  },
+  {
+    "objectID": "projets/Template_presentation_feuille.html#lien-vers-les-slides",
+    "href": "projets/Template_presentation_feuille.html#lien-vers-les-slides",
+    "title": "Entraîner un modèle Vision Transformers pour la classification d’images",
+    "section": "Lien vers les slides",
+    "text": "Lien vers les slides\n\nSlides"
+  },
+  {
+    "objectID": "projets/Template_presentation_feuille.html#description-projet",
+    "href": "projets/Template_presentation_feuille.html#description-projet",
+    "title": "Entraîner un modèle Vision Transformers pour la classification d’images",
+    "section": "description Projet",
+    "text": "description Projet\nUtilisation d’un Vision Transformers pour determiner si des feuilles sont malades ou non et leur maladie."
+  },
+  {
+    "objectID": "projets/Projet_DeepMeow.html",
+    "href": "projets/Projet_DeepMeow.html",
     "title": "Deep Meow",
     "section": "",
     "text": "Github"
   },
   {
-    "objectID": "projets/DEEP_meow.html#lien-vers-le-code-github",
-    "href": "projets/DEEP_meow.html#lien-vers-le-code-github",
+    "objectID": "projets/Projet_DeepMeow.html#lien-vers-le-code-github",
+    "href": "projets/Projet_DeepMeow.html#lien-vers-le-code-github",
     "title": "Deep Meow",
     "section": "",
     "text": "Github"
   },
   {
-    "objectID": "projets/DEEP_meow.html#lien-vers-les-slides",
-    "href": "projets/DEEP_meow.html#lien-vers-les-slides",
+    "objectID": "projets/Projet_DeepMeow.html#lien-vers-les-slides",
+    "href": "projets/Projet_DeepMeow.html#lien-vers-les-slides",
     "title": "Deep Meow",
     "section": "Lien vers les slides",
     "text": "Lien vers les slides\n\nSlides"
   },
   {
-    "objectID": "projets/DEEP_meow.html#contexte",
-    "href": "projets/DEEP_meow.html#contexte",
+    "objectID": "projets/Projet_DeepMeow.html#contexte",
+    "href": "projets/Projet_DeepMeow.html#contexte",
     "title": "Deep Meow",
     "section": "Contexte :",
     "text": "Contexte :\nLa labellisation d’audio est une méthode fortement utilisée en machine learning, en agronomie, en sociologie, musique, etc… Nous proposons donc de présenter une démarche de traitement de signaux audio et de labellisation de ces signaux."
   },
   {
-    "objectID": "projets/DEEP_meow.html#notre-jeu-de-données",
-    "href": "projets/DEEP_meow.html#notre-jeu-de-données",
+    "objectID": "projets/Projet_DeepMeow.html#notre-jeu-de-données",
+    "href": "projets/Projet_DeepMeow.html#notre-jeu-de-données",
     "title": "Deep Meow",
     "section": "Notre jeu de données :",
     "text": "Notre jeu de données :\nNotre exemple sera la labellisation d’audio de chat. Le jeu de données comprend 440 audios au format .WAV. Chaque audio étant un miaulement de chat. Les chats sont enregistrés dans différentes situations (En train d’être brossé, attendant de la nourriture, isolement dans un espace inconnu). Le but ici est de déterminer le contexte d’émission d’un miaulement."
   },
   {
-    "objectID": "projets/DEEP_meow.html#points-abordés",
-    "href": "projets/DEEP_meow.html#points-abordés",
+    "objectID": "projets/Projet_DeepMeow.html#points-abordés",
+    "href": "projets/Projet_DeepMeow.html#points-abordés",
     "title": "Deep Meow",
     "section": "Points abordés :",
     "text": "Points abordés :\n\nPreprocessing sur des données audios\nExtraction de features via un réseau de neurones et des couches convolutionnelles"
@@ -231,6 +287,34 @@
     "text": "description Projet\nThis project explains the architecture of a ResNet and compares it to a traditional CNN in the context of classifying microscopic images of pathogenic fungi. We explain how skip connections enable ResNet models to preserve information and ease gradient flow, addressing limitations of deeper conventional CNNs. Both architectures were tested on the fungal image dataset to evaluate differences in learning efficiency and classification performance."
   },
   {
+    "objectID": "projets/Template_presentation_projet_data_augmentation.html",
+    "href": "projets/Template_presentation_projet_data_augmentation.html",
+    "title": "Data augmentation appliquée à des images",
+    "section": "",
+    "text": "Github"
+  },
+  {
+    "objectID": "projets/Template_presentation_projet_data_augmentation.html#lien-vers-le-code-github",
+    "href": "projets/Template_presentation_projet_data_augmentation.html#lien-vers-le-code-github",
+    "title": "Data augmentation appliquée à des images",
+    "section": "",
+    "text": "Github"
+  },
+  {
+    "objectID": "projets/Template_presentation_projet_data_augmentation.html#lien-vers-les-slides",
+    "href": "projets/Template_presentation_projet_data_augmentation.html#lien-vers-les-slides",
+    "title": "Data augmentation appliquée à des images",
+    "section": "Lien vers les slides",
+    "text": "Lien vers les slides\n\nSlides"
+  },
+  {
+    "objectID": "projets/Template_presentation_projet_data_augmentation.html#description-projet",
+    "href": "projets/Template_presentation_projet_data_augmentation.html#description-projet",
+    "title": "Data augmentation appliquée à des images",
+    "section": "description Projet",
+    "text": "description Projet\nProjet de classification d’images basé sur un CNN entraîné sur le dataset Animals10. Mise en place d’un pipeline complet : préparation des données, data augmentation et entraînement du modèle avec PyTorch. Évaluation des performances via précision, matrice de confusion et courbes d’apprentissage."
+  },
+  {
     "objectID": "index.html#edition-2025-ecole-dautomne",
     "href": "index.html#edition-2025-ecole-dautomne",
     "title": "3ᵉ édition de la conférence de Machine Learning en Sciences du Vivant",
@@ -256,6 +340,6 @@
     "href": "programme.html",
     "title": "Programme",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Description\n        \n     \n  \n\n\n\n\n\n\n\n\n\n\nA deep CNN architecture : the Resnet - Application to image classification of pathogenous mycosis\n\n\nheure - passage\n\n\nWhat is a ResNet and how this architecture permited to train deeper network\n\n\n\n\n\nNov 21, 2025\n\n\nMathieu Jules, Norroy Tom\n\n\n\n\n\n\n\n\n\n\n\n\nApport d’un modèle Bayésien lors de l’utilisation de réseaux de neuronnes pour la classification d’images\n\n\nheure - passage\n\n\nComparaison de 2 ‘versions’ du modèle AlexNet pour la classification d’images, exemple sur un jeu d’images d’insectes\n\n\n\n\n\nNov 21, 2025\n\n\nRoattino Thibault, Belle Louis, Rosa Matéo\n\n\n\n\n\n\n\n\n\n\n\n\nClassification d’images - une comparaison entre R et Python\n\n\nheure - passage\n\n\nComparaison méthologiques de l’utilisation de Keras sur R et Python et Pytorch sur Python dans le cadre d’une classification d’images à 2 classes\n\n\n\n\n\nNov 21, 2025\n\n\nClément Melina, Le Moan Delalande Riwal, Mathieu Anna\n\n\n\n\n\n\n\n\n\n\n\n\nData augmentation appliquée à des images\n\n\nheure - passage\n\n\nModèle CNN avec data augmentation pour classifier des images d’animaux\n\n\n\n\n\nNov 21, 2025\n\n\nEL HILALI Nassima, MONTIER Maéva, TRAORE Fabrice\n\n\n\n\n\n\n\n\n\n\n\n\nDeep Meow\n\n\nheure - passage\n\n\nLabellisation de signaux audio de miaulement de chat\n\n\n\n\n\nNov 21, 2025\n\n\nAntier Augustin, Causeur Léna, Prusiewicz-Blondin Louis\n\n\n\n\n\n\n\n\n\n\n\n\nDétection et segmentation automatique des métastases cérébrales sur IRM avec U-Net et SAM\n\n\nheure - passage\n\n\nPrésentation sur l’imagerie médicale et l’IA : à partir de 156 IRM cérébrales, nous développons des méthodes automatisées pour détecter et segmenter les métastases, rendant le diagnostic plus rapide et fiable.\n\n\n\n\n\nNov 21, 2025\n\n\nMarine Camus, Audrey Lapie, Léa Desbats\n\n\n\n\n\n\n\n\n\n\n\n\nEntraîner un modèle Vision Transformers pour la classification d’images\n\n\nheure - passage\n\n\nUtilisation d’un Vision Transformers pour determiner si des feuilles sont malades ou non et leur maladie\n\n\n\n\n\nNov 21, 2025\n\n\nFraysse Emilie, Gouhier Erwan, Delage de Luget Sixtine\n\n\n\n\n\n\n\n\n\n\n\n\nOptimisation de l’Irrigation des Cultures de Tomates par Apprentissage par Renforcement : Application de l’Algorithme Proximal Policy Optimization (PPO)\n\n\nheure - passage\n\n\nNotre projet vise à optimiser l’irrigation de plants de tomates grâce à un agent d’apprentissage par renforcement.\n\n\n\n\n\nNov 21, 2025\n\n\nLefèvre Vadim, Naux Emilie, Julliard Valentine\n\n\n\n\n\n\n\n\n\n\n\n\nPrédire la structure secondaire des protéines : du signal biologique aux approches d’apprentissage avancées\n\n\nheure - passage\n\n\nPrédiction de la structure secondaire à partir de la séquence, en évaluant l’impact de différents descripteurs biologiques et des méthodes Random Forest, CNN et modèles de NLP spécialisés du type BERT.\n\n\n\n\n\nNov 21, 2025\n\n\nBOULET Faustine, BEAUFILS Constance, PLACIER Moïse\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Description\n        \n     \n  \n\n\n\n\n  \n\n\n\n\nA deep CNN architecture : the Resnet - Application to image classification of pathogenous mycosis\n\n\n13h50–14h10\n\n\nWhat is a ResNet and how this architecture permited to train deeper network\n\n\n\n\n\n\nNov 21, 2025\n\n\nMathieu Jules, Norroy Tom\n\n\n\n\n\n\n  \n\n\n\n\nApport d’un modèle Bayésien lors de l’utilisation de réseaux de neuronnes pour la classification d’images\n\n\n14h10–14h30\n\n\nComparaison de 2 ‘versions’ du modèle AlexNet pour la classification d’images, exemple sur un jeu d’images d’insectes\n\n\n\n\n\n\nNov 21, 2025\n\n\nRoattino Thibault, Belle Louis, Rosa Matéo\n\n\n\n\n\n\n  \n\n\n\n\nClassification d’images - une comparaison entre R et Python\n\n\n14h30–14h50\n\n\nComparaison méthologiques de l’utilisation de Keras sur R et Python et Pytorch sur Python dans le cadre d’une classification d’images à 2 classes\n\n\n\n\n\n\nNov 21, 2025\n\n\nClément Melina, Le Moan Delalande Riwal, Mathieu Anna\n\n\n\n\n\n\n  \n\n\n\n\nData augmentation appliquée à des images\n\n\n14h50–15h10\n\n\nModèle CNN avec data augmentation pour classifier des images d’animaux\n\n\n\n\n\n\nNov 21, 2025\n\n\nEL HILALI Nassima, MONTIER Maéva, TRAORE Fabrice\n\n\n\n\n\n\n  \n\n\n\n\nDeep Meow\n\n\n15h10–15h30\n\n\nLabellisation de signaux audio de miaulement de chat\n\n\n\n\n\n\nNov 21, 2025\n\n\nAntier Augustin, Causeur Léna, Prusiewicz-Blondin Louis\n\n\n\n\n\n\n  \n\n\n\n\nDétection et segmentation automatique des métastases cérébrales sur IRM avec U-Net et SAM\n\n\n13h30–13h50\n\n\nPrésentation sur l’imagerie médicale et l’IA : à partir de 156 IRM cérébrales, nous développons des méthodes automatisées pour détecter et segmenter les métastases, rendant le diagnostic plus rapide et fiable.\n\n\n\n\n\n\nNov 21, 2025\n\n\nMarine Camus, Audrey Lapie, Léa Desbats\n\n\n\n\n\n\n  \n\n\n\n\nEntraîner un modèle Vision Transformers pour la classification d’images\n\n\n15h50–16h10\n\n\nUtilisation d’un Vision Transformers pour determiner si des feuilles sont malades ou non et leur maladie\n\n\n\n\n\n\nNov 21, 2025\n\n\nFraysse Emilie, Gouhier Erwan, Delage de Luget Sixtine\n\n\n\n\n\n\n  \n\n\n\n\nOptimisation de l’Irrigation des Cultures de Tomates par Apprentissage par Renforcement : Application de l’Algorithme Proximal Policy Optimization (PPO)\n\n\n15h30–15h50\n\n\nNotre projet vise à optimiser l’irrigation de plants de tomates grâce à un agent d’apprentissage par renforcement.\n\n\n\n\n\n\nNov 21, 2025\n\n\nLefèvre Vadim, Naux Emilie, Julliard Valentine\n\n\n\n\n\n\n  \n\n\n\n\nPrédire la structure secondaire des protéines : du signal biologique aux approches d’apprentissage avancées\n\n\n16h10–16h30\n\n\nPrédiction de la structure secondaire à partir de la séquence, en évaluant l’impact de différents descripteurs biologiques et des méthodes Random Forest, CNN et modèles de NLP spécialisés du type BERT.\n\n\n\n\n\n\nNov 21, 2025\n\n\nBOULET Faustine, BEAUFILS Constance, PLACIER Moïse\n\n\n\n\n\n\nNo matching items"
   }
 ]

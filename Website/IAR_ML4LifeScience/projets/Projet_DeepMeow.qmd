@@ -1,6 +1,6 @@
 ---
 title: "Deep Meow"
-subtitle: "heure - passage"
+subtitle: "15h10–15h30"
 description: "Labellisation de signaux audio de miaulement de chat"
 author:
   - name: "Antier Augustin"
@@ -9,8 +9,7 @@ author:
     affiliation: "Institut Agro Rennes"
   - name: "Prusiewicz-Blondin Louis"
     affiliation: "Institut Agro Rennes"
-
-
+    
 date: 2025-11-21 
 image: ../img_projets/chat.jpg 
 listing:

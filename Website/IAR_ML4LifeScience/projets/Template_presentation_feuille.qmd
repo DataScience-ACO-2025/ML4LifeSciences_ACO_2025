@@ -1,6 +1,6 @@
 ---
 title: "Entraîner un modèle Vision Transformers pour la classification d'images "
-subtitle: "heure - passage"
+subtitle: "15h50–16h10"
 description: "Utilisation d'un Vision Transformers pour determiner si des feuilles sont malades ou non et leur maladie"
 author:
   - name: "Fraysse Emilie"

@@ -1,6 +1,6 @@
 ---
 title: "A deep CNN architecture : the Resnet - Application to image classification of pathogenous mycosis"
-subtitle: "heure - passage"
+subtitle: "13h50–14h10"
 description: "What is a ResNet and how this architecture permited to train deeper network"
 author:
   - name: "Mathieu Jules"

@@ -1,6 +1,6 @@
 ---
 title: "Classification d'images - une comparaison entre R et Python"
-subtitle: "heure - passage"
+subtitle: "14h30–14h50"
 description: "Comparaison méthologiques de l'utilisation de Keras sur R et Python et Pytorch sur Python dans le cadre d'une classification d'images à 2 classes"
 author:
   - name: "Clément Melina"
@@ -22,7 +22,7 @@ listing:
 
 ## Lien vers les slides
 
-- [Slides](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025)
+- [Slides](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025/blob/main/submissions/groupe02/Slides_Group02.pdf)
 
 ## description Projet
 

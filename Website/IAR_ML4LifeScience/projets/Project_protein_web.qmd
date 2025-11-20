@@ -1,6 +1,6 @@
 ---
 title: "Prédire la structure secondaire des protéines : du signal biologique aux approches d’apprentissage avancées"
-subtitle: "heure - passage"
+subtitle: "16h10–16h30"
 description: "Prédiction de la structure secondaire à partir de la séquence, en évaluant l’impact de différents descripteurs biologiques et des méthodes Random Forest, CNN et modèles de NLP spécialisés du type BERT."
 
 author:
@@ -22,6 +22,10 @@ listing:
 
 This project investigates **Protein Secondary Structure Prediction (PSSP)** from the primary amino-acid sequence, mapping the linear sequence of residues (primary structure) to a one-dimensional annotation of local folding states (secondary structure). We evaluate the impact of different biological descriptors and compare three core modeling strategies: **Random Forest**, **1D Convolutional Neural Networks (CNN)**, and **specialized Protein Language Models (BERT)**.
 
+## Links 
+
+#### [Code](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025/tree/main/submissions/Protein_structure_Project)
+#### [Slides](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025/blob/main/submissions/Protein_structure_Project/Slides_prot_structure.pdf)
 
 # The Project Team
 

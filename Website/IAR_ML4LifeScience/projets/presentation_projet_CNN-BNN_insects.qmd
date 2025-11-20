@@ -1,6 +1,6 @@
 ---
 title: "Apport d'un modèle Bayésien lors de l'utilisation de réseaux de neuronnes pour la classification d'images"
-subtitle: "heure - passage"
+subtitle: "14h10–14h30"
 description: "Comparaison de 2 'versions' du modèle AlexNet pour la classification d'images, exemple sur un jeu d'images d'insectes"
 author:
   - name: "Roattino Thibault"
@@ -22,7 +22,7 @@ listing:
 
 ## Lien vers les slides
 
-- [Slides](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025)
+- [Slides](https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025/tree/main/submissions/BNN_insect/.presentation)
 
 ## Description Projet
 

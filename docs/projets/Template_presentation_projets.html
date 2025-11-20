@@ -6,12 +6,13 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Mathieu Jules">
-<meta name="author" content="Norroy Tom">
+<meta name="author" content="Marine Camus">
+<meta name="author" content="Audrey Lapie">
+<meta name="author" content="Léa Desbats">
 <meta name="dcterms.date" content="2025-11-21">
-<meta name="description" content="What is a ResNet and how this architecture permited to train deeper network">
+<meta name="description" content="Présentation sur l’imagerie médicale et l’IA : à partir de 156 IRM cérébrales, nous développons des méthodes automatisées pour détecter et segmenter les métastases, rendant le diagnostic plus rapide et fiable.">
 
-<title>École d’Automne Data Science – Institut Agro Rennes - A deep CNN architecture : the Resnet - Application to image classification of pathogenous mycosis</title>
+<title>École d’Automne Data Science – Institut Agro Rennes - Détection et segmentation automatique des métastases cérébrales sur IRM avec U-Net et SAM</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -161,13 +162,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">A deep CNN architecture : the Resnet - Application to image classification of pathogenous mycosis</h1>
-<p class="subtitle lead">13h50–14h10</p>
+<h1 class="title">Détection et segmentation automatique des métastases cérébrales sur IRM avec U-Net et SAM</h1>
+<p class="subtitle lead">13h30–13h50</p>
 </div>
 
 <div>
   <div class="description">
-    What is a ResNet and how this architecture permited to train deeper network
+    Présentation sur l’imagerie médicale et l’IA : à partir de 156 IRM cérébrales, nous développons des méthodes automatisées pour détecter et segmenter les métastases, rendant le diagnostic plus rapide et fiable.
   </div>
 </div>
 
@@ -176,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
   <div class="quarto-title-meta-heading">Affiliation</div>
   
     <div class="quarto-title-meta-contents">
-    <p class="author">Mathieu Jules </p>
+    <p class="author">Marine Camus </p>
   </div>
     <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -184,7 +185,15 @@ ul.task-list li input[type="checkbox"] {
           </p>
       </div>
       <div class="quarto-title-meta-contents">
-    <p class="author">Norroy Tom </p>
+    <p class="author">Audrey Lapie </p>
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Institut Agro Rennes
+          </p>
+      </div>
+      <div class="quarto-title-meta-contents">
+    <p class="author">Léa Desbats </p>
   </div>
     <div class="quarto-title-meta-contents">
         <p class="affiliation">
@@ -212,18 +221,19 @@ ul.task-list li input[type="checkbox"] {
 <section id="lien-vers-le-code-github" class="level2">
 <h2 class="anchored" data-anchor-id="lien-vers-le-code-github">Lien vers le code github</h2>
 <ul>
-<li><a href="https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025/blob/main/submissions/ResNet-Project/train_test.py">Github</a></li>
+<li><a href="https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025/tree/main/submissions/groupe01">Github</a></li>
 </ul>
 </section>
 <section id="lien-vers-les-slides" class="level2">
 <h2 class="anchored" data-anchor-id="lien-vers-les-slides">Lien vers les slides</h2>
 <ul>
-<li><a href="https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025/blob/main/submissions/ResNet-Project/Resnet_SLIDE.pdf">Slides</a></li>
+<li><a href="https://github.com/DataScience-ACO-2025/ML4LifeSciences_ACO_2025/blob/main/submissions/groupe01/Conf%C3%A9rence%20Unet%20SAM.pdf">Slides</a></li>
 </ul>
 </section>
 <section id="description-projet" class="level2">
 <h2 class="anchored" data-anchor-id="description-projet">description Projet</h2>
-<p>This project explains the architecture of a ResNet and compares it to a traditional CNN in the context of classifying microscopic images of pathogenic fungi. We explain how skip connections enable ResNet models to preserve information and ease gradient flow, addressing limitations of deeper conventional CNNs. Both architectures were tested on the fungal image dataset to evaluate differences in learning efficiency and classification performance.</p>
+<p>Les métastases cérébrales apparaissent chez environ 2% des patients dès le diagnostic initial de leur cancer primaire, et ce chiffre peut être plus élevé pour les cancers particulièrement agressifs. Une détection précoce et précise de ces lésions est cruciale, car certaines métastases peuvent être traitées chirurgicalement ou par radiothérapie stéréotaxique. Cependant, la lecture et l’annotation des IRM cérébrales restent des tâches longues et minutieuses pour les radiologues.</p>
+<p>Pour répondre à ce défi, notre projet utilise un jeu de données de 156 IRM cérébrales issues de patients présentant au moins une métastase confirmée. Pour une partie de ces images, des annotations de référence réalisées par des radiologues permettent de comparer et d’évaluer les performances des méthodes développées. L’objectif est de concevoir des approches automatisées capables de détecter et segmenter les métastases cérébrales, en s’appuyant notamment sur des architectures d’apprentissage profond telles que U-Net, largement utilisée pour la segmentation médicale, et SAM (Segment Anything Model), un modèle plus récent et généralisable. Ces outils permettent d’identifier et de délimiter avec précision les lésions, illustrant comment l’intelligence artificielle peut accélérer le diagnostic, améliorer la prise en charge clinique et ouvrir la voie à une médecine plus assistée, fiable et personnalisée.</p>
 
 
 
@@ -231,7 +241,35 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-projets">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1763679600000" data-listing-file-modified-sort="1763629715477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1763679600000" data-listing-file-modified-sort="1763629243502" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="../projets/Template_presentation_projets_Tom_Jules.html"> <img src="../img_projets/fungi.png" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="../projets/Template_presentation_projets_Tom_Jules.html">
+<h3 class="no-anchor listing-title">
+A deep CNN architecture : the Resnet - Application to image classification of pathogenous mycosis
+</h3>
+<div class="listing-subtitle">
+13h50–14h10
+</div>
+<div class="listing-description">
+<p>What is a ResNet and how this architecture permited to train deeper network</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../projets/Template_presentation_projets_Tom_Jules.html">
+<div class="listing-date">
+Nov 21, 2025
+</div>
+<div class="listing-author">
+Mathieu Jules, Norroy Tom
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1763679600000" data-listing-file-modified-sort="1763629715477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
 <div class="thumbnail">
 <p><a href="../projets/presentation_projet_CNN-BNN_insects.html"> <img src="../img_projets/image_insecte.jpg" class="thumbnail-image"> </a></p>
 </div>
@@ -259,7 +297,7 @@ Roattino Thibault, Belle Louis, Rosa Matéo
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1763679600000" data-listing-file-modified-sort="1763629784588" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1763679600000" data-listing-file-modified-sort="1763629784588" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="../projets/presentationFruits.html"> <img src="../img_projets/image_fruit.png" class="thumbnail-image"> </a></p>
 </div>
@@ -287,7 +325,7 @@ Clément Melina, Le Moan Delalande Riwal, Mathieu Anna
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1763679600000" data-listing-file-modified-sort="1763629285986" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1763679600000" data-listing-file-modified-sort="1763629285986" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="../projets/Template_presentation_projet_data_augmentation.html"> <img src="../img_projets/chat_rota.jpg" class="thumbnail-image"> </a></p>
 </div>
@@ -311,34 +349,6 @@ Nov 21, 2025
 </div>
 <div class="listing-author">
 EL HILALI Nassima, MONTIER Maéva, TRAORE Fabrice
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1763679600000" data-listing-file-modified-sort="1763630037647" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="../projets/Template_presentation_projets.html"> <img src="../img_projets/irm.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../projets/Template_presentation_projets.html">
-<h3 class="no-anchor listing-title">
-Détection et segmentation automatique des métastases cérébrales sur IRM avec U-Net et SAM
-</h3>
-<div class="listing-subtitle">
-13h30–13h50
-</div>
-<div class="listing-description">
-<p>Présentation sur l’imagerie médicale et l’IA : à partir de 156 IRM cérébrales, nous développons des méthodes automatisées pour détecter et segmenter les métastases, rendant le diagnostic plus rapide et fiable.</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../projets/Template_presentation_projets.html">
-<div class="listing-date">
-Nov 21, 2025
-</div>
-<div class="listing-author">
-Marine Camus, Audrey Lapie, Léa Desbats
 </div>
 </a>
 </div>
