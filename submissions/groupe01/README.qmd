@@ -49,6 +49,10 @@ https://www.cancer.fr/personnes-malades/diagnostic/examens-de-diagnostic/irm
 https://www.statcan.gc.ca/fr/science-donnees/reseau/segmentation-image
 https://larevueia.fr/quest-ce-que-la-segmentation-dimages/
 https://www.nature.com/articles/s41467-024-44824-z
+https://arxiv.org/abs/1903.07988
+https://datascientest.com/u-net
+
+
 
 
 
