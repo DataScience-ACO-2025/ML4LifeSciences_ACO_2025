@@ -34,11 +34,28 @@ Nous ne pouvons donc pas les upload sur le Git.
 
 - [Github]https://github.com/spmallick/learnopencv/blob/master/Training_3D_U-Net_Brain_Tumor_Seg/README.md?utm_source=chatgpt.com
 
-## description Projet
+## Description Projet
 
 Les métastases cérébrales apparaissent chez environ 2% des patients dès le diagnostic initial de leur cancer primaire, et ce chiffre peut être plus élevé pour les cancers particulièrement agressifs. Une détection précoce et précise de ces lésions est cruciale, car certaines métastases peuvent être traitées chirurgicalement ou par radiothérapie stéréotaxique. Cependant, la lecture et l’annotation des IRM cérébrales restent des tâches longues et minutieuses pour les radiologues.
 
 Pour répondre à ce défi, notre projet utilise un jeu de données de 156 IRM cérébrales issues de patients présentant au moins une métastase confirmée. Pour une partie de ces images, des annotations de référence réalisées par des radiologues permettent de comparer et d’évaluer les performances des méthodes développées. L’objectif est de concevoir des approches automatisées capables de détecter et segmenter les métastases cérébrales, en s’appuyant notamment sur des architectures d’apprentissage profond telles que U-Net, largement utilisée pour la segmentation médicale, et SAM (Segment Anything Model), un modèle plus récent et généralisable. Ces outils permettent d’identifier et de délimiter avec précision les lésions, illustrant comment l’intelligence artificielle peut accélérer le diagnostic, améliorer la prise en charge clinique et ouvrir la voie à une médecine plus assistée, fiable et personnalisée.
+
+## Bibliographie
+
+- pour le diapo -
+
+https://stanfordaimi.azurewebsites.net/datasets/ae0182f1-d5b6-451a-8177-d1f39f019962
+https://www.cancer.fr/personnes-malades/diagnostic/examens-de-diagnostic/irm
+https://www.statcan.gc.ca/fr/science-donnees/reseau/segmentation-image
+https://larevueia.fr/quest-ce-que-la-segmentation-dimages/
+https://www.nature.com/articles/s41467-024-44824-z
+https://arxiv.org/abs/1903.07988
+https://datascientest.com/u-net
+
+
+
+
+
 
 
 
