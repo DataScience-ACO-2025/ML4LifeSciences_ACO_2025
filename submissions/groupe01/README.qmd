@@ -52,6 +52,19 @@ https://www.nature.com/articles/s41467-024-44824-z
 https://arxiv.org/abs/1903.07988
 https://datascientest.com/u-net
 
+- pour SAM
+https://github.com/facebookresearch/segment-anything
+https://docs.ultralytics.com/fr/models/sam/#key-features-of-the-segment-anything-model-sam
+https://aidemos.meta.com/segment-anything
+https://www.louisbouchard.ca/blog-ia/segment-anything-de-meta
+
+~ pour les poids des différentes architectures utilisés pour SAM 
+https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth
+https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth
+https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
+
+
+
 
 
 
