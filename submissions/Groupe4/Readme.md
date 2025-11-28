@@ -42,5 +42,5 @@ scripts
 presentation
 → slides du projet
 
-📄 README.md
+README.md
 → synthèse du projet
